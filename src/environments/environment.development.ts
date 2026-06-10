@@ -1,11 +1,11 @@
 export const environment = {
   production:false,
-  baseUrl:'https://apiadmin.tecnocomp.cloud',
+  baseUrl:'https://apiadminproex.tecnocomp.cloud',
 };
 
 export const environmentFrontEnd = {
   production: false,
-  baseUrl: 'https://apiadmin.tecnocomp.cloud'
+  baseUrl: 'https://apiadminproex.tecnocomp.cloud'
 }
 
 
