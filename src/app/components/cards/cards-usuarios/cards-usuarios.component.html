@@ -1,26 +1,28 @@
-<mat-card class="container-card">
-  <div class="img" *ngIf="user">
-      <img *ngIf="user.url_foto; else letra" [src]="user.url_foto">
-      <ng-template #letra>
-        <img src="../../../assets/icons/perfil-sem-foto.png" alt="">
-      </ng-template>
-      <mat-card-header>
-      <mat-card-title [title]="this.user.username">{{ this.user.username | truncate:30 }}</mat-card-title>
-    </mat-card-header>
+<div class="borda-gradiente">
+  <mat-card class="container-card">
+    <div class="img" *ngIf="user">
+        <img *ngIf="user.url_foto; else letra" [src]="user.url_foto">
+        <ng-template #letra>
+          <img src="../../../../assets/icons/icone-user-verde.svg" alt="">
+        </ng-template>
+        <mat-card-header>
+        <mat-card-title [title]="this.user.username">{{ this.user.username | truncate:30 }}</mat-card-title>
+      </mat-card-header>
+      </div>
+    <div class="informacoes">
+
+      <mat-card-content class="content">
+        <div class="box-icon">
+          <img src="../../../../assets/icons/btn-editar-verde.svg" class="card-icon" (click)="abrirConfirmacaoExcluir()">
+        </div>
+        <div class="box-icon">
+          <img src="../../../../assets/icons/btn-excluir-verde.svg" class="card-icon" [routerLink]="['/tecnocomp','editar-usuario', user.id]">
+        </div>
+        <mat-card-actions>
+        <!-- Verificar como vai funcionar esse -->
+          <button class="btn" [routerLink]="['/tecnocomp','ver-perfil', user?.id]">Ver Perfil</button>
+        </mat-card-actions>
+      </mat-card-content>
     </div>
-  <div class="informacoes">
-    
-    <mat-card-content class="content">
-      <div class="box-icon">
-        <img src="../../../../assets/icons/icone-lixeira-nova.svg" class="card-icon" (click)="abrirConfirmacaoExcluir()">
-      </div>
-      <div class="box-icon">
-        <img src="../../../../assets/icons/icone-editar-novo.svg" class="card-icon" [routerLink]="['/tecnocomp','editar-usuario', user.id]">
-      </div>
-      <mat-card-actions>
-      <!-- Verificar como vai funcionar esse -->
-        <button class="btn" [routerLink]="['/tecnocomp','ver-perfil', user?.id]">Ver Perfil</button>
-      </mat-card-actions>
-    </mat-card-content>
-  </div>
-</mat-card>
+  </mat-card>
+</div>

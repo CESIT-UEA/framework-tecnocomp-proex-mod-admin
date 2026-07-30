@@ -7,20 +7,22 @@
   align-self: stretch;
   /* border-left: 8px solid var(--Primaria, #9665df); */
   border-radius: 35px;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #2B2A2E;
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #FFF 0%, #EEFFFC 100%);
+  box-shadow: 0px 0px 2px 0.9px rgba(0, 0, 0, 0.3);
 }
+
 h1 {
-  color: var(--Terciaria, #fff);
-  font-size: 24px;
+  color: #03422F;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
+
 button {
   cursor: pointer;
   border-radius: 5.118px;
-  background: linear-gradient(90deg, rgba(124, 76, 198, 0.50) 0%, rgba(83, 0, 249, 0.50) 100%), #7C4CC6;
+  background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%), #2F735E;
   outline: none;
   border: none;
   padding: 2px;
@@ -34,16 +36,18 @@ button {
 button mat-icon {
   color: white;
 }
+
 p{
   margin-top: 30px;
-  color: #FFF;
+  color: #03422F;
 
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
+
 mat-divider{
-  background-color: white;
+  background-color: #227272;
   margin: 30px 0;
 }

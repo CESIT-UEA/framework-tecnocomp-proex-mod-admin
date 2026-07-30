@@ -6,9 +6,9 @@
   border-radius: 12px;
   border: 0.8px solid #404040;
   border-radius: 15px;
-background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #2B2A2E;
-  box-shadow: 0px 0px 5.267px 0px rgba(0, 0, 0, 0.15);
-  color: white;
+  background: linear-gradient(90deg, #FFF 0%, #EEFFFC 100%);
+  box-shadow: 0px 0px 2px 0.9px rgba(0, 0, 0, 0.3);
+  color: #03422F;
   margin-bottom: 1rem;
   padding: 0 10px;
   box-sizing: border-box;
@@ -16,12 +16,17 @@ background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  
+
 }
 
 .container-card:hover {
   box-sizing: border-box;
-  border: 2px solid #7C4CC6;
+  border: 2px solid;
+  border-image: linear-gradient(
+    135deg,
+    rgba(57, 169, 53, 1),
+    rgba(26, 109, 83, 1)
+  ) 1;
 }
 
 .img {
@@ -51,14 +56,18 @@ background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09
   height: 36px;
   padding: 0 20px;
   border-radius: 7px;
-  background: linear-gradient(90deg, rgba(124, 76, 198, 0.50) 0%, rgba(83, 0, 249, 0.50) 100%), #7C4CC6;
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #7C4CC6;
   outline: none;
   border: none;
   color: white;
   cursor: pointer;
-  
-  
 }
+
+.btn:hover {
+  background-color:#FFFFFF;
+  opacity: 50%;
+}
+
 .content {
   display: flex;
   flex-direction: row;
@@ -74,8 +83,8 @@ background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09
 }
 .box-icon {
   border-radius: 3.94px;
-  border: 1.477px solid #535353;
-  background: #363638;
+  border: 1.477px solid #27A36D;
+  background-color: #FFFFFF;
   width: 31.736px;
   height: 27.358px;
   display: flex;
