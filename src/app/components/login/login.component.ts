@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
           const usuarioDados = this.authService.decodeToken(res.accessToken);
           console.log()
           this.authService.setUsuario(usuarioDados);
-          this.router.navigate(['/tecnocomp/dashboard']);
+          this.router.navigate(['/tecnocomp/meu-perfil']);
         },
         error: (err) => {
           console.error("Erro login Google:", err);

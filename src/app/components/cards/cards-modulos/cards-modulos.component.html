@@ -15,14 +15,15 @@
       </p>
     </div>
     <div class="box-content">
-      <div class="box-icon" [routerLink]="['/tecnocomp','editar-modulo', modulo.id]">
-        <img src="../../../../assets/icons/icone-editar-novo.svg" class="card-icon">
-      </div>
       <div class="box-icon" (click)="abrirConfirmacaoExcluir()">
-        <img src="../../../../assets/icons/icone-lixeira-nova.svg" alt="" class="card-icon">
+        <img src="../../../../assets/icons/lixeira-proex.svg" alt="" class="card-icon">
       </div>
+      <div class="box-icon" [routerLink]="['/tecnocomp','editar-modulo', modulo.id]">
+        <img src="../../../../assets/icons/editar-proex.png" class="card-icon">
+      </div>
+      
       <div class="box-icon" [routerLink]="['/ver-ao-vivo', modulo.id]">
-        <img src="../../../../assets/icons/icone-vizualizar-novo.svg" class="card-icon">
+        <img src="../../../../assets/icons/visualizar-proex.png" class="card-icon">
       </div>
     </div>
     <mat-card-actions>

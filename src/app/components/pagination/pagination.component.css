@@ -65,6 +65,9 @@
 
 .indicador-pagina:hover {
   background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%), #2F735E;
+
+  color: white;
+
   transform: scale(1.1);
   color:#FFFFFF;
 }

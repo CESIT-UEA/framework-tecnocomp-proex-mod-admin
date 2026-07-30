@@ -1,32 +1,29 @@
 <mat-drawer-container class="drawer-container" autosize>
   <mat-drawer #drawer mode="side" [opened]="isDrawerOpen" class="sidenav">
     <div class="logo">
-      <img src="assets/icons/Tecnocomp.svg" alt="logo" />
+      <img src="assets/imgs/logo-proex.png" alt="logo" />
     </div>
     <div class="titulo">
-      <p>Links</p>
+      <p style="color: #FFF;">Menu</p>
       <mat-divider></mat-divider>
     </div>
     <mat-nav-list class="nav-list">
-      <a routerLink="/tecnocomp/dashboard" routerLinkActive="active">
-        <mat-icon svgIcon="estrela"></mat-icon>
-        Dashboard
-      </a>
-      <a routerLink="/tecnocomp/cadastros" routerLinkActive="active">
-        <mat-icon>add</mat-icon>
-        Cadastrar
-      </a>
       <a routerLink="/tecnocomp/meu-perfil" routerLinkActive="active">
-        <mat-icon svgIcon="perfil"></mat-icon>
+        <img src="../../../assets/icons/icone-estrela-perfil.png" alt="ícone de perfil">
         Meu perfil
       </a>
+      <a routerLink="/tecnocomp/cadastros" routerLinkActive="active">
+        <img src="../../../assets/icons/icone-cadastrar.png" alt="ícone de cadastro">
+        Cadastrar
+      </a>
+      
       <a routerLink="/tecnocomp/templates" routerLinkActive="active">
-        <mat-icon>person</mat-icon>
+        <img src="../../../assets/icons/icone-template-novo.png" alt="ícone de templates">
         Templates
       </a>
       <!-- Administrador -->
       <a *ngIf="isAdmin" routerLink="/tecnocomp/usuarios" routerLinkActive="active">
-        <mat-icon>person</mat-icon>
+        <img src="../../../assets/icons/user_icone.png" alt="ícone de usuário">
         Usuarios
       </a>
       <a *ngIf="isAdmin" routerLink="/tecnocomp/modulos" routerLinkActive="active">
@@ -54,7 +51,7 @@
       
       <div class="texto">
         <p [title]="getUsuarioDados().username">{{ getUsuarioDados().username | truncate:15}}</p>
-        <p style="color: #a3a3a3"[title]="getUsuarioDados().email">{{ getUsuarioDados().email | truncate:15}}</p>
+        <p style="color: #FFF; opacity: 0.6;" [title]="getUsuarioDados().email">{{ getUsuarioDados().email | truncate:15}}</p>
       </div>
       <mat-icon [matMenuTriggerFor]="menu" style="cursor: pointer;" xPosition="before" yPosition="below">more_vert</mat-icon>
 
@@ -72,9 +69,10 @@
     <header class="header">
       <img (click)="toggleDrawer()" [src]="this.currentIcone" style="cursor: pointer;" />
       <h1>{{ currentPageTitle }}</h1>
-      <form action="/pesquisa" method="get" class="input-pesquisa">
+      <!-- <form action="/pesquisa" method="get" class="input-pesquisa">
         <input type="search" placeholder="Pesquisar..." required />
-      </form>
+      </form> -->
+      <img src="../../../assets/imgs/quadriculados-header.png" class="img-quadriculada" />
     </header>
 
     <div class="container-conteudo">

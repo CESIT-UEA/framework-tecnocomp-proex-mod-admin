@@ -1,6 +1,6 @@
 <div class="container-background">
   <div class="container-cadastro">
-  <p>
+  <p style="color: #03422F">
     Selecione uma opção abaixo para cadastrar um novo usuário, módulo ou
     plataforma.
   </p>  
@@ -10,17 +10,17 @@
         <div class="cards">
           <app-cards-cadastro *ngIf="this.isAdmin()"
             nomeCard="Usuário"
-            caminhoImagem="../../../assets/icons/icon-user.svg"
+            caminhoImagem="../../../assets/icons/icone-adicionar-usuario.png"
             caminhoUrl="/tecnocomp/cadastros/cadastro-usuario"
           ></app-cards-cadastro>
           <app-cards-cadastro
             nomeCard="Módulo"
-            caminhoImagem="../../../assets/icons/icone-cadastrar-mod.png"
+            caminhoImagem="../../../assets/icons/icone-adicionar-modulo.png"
             caminhoUrl="/tecnocomp/cadastros/registrar-modulo"
           ></app-cards-cadastro>
           <app-cards-cadastro
             nomeCard="Plataforma"
-            caminhoImagem="../../../assets/icons/icon-desktop.png"
+            caminhoImagem="../../../assets/icons/icone-adicionar-plataforma.png"
             caminhoUrl="/tecnocomp/cadastros/cadastro-plataforma"
           ></app-cards-cadastro>
         </div>
