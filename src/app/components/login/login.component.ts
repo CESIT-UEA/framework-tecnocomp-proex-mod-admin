@@ -88,7 +88,7 @@ export class LoginComponent implements OnInit {
             this.authService.setUsuario(usuarioDados);
 
             // Navega para o dashboard
-            this.router.navigate(['/tecnocomp/dashboard']);
+            this.router.navigate(['/tecnocomp/meu-perfil']);
             console.log(this.authService.getUsuarioDados());
           } else {
             this.errorLogin = true;
