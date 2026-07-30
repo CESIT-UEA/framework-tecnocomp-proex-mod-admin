@@ -77,11 +77,11 @@ body {
   border-color: #ffff !important;
 }
 
-.logo img {
+/* .logo img {
   width: 159.091px;
   height: 50px;
   margin-bottom: 15px;
-}
+} */
 
 .logo h3 {
   width: fit-content;
