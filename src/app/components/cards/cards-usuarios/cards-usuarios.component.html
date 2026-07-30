@@ -12,11 +12,11 @@
     <div class="informacoes">
 
       <mat-card-content class="content">
-        <div class="box-icon">
-          <img src="../../../../assets/icons/btn-editar-verde.svg" class="card-icon" (click)="abrirConfirmacaoExcluir()">
+        <div class="box-icon" [routerLink]="['/tecnocomp','editar-usuario', user.id]" >
+          <img src="../../../../assets/icons/btn-editar-verde.svg" class="card-icon" >
         </div>
-        <div class="box-icon">
-          <img src="../../../../assets/icons/btn-excluir-verde.svg" class="card-icon" [routerLink]="['/tecnocomp','editar-usuario', user.id]">
+        <div class="box-icon" (click)="abrirConfirmacaoExcluir()">
+          <img src="../../../../assets/icons/btn-excluir-verde.svg" class="card-icon"  >
         </div>
         <mat-card-actions>
         <!-- Verificar como vai funcionar esse -->

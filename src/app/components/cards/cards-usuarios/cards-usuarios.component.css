@@ -94,6 +94,9 @@
   cursor: pointer;
 }
 
+ .box-icon:hover {
+  opacity: 50%;
+}
 
 button {
   font-style: normal;
