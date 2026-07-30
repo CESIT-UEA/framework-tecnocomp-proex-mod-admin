@@ -16,17 +16,16 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-
+  border: 2px solid transparent;
 }
 
 .container-card:hover {
-  box-sizing: border-box;
-  border: 2px solid;
-  border-image: linear-gradient(
-    135deg,
-    rgba(57, 169, 53, 1),
-    rgba(26, 109, 83, 1)
-  ) 1;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(90deg, #27A36D 0%, #116259 100%) border-box;
+
 }
 
 .img {
