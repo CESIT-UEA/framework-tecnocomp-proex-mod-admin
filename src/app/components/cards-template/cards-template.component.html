@@ -1,16 +1,18 @@
-<mat-card class="container-card">
-  <img src="../../../assets/icons/icone-template.png" class="icone-template" alt="">
-  <mat-card-header>
-    <mat-card-title class="nome-modulo">{{ modulo.nome_modulo }}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content class="content">
-    <div class="box-content">
-      <div class="box-icon" (click)="confirmarClonagem()">
-        <mat-icon class="card-icon">content_copy</mat-icon>
+<div class="card-border">
+  <mat-card class="container-card">
+    <img src="../../../assets/icons/icone-template-verde.svg" class="icone-template" alt="">
+    <mat-card-header>
+      <mat-card-title class="nome-modulo">{{ modulo.nome_modulo }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content">
+      <div class="box-content">
+        <div class="box-icon" (click)="confirmarClonagem()">
+          <mat-icon class="card-icon">content_copy</mat-icon>
+        </div>
+        <div class="box-icon" [routerLink]="['/ver-ao-vivo', modulo.id]">
+          <mat-icon class="card-icon">visibility</mat-icon>
+        </div>
       </div>
-      <div class="box-icon" [routerLink]="['/ver-ao-vivo', modulo.id]">
-        <mat-icon class="card-icon">visibility</mat-icon>
-      </div>
-    </div>
-  </mat-card-content>
-</mat-card>
+    </mat-card-content>
+  </mat-card>
+</div>

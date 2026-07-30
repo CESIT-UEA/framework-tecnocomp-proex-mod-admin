@@ -1,6 +1,30 @@
+.titulo-template {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 0 53px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.titulo-template h1 {
+  color: #03422F;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+mat-divider {
+  border:1px solid #227272;
+  margin: 53px 62px 70px 53px;
+}
+
+
+
 .container-background {
   height: 88vh;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 16.83%, rgba(0, 0, 0, 0.09) 47.11%, rgba(66, 0, 146, 0.05) 81.73%, rgba(95, 0, 211, 0.05) 95.21%), #131313;
+  background-color: #FFFFFFFF;
 }
 
 .container-modulos {
