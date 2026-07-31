@@ -13,6 +13,8 @@ export class EditarUsuarioComponent {
   user: User = { id: 0, username: '', email: '', tipo: '' };
   senhaAtual: string = '';
 
+   hide = true;
+
   constructor(
     private route: ActivatedRoute,
     private userService: ApiAdmService,

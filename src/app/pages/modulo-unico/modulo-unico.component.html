@@ -43,12 +43,12 @@
 
             <!-- <p class="paragrafo"><strong>Id: </strong> {{ modulo?.id }}</p> -->
             <p class="paragrafo">
-              <a target="_blank" [href]="modulo.ebookUrlGeral"
+              <a target="_blank" [href]="modulo.ebookUrlGeral" style="color: #03422F;"
                 >Ebook Completo</a
               >
             </p>
             <p class="paragrafo">
-              <a target="_blank" [href]="modulo.video_inicial">Vídeo Inicial</a>
+              <a target="_blank" [href]="modulo.video_inicial" style="color: #03422F;">Vídeo Inicial</a>
             </p>
             <p class="paragrafo">
               <strong>UUID:</strong> {{ modulo.uuid }}
@@ -77,7 +77,7 @@
           <a
             routerLink="/modulo/topicos"
             class="botao-vizualizar-topicos"
-            [queryParams]="{ id_modulo: modulo.id }"
+            [queryParams]="{ id_modulo: modulo.id }" style="color: #03422F;"
           >
             Vizualizar tópicos
           </a>

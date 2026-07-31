@@ -1,5 +1,5 @@
 .container-voltar{
-  background-color: #0E0E0E;
+  background:linear-gradient(90deg, #206377 0%, #247E6E 50.96%, rgba(39, 163, 109, 0.10) 100%);
   box-sizing: border-box;
   display: flex;
   justify-content: start;

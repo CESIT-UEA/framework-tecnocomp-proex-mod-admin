@@ -1,7 +1,8 @@
 <app-header-voltar texto="Novo Módulo"></app-header-voltar>
 <div class="container-background" >
   <div class="cadastro-modulo-pagina" *ngIf="!carregando; else tela">
-    <div class="cadastro-modulo-container">
+    <div class="container-wrapper">
+      <div class="cadastro-modulo-container">
       <h2 class="cadastro-modulo-titulo">Cadastrar Módulo</h2>
       <p class="cadastro-modulo-aviso">* Indica campos obrigatórios</p>
       <form [formGroup]="moduloForm">
@@ -54,10 +55,13 @@
           </div>
         </div>
         <div class="cadastro-modulo-buttons">
-          <button type="button" (click)="voltarPagina()" id="botao-um">Cancelar</button>
-          <button type="submit"  id="botao-dois" (click)="onSubmit()">Cadastrar Módulo</button>
+          <div class="btn-wrapper">
+            <button type="button" (click)="voltarPagina()" id="botao-um"><span>Cancelar</span></button>
+          </div>
+          <button type="submit"  id="botao-dois" (click)="onSubmit()">Criar novo módulo</button>
         </div>
       </form>
+    </div>
     </div>
   </div>
   <ng-template #tela>

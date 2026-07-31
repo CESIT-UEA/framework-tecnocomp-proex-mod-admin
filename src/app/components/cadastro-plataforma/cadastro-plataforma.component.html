@@ -1,7 +1,8 @@
 <app-header-voltar texto="Cadastrar Plataforma"></app-header-voltar>
 <div class="container-background">
   <div class="cadastro-plataforma-pagina">
-  <section class="cadastro-plataforma-container" *ngIf="!carregando; else tela">
+  <div class="container-wrapper">
+    <section class="cadastro-plataforma-container" *ngIf="!carregando; else tela">
     <h2 class="cadastro-plataforma-titulo">Cadastro de Plataforma</h2>
     <p class="cadastro-plaforma-aviso">*Indica uma pergunta obrigatória</p>
     <form
@@ -92,7 +93,10 @@
       </div> -->
 
       <div class="buttons">
-        <button (click)="voltarPagina()" id="botao-um">Cancelar</button>
+        <div class="btn-wrapper">
+          <button (click)="voltarPagina()" id="botao-um"><span>Cancelar</span></button>
+        </div>
+  
         <button type="submit" id="botao-dois" (click)="onSubmit()">Cadastrar</button>
       </div>
     </form>
@@ -102,6 +106,7 @@
       <h2 class="">Cadastrando plataforma...</h2>
     </div>
   </ng-template>
+  </div>
 </div>
 
 </div>

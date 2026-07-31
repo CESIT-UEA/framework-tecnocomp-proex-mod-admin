@@ -1,7 +1,8 @@
 <app-header-voltar texto="Editar Plataforma"></app-header-voltar>
 
 <main class="page-editar-plataforma">
-  <section class="card-editar-plataforma" *ngIf="!carregando; else tela">
+  <div class="container-wrapper">
+    <section class="card-editar-plataforma" *ngIf="!carregando; else tela">
     <header class="card-header">
       <h2 class="card-title">Editar Plataforma</h2>
       <div class="card-divider"></div>
@@ -79,9 +80,11 @@
 
       <!-- Botões -->
       <div class="form-actions">
-        <button type="button" (click)="voltarPagina()" class="btn btn-cancelar">
-          Cancelar
+        <div class="btn-wrapper">
+          <button type="button" (click)="voltarPagina()" class="btn btn-cancelar">
+          <span>Cancelar</span>
         </button>
+        </div>
         <button
           type="submit"
           class="btn btn-salvar"
@@ -92,6 +95,7 @@
       </div>
     </form>
   </section>
+  </div>
   <ng-template #tela>
     <div class="carregando-registro">
       <h2 class="">Atualizando plataforma...</h2>
