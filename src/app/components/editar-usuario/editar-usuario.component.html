@@ -1,7 +1,8 @@
 
 <app-header-voltar texto="Editar Usuário"></app-header-voltar>
 <main class="container">
-  <form (ngSubmit)="atualizarUsuario()" class="form-editar-usuario">
+    <div class="container-wrapper">
+      <form class="form-editar-usuario">
     <h2 id="form-editar-usuario-titulo">Editar Usuário</h2>
     <p class="obrigatorio">* Indica campos obrigatórios</p>
     <section class="form-editar-usuario-campos">
@@ -21,7 +22,12 @@
       <!-- Senha Atual -->
       <div class="form-editar-usuario-campo">
         <label>Senha Administrador <span class="obrigatorio">*</span></label>
-        <input matInput [(ngModel)]="senhaAtual" name="senhaAtual" type="password" required placeholder="Digite a senha atual" />
+        <div class="input-wrapper">
+          <input [type]="hide ? 'password' : 'text'" matInput [(ngModel)]="senhaAtual" name="senhaAtual" type="password" required placeholder="Digite a senha atual" />
+         <button  class="icon" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </div>
       </div>
 
       <!-- Tipo -->
@@ -36,10 +42,16 @@
     
     <!-- Botões -->
     <div class="botoes">
-      <button [routerLink]="'/tecnocomp/usuarios'" id="botao-dois">Cancelar</button>
-      <button type="submit" id="botao-um">Salvar Alterações</button>
+      <div class="btn-wrapper">
+        <button [routerLink]="'/tecnocomp/usuarios'" id="botao-dois" ><span>Cancelar</span></button>
+      </div>
+      <div class="btn-wrapper-salvar">
+        <button id="botao-um" (click)="atualizarUsuario()"><span>Salvar Alterações</span></button>
+      </div>
+      
     </div>
   </form>
+    </div>
 </main>
 
 

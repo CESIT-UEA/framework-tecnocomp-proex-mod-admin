@@ -55,7 +55,10 @@
       </div>
       <div class="form-conteudo">
           <label for="confirmar-senha" class="cadastro-usuario-label">Confirmar<span> *</span></label>
-          <input type="password" formControlName="confirmarSenha" class="cadastro-usuario-input" id="confirmar-senha" placeholder="Confirmar a senha">
+          <input [type]="hideConfirmar ? 'password' : 'text'" type="password" formControlName="confirmarSenha" class="cadastro-usuario-input" id="confirmar-senha" placeholder="Confirmar a senha">
+          <button  class="icon" (click)="hideConfirmar = !hideConfirmar" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirmar">
+              <mat-icon>{{hideConfirmar ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
           <div
           *ngIf="
             cadastroForm.get('confirmarSenha')?.invalid &&

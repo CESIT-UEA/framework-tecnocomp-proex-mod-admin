@@ -4,22 +4,30 @@
     justify-content: center;
     align-items: center;
     height: 88%;
-    background-color: #1E1E1E;
-    color: white;
+    background-color: #F9FFF9;
+    color: #03422F;
+}
+
+.container-wrapper {
+    width: 55%;
+    background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
+    border-radius: 40px;
+    padding-top: 8px;
 }
 
 .form-editar-usuario {
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #2B2A2E;;
-  width: 55%;
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+  box-sizing: border-box;
+  width: 100%;
   border-radius: 40px;
   padding: 0 2.5rem;
-  border-top: 8px solid #7C4CC6;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 #form-editar-usuario-titulo {
     text-align: center;
     padding: 35px 0 30px 0;
-    border-bottom: 2px solid #7C4CC6;
+    border-bottom: 2px solid #27A36D;
 }
 
 .obrigatorio {
@@ -46,15 +54,16 @@
 .form-editar-usuario-campo select {
     display: flex;
     flex-direction: column;
-    background-color: #3F3F40;
+    border-radius: 10px;
+    border: 1px solid #27A36D;
+    background: #FFF;
     height: 35px;
     width: 100%;
-    border: none;
-    border-radius: 10px;
-    color: white;
+    color: #03422F;
     padding-left: 10px;
     box-sizing: border-box;
 }
+
 
 .form-editar-usuario-campo select {
     padding-top: 8px;
@@ -66,7 +75,7 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2303422F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 16px;
@@ -98,18 +107,89 @@
   
 }
 
-button:hover {
+#botao-um span {
+    color: #fff;
+}
+
+#botao-um:hover {
     opacity: 50%;
+    color: #fff;
+    
 }
 
 #botao-um {
-    background-color: #7C4CC6;
+    background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259;
+}
+
+.btn-wrapper, .btn-wrapper-salvar {
     
+    display: inline-block;
+    padding: 2px; /* espessura da borda */
+    border-radius: 10px;
+    background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259;;
 }
 
 #botao-dois {
-    background-color: transparent;
-    border: 3px solid #7C4CC6;
-    color: #7C4CC6;
+    display: block;
+    /* padding: 10px 20px; */
+    border-radius: 8px; /* menor que o wrapper */
+    background: #fff;
+    cursor: pointer;
     
+}
+
+#botao-dois span {
+    background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#botao-dois:hover {
+  background:  linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259;
+
+}
+
+#botao-dois:hover span {
+  background: none; /* remove o gradiente */
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+#botao-um:hover span {
+  -webkit-text-fill-color: #fff;
+    color: #fff;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 45px; /* espaço para o ícone */
+  box-sizing: border-box;
+}
+
+
+.input-wrapper .icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+}
+
+.input-wrapper .icon mat-icon {
+  font-size: 22px;
+  color: #888888;
 }
