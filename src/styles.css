@@ -57,15 +57,15 @@ body {
 }
 
 .mdc-label {
-  color: white;
+  color: #03422F;
 }
 
 .mat-mdc-radio-button.mat-accent {
-  --mdc-radio-selected-icon-color: #864FD9;
-  --mdc-radio-selected-focus-icon-color: #864FD9;
-  --mdc-radio-selected-hover-icon-color: #864FD9;
-  --mdc-radio-selected-pressed-icon-color: #864FD9;
-  --mat-radio-checked-ripple-color: #864FD9;
+  --mdc-radio-selected-icon-color: #259E6B;
+  --mdc-radio-selected-focus-icon-color: #259E6B;
+  --mdc-radio-selected-hover-icon-color: #259E6B;
+  --mdc-radio-selected-pressed-icon-color: #259E6B;
+  --mat-radio-checked-ripple-color: #259E6B;
 }
 
 .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background {

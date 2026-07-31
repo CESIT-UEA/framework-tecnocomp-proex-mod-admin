@@ -1,7 +1,8 @@
 <app-header-voltar texto="Cadastrar Usuário"></app-header-voltar>
 <div class="container-background">
   <div class="cadastro-usuario-pagina">
-  <div class="cadastro-usuario-container">
+    <div class="container-wrapper">
+      <div class="cadastro-usuario-container">
     <h2 class="cadastro-usuario-titulo">Cadastrar Usuário</h2>
     <p class="cadastro-usuario-aviso">* Indica campos obrigatórios</p>
   <form id="form" class="form" [formGroup]="cadastroForm" >
@@ -76,7 +77,9 @@
       </mat-radio-group>
     </div>
     <div class="buttons">
-        <button (click)="voltarPagina()" id="botao-um">Cancelar</button>
+      <div class="btn-wrapper">
+        <button (click)="voltarPagina()" id="botao-um"><span>Cancelar</span></button>
+      </div>
           <button
               type="submit"
               id="botao-dois"
@@ -87,6 +90,7 @@
         </div>
     </form>
   </div>
+    </div>
   
   </div>
 </div>
