@@ -103,7 +103,8 @@ background: #FFF;
 }
 
 .nao-publicado {
-  background-color: #33b727;
+  background: linear-gradient(90deg, rgba(51, 183, 39, 0.00) 0%, rgba(14, 156, 1, 0.50) 100%), #33B727;
+;
 }
 
 .btn-publicar,
