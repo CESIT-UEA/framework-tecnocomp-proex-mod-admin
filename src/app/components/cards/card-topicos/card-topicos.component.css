@@ -7,9 +7,10 @@
   padding: clamp(1.19rem, 1.25rem + 0.2vw, 1.41rem);
   flex-shrink: 0;
   border-radius: 10px;
-  color: white;
+  color: #03422F;
   border-radius: 15px;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #2B2A2E;
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+
 }
 
 mat-card-header {
@@ -33,7 +34,7 @@ mat-card-header span {
   font-weight: bold;
   line-height: normal;
   text-align: center;
-  color: var(--abc-color);
+  color: #227272;
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
@@ -59,8 +60,8 @@ mat-card-header span {
   margin: 0;
   padding: 0.63rem 0 0.63rem 0.56rem;
   border-radius: 10px;
-  border-radius: 10px;
-background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #424147;;
+  background: #FFF;
+  box-shadow: 0 0 1px 0.9px rgba(0, 0, 0, 0.25);
 }
 
 a {
@@ -87,7 +88,7 @@ mat-divider {
   gap: 0.94rem;
   width: 100%;
   padding: 12px 0 10px 0;
-  border-top: 2px solid #7C4CC6;
+  border-top: 2px solid #227272;
   
 }
 
@@ -106,8 +107,7 @@ mat-divider {
   height: 1.71rem;
   padding: 0.25rem 0.5rem;
   border-radius: 3.94px;
-  border: 1.477px solid #535353;
-  background: #363638;
+  background: #fff;
   cursor: pointer;
 }
 
@@ -142,6 +142,14 @@ mat-card-actions {
 
 .btn:hover {
   filter: brightness(70%);
+}
+
+a {
+  color: #03422F;
+}
+
+span {
+  font-weight: 400;
 }
 
 @media screen and (max-width: 1899px) {

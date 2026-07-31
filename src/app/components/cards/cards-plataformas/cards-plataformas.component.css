@@ -4,8 +4,8 @@
   width: auto;
   border: none;
   border-radius: 15px;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #2B2A2E;
-  box-shadow: 0px 0px 5.267px 0px rgba(0, 0, 0, 0.15);
+  background:  linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   color: white;
   text-align: center;
   margin: 0 auto;
@@ -32,8 +32,8 @@
 
 .box-icon {
   border-radius: 3.94px;
-  border: 1.477px solid #535353;
-  background: #363638;
+  /* border: 1.477px solid #535353; */
+   background: #fff;
   width: 31.736px;
   height: 27.358px;
   display: flex;

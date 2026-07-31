@@ -5,21 +5,21 @@
   <mat-card-content>
     <div class="box-card-content">
       <p>ID: {{ topico.id }}</p>
-      <p>Videos ({{ topico.VideoUrls.length }})</p>
+      <p>Videos <span>({{ topico.VideoUrls.length }})</span></p>
       <p><a target="_blank" [href]="topico.textoApoio">Slide</a></p>
-      <p>Saiba Mais ({{ topico.SaibaMais.length}})</p>
+      <p>Saiba Mais <span>({{ topico.SaibaMais.length}})</span></p>
       <p> <a target="_blank" [href]="topico.ebookUrlGeral">E-book do Tópico</a></p>
-      <p>Atividades ({{ topico.Exercicios.length}})</p>
+      <p>Atividades <span>({{ topico.Exercicios.length}})</span></p>
     </div>
 
   </mat-card-content>
   <div class="icons-btn">
     <div class="icons">
         <div class="box-icon" [routerLink]="['/editar-topico', topico.id]" [queryParams]="{ id_modulo: idModulo}">
-          <mat-icon class="card-icon">border_color</mat-icon>
+          <img src="../../../../assets/icons/editar-proex.png" class="card-icon">
         </div>
         <div class="box-icon" (click)="abrirConfirmacaoExcluir()">
-          <mat-icon class="card-icon">delete</mat-icon>
+          <img src="../../../../assets/icons/lixeira-proex.svg" alt="" class="card-icon">
         </div>
     </div>
     <!-- <mat-card-actions>
