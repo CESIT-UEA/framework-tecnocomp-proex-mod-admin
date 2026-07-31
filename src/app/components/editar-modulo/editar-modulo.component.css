@@ -1,20 +1,27 @@
 .container {
   height: 88vh;
-  background-color: #1E1E1E;
-  color: #FFFFFF;
+  background-color: #F9FFF9;
+  color: #03422F;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Inter;
 }
 
-.forms {
+.container-wrapper {
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
   width: 50%;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #2B2A2E;
+  border-radius: 40px;
+  padding-top: 8px;
+}
+
+.forms {
+  box-sizing: border-box;
+  width: 100%;
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
   padding: 0 2.5rem;
   border-radius: 40px;
-  border-top: 8px solid #9665DF;
-
 }
 
 p {
@@ -29,7 +36,7 @@ span {
 .titulo-formulario h1 {
   text-align: center;
   padding: 20px 0 20px 0;
-  border-bottom: 2px solid #9665DF;
+  border-bottom: 2px solid #27A36D;
   font-size: 20px;
   font-weight: 700;
   font-family: Inter;
@@ -60,10 +67,10 @@ span {
 
 .form-conteudo-editar input {
   height: 35px;
-  border: none;
   border-radius: 10px;
-  background-color: #3F3F40;
-  color: #FFFFFF;
+  border: 1px solid #27A36D;
+  background: #FFF;
+  color: #03422F;
   padding-left: 10px;
 
 }
@@ -83,7 +90,7 @@ span {
 .btn-cancelar,
 .btn-salvar {
   padding: 7px;
-  width: 25%;
+  
   border-radius: 10px;
   border: none;
   font-size: 16px;
@@ -91,24 +98,61 @@ span {
   cursor: pointer;
   color: #FFFFFF;
 }
+.btn-salvar, .btn-wrapper {
+  width: 25%;
+}
 
 .btn-cancelar {
-  background-color: transparent;
-  border: 3px solid #7C4CC6;
-  color: #7C4CC6 !important;
+  width: 100%
 }
+
+.btn-cancelar {
+    display: block;
+    /* padding: 10px 20px; */
+    border-radius: 8px; /* menor que o wrapper */
+    background: #fff;
+    cursor: pointer;
+    
+}
+
 
 .btn-cancelar:hover {
   background: linear-gradient(90deg, rgba(124, 76, 198, 0.50) 0%, rgba(83, 0, 249, 0.50) 100%), #7C4CC6;
   color: #fff !important;
 }
 
+.btn-cancelar span {
+    background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-cancelar:hover {
+  background:  linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259;
+}
+
+.btn-cancelar:hover span {
+  background: none; /* remove o gradiente */
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+
 .btn-salvar {
-  background: linear-gradient(90deg, rgba(124, 76, 198, 0.50) 0%, rgba(83, 0, 249, 0.50) 100%), #7C4CC6;
+  background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%), #2F735E;
+
 }
 
 .btn-salvar:hover {
   opacity: 50%;
+}
+
+.btn-wrapper {
+    
+    display: inline-block;
+    padding: 2px; /* espessura da borda */
+    border-radius: 10px;
+    background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259;;
 }
 
 
@@ -128,8 +172,8 @@ input.ng-invalid.ng-touched {
 /* Estilização do Campo de Upload (Ebook Editar) */
 .file-input-wrapper #ebook_url_Geral::file-selector-button {
   background-color: transparent;
-  color: rgba(124, 76, 198, 1);
-  border: 2.5px solid rgba(124, 76, 198, 1);
+  color: #27A36D;
+  border: 2.5px solid #27A36D;
   font-family: Inter, sans-serif;
   font-size: 15px;
   font-weight: 700;
@@ -140,7 +184,7 @@ input.ng-invalid.ng-touched {
 }
 
 .file-input-wrapper #ebook_url_Geral::file-selector-button:hover {
-  background-color: rgba(124, 76, 198, 1);
+  background-color: #27A36D;
   color: #fff;
 }
 
@@ -151,13 +195,15 @@ input.ng-invalid.ng-touched {
   width: 160px;
   background-color: transparent !important;
   padding: 0 !important;
+  border: none !important;
 }
 
 /* Container Wrapper com fundo cinza */
 .file-input-wrapper {
   display: flex;
   align-items: center;
-  background-color: #3F3F40;
+  background-color: #FFF;
+  border: 1px solid #27A36D;
   border-radius: 10px;
   height: 48px;
   /* Ajustado para bater com o padrão dos outros inputs da tela */
@@ -165,7 +211,7 @@ input.ng-invalid.ng-touched {
 }
 
 .file-status-text {
-  color: #fff;
+  color: #03422F;
   font-family: Inter, sans-serif;
   font-size: 15px;
   white-space: nowrap;

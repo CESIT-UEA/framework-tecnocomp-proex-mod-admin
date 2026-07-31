@@ -1,6 +1,7 @@
 <app-header-voltar texto="Editar Módulo"></app-header-voltar>
 <main class="container">
-  <form class="forms" [formGroup]="moduloForm" *ngIf="!carregando; else tela" >
+  <div class="container-wrapper">
+    <form class="forms" [formGroup]="moduloForm" *ngIf="!carregando; else tela" >
     <div class="form-campos">
       <div class="titulo-formulario">
         <h1>Editar Módulo</h1>
@@ -51,12 +52,15 @@
       </div>
 
       <div class="botoes">
-        <button class="btn-cancelar" (click)="voltarPagina()">Cancelar</button>
+        <div class="btn-wrapper">
+          <button class="btn-cancelar" (click)="voltarPagina()"><span>Cancelar</span></button>
+        </div>
         <button class="btn-salvar" type="submit" (click)="onSubmit()">Salvar Alterações</button>
       </div>
     </div>
 
   </form>
+  </div>
   <ng-template #tela>
     <div class="carregando-registro">
       <h2 class="">Atualizando módulo...</h2>
