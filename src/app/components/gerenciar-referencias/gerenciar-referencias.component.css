@@ -1,6 +1,6 @@
 .container {
     height: 83vh;
-    background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 16.83%, rgba(0, 0, 0, 0.09) 47.11%, rgba(66, 0, 146, 0.05) 81.73%, rgba(95, 0, 211, 0.05) 95.21%), #131313;
+    background: #FFFFFF;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -15,7 +15,7 @@
 }
 
 .botao-add-ref {
-    background: linear-gradient(90deg, rgba(124, 76, 198, 0.50) 0%, rgba(83, 0, 249, 0.50) 100%), #7C4CC6;
+    background:linear-gradient(90deg, #27A36D 0%, #2F735E 100%);
     color: #FFFFFF;
     width: 247px;
     height: 40px;
@@ -35,11 +35,11 @@
 }
 
 .container-referencias li{
-    background-color: #2B2A2E;
-    color: #FFFFFF;
+    background: linear-gradient(180deg, #FFFFFF 0%, #EEFFFC 100%);
+    border: 1px solid #27A36D;
+    color: #03422F;
     list-style-type: none;
     border-radius: 15px;
-    border: 1px solid #7C4CC6;
     justify-content: space-between;
     align-items: center;
     padding: 10px 60px;
@@ -75,7 +75,7 @@
     height: 40px;
     border: none;
     border-radius: 7px;
-    background: linear-gradient(90deg, rgba(124, 76, 198, 0.50) 0%, rgba(83, 0, 249, 0.50) 100%), #7C4CC6;
+    background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%);
     color: #FFF;
     text-align: center;
     font-size: 16px;

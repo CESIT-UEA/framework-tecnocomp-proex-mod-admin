@@ -19,7 +19,9 @@
 
 <mat-dialog-actions>
   <div class="botoes">
-    <button class="cancelar" (click)="cancelar()">Cancelar</button>
+    <div class="btn-border">
+      <button class="cancelar" (click)="cancelar()">Cancelar</button>
+    </div>
     <button class="criar" (click)="confirmar()" [disabled]="!nome.trim() || !cargo.trim()">
       {{ isEditando ? 'Salvar' : 'Adicionar' }}
     </button>

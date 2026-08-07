@@ -4,7 +4,7 @@
 
 
 .container {
-    background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 16.83%, rgba(0, 0, 0, 0.09) 47.11%, rgba(66, 0, 146, 0.05) 81.73%, rgba(95, 0, 211, 0.05) 95.21%), #131313;
+    background: #FFFFFF;
     min-height: 88vh;
 }
 
@@ -28,7 +28,7 @@
         row-gap: 20px;
     }
 
-    
+
     .descricao {
         font-size: 20px;
         padding: 1.4rem 0;

@@ -23,7 +23,7 @@
             <li *ngFor="let membro of membrosPorEquipe[equipe.id]" class="lista-membros" style="list-style-type: none; width: 100%">
               <div class="caixa-perfil">
                 <img
-                  src="../../../assets/icons/perfil-sem-foto.png"
+                  src="../../../assets/icons/icone-user-verde.svg"
                   alt="Foto do membro"
                 />
                 <p class="text-muted">{{ membro.nome }} - {{ membro.cargo }}</p>
@@ -32,16 +32,16 @@
                 <button
                 (click)="editarMembro(membro)"
               >
-                <img class="editar-ref" src="../../../assets/icons/editar-ref.png" alt="">
+                <img class="editar-ref" src="../../../assets/icons/editar-proex.png" alt="">
               </button>
               <button
                 class="remover-membro"
                 (click)="removerMembro(membro)"
               >
-                <img class="excluir-ref" src="../../../assets/icons/image.png" alt="">
+                <img class="excluir-ref" src="../../../assets/icons/lixeira-proex.svg" alt="">
               </button>
               </div>
-              
+
             </li>
           </ul>
         </div>
@@ -51,7 +51,7 @@
               Remover Equipe
             </button>
           </div>
-          
+
           <div>
             <button
               class="adicionar-membro"
@@ -62,8 +62,8 @@
             </button>
           </div>
         </div>
-          
-        
+
+
       </mat-expansion-panel>
     </mat-accordion>
   </div>

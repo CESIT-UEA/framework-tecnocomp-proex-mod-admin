@@ -1,5 +1,5 @@
 .titulo {
-    color: #FFF;
+    color: #03422F;
     margin: 0 auto;
     text-align: center;
     padding: 15px 0 5px 0;
@@ -10,7 +10,7 @@
 }
 
 .mensagem {
-    color: #FFF;
+    color: #03422F;
     margin: 0 auto;
     text-align: center;
 }
@@ -34,21 +34,28 @@
 }
 
 .cancelar {
-    border: 3px solid #7C4CC6;
+    border: 3px solid #27A36D;
     background-color: transparent;
-    color: #7C4CC6 !important;
+    color: #27A36D !important;
+}
+
+.cancelar:hover {
+    border: none;
+    background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
+    color: #FFF !important;
 }
 
 
 .salvar {
     border: none;
-    background: linear-gradient(90deg, rgba(124, 76, 198, 0.50) 0%, rgba(83, 0, 249, 0.50) 100%), #7C4CC6;
+    background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
+
 }
 
-.salvar:hover, .cancelar:hover {
+.salvar:hover {
     opacity: 50%;
 }
- 
+
 button:focus {
-  outline: none;   
+  outline: none;
 }

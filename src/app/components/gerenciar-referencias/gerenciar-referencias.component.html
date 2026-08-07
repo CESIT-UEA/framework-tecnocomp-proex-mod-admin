@@ -13,7 +13,7 @@
           <p class="descricao">
             <strong>{{ referencia.descricao }}</strong>
           </p>
-          
+
         </div>
         <div class="acoes">
           <button *ngIf="referencia.link" class="botao-acessar-referencia">
@@ -22,13 +22,13 @@
           <button class="botao-editar"
             (click)="editarReferencia(referencia)"
           >
-            <img class="editar-ref" src="../../../assets/icons/editar-ref.png" alt="">
+            <img class="editar-ref" src="../../../assets/icons/editar-proex.png" alt="">
           </button>
-          <button 
+          <button
           class="botao-excluir"
           (click)="deletarReferencia(referencia.id)"
           >
-            <img class="excluir-ref" src="../../../assets/icons/image.png" alt="">
+            <img class="excluir-ref" src="../../../assets/icons/lixeira-proex.svg" alt="">
           </button>
         </div>
       </li>
