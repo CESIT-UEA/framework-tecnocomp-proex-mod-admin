@@ -1,21 +1,35 @@
 .container-pagina {
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 16.83%, rgba(0, 0, 0, 0.09) 47.11%, rgba(66, 0, 146, 0.05) 81.73%, rgba(95, 0, 211, 0.05) 95.21%), #131313;
+  background: #F9FFF9;
   min-height: 88vh;
   align-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.wrapper {
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
+  width: 60%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 40px;
+  padding-top: 8px !important;
 }
 
 .formulario {
-  width: 60%;
+  box-sizing: border-box;
+  width: 100%;
   max-width: 1100px;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  margin: 10px auto;
+  margin: 0 auto;
   gap: 20px;
   background-color: #2C2C2E;
   border-radius: 40px;
-  border-top: 6px solid #7C4CC6;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #2B2A2E;
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
 
 }
@@ -25,20 +39,20 @@
 }
 
 .titulo-etapa {
-  color: #ffffff;
+  color: #03422F;
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 mat-divider {
-  background-color: #7C4CC6;
+  background-color: #27A36D;
   height: 2px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
 h3 {
-  color: white;
+  color: #03422F;
   text-align: center;
 }
 
@@ -53,7 +67,7 @@ h3 {
 .mat-form-field {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #03422F;
   row-gap: 10px;
   padding-bottom: 5px;
   box-sizing: border-box;
@@ -61,9 +75,10 @@ h3 {
 
 .mat-form-field input {
   height: 42px;
-  background-color: #3F3F40;
-  border: none;
-  color: white;
+  border-radius: 10px;
+  border: 1px solid #27A36D;
+  background: #FFF;
+  color: #03422F;
   padding-left: 10px;
 }
 
@@ -126,7 +141,7 @@ button[mat-button] {
   align-items: center;
   background-color: transparent;
   border: none;
-  color: white;
+  color: #03422F;
   cursor: pointer;
   column-gap: 10px;
 }
@@ -181,14 +196,16 @@ button[mat-button] {
 .icone-adicionar,
 .icone-remover {
   border-radius: 50%;
-  background-color: #7C4CC6;
+  background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%), #2F735E;
+;
   height: 25px;
   width: 25px;
+  color: #fff
 }
 
 
 .icone-remover {
-  background-color: #ff5722 !important;
+  background: #F84C4C !important;
 }
 
 .box-input {
@@ -286,23 +303,26 @@ input.ng-invalid.ng-touched:focus {
   height: 35px;
   width: 209px;
   border: none;
-  color: white;
+  color: #03422F;
   padding: 10px;
   justify-content: center;
   border-radius: 10px;
   column-gap: 10px;
-  border: 2px solid white;
-  cursor: pointer
+  border: 2px solid #03422F;
+  cursor: pointer;
+  font-weight: 700;
+  
 }
 
 .botoes-tipo-questao button:hover {
-  background-color: #7C4CC6;
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259 !important;
   border-color: #7C4CC6;
 }
 
 .botao-questao-ativa {
-  background-color: #7C4CC6 !important;
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259 !important;
   border: none !important;
+  color: #fff !important;
 }
 
 .questao-aberta {
@@ -310,13 +330,15 @@ input.ng-invalid.ng-touched:focus {
   flex-direction: column;
   width: 100%;
   row-gap: 10px;
-  color: white;
+  color: #03422F;
 }
 
 .questao-aberta-resposta-esperada {
   height: 150px;
   border: none;
-  color: white;
+  background-color: #fff;
+  color: #03422F;
+  border: 1px solid #27A36D;
 }
 
 .questao-aberta-resposta-esperada:focus {
@@ -344,7 +366,7 @@ input.ng-invalid.ng-touched:focus {
 
 .txt-caixa {
   min-height: 42px;
-  background-color: #3F3F40;
+  background-color: #fff;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -419,8 +441,8 @@ ul {
 /* Estilização do Input do Ebook */
 .file-field #ebookUrlGeral::file-selector-button {
   background-color: transparent;
-  color: rgba(124, 76, 198, 1);
-  border: 2.5px solid rgba(124, 76, 198, 1);
+  color: #27A36D;
+  border: 2.5px solid #27A36D;
   /* font-family: Inter, sans-serif; */
   font-size: 15px;
   font-weight: 700;
@@ -433,7 +455,7 @@ ul {
 }
 
 .file-field #ebookUrlGeral::file-selector-button:hover {
-  background-color: rgba(124, 76, 198, 1);
+  background-color: #27A36D;
   color: #fff;
 }
 
@@ -450,7 +472,9 @@ ul {
 .file-input-wrapper {
   display: flex;
   align-items: center;
-  background-color: #3F3F40;
+  border-radius: 10px;
+  border: 1px solid #27A36D;
+  background: #FFF;
   border-radius: 10px;
   
   gap: 10px;
@@ -480,7 +504,7 @@ ul {
 
 .file-field .cadastro-modulo-label {
   width: 100%;
-  color: #fff;
+  color: #03422F;
 }
 
 .file-bnt {
@@ -488,7 +512,7 @@ ul {
 }
 
 .file-status-text {
-  color: #fff;
+  color: #27A36D;
   /* font-family: Inter, sans-serif; */
   font-size: 15px;
   white-space: nowrap;

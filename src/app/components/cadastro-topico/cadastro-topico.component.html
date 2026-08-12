@@ -1,6 +1,7 @@
 <app-header-voltar texto="Cadastrar Tópico"></app-header-voltar>
 <div class="container-pagina">
-  <div class="formulario" *ngIf="!carregando; else tela">
+  <div class="wrapper">
+    <div class="formulario" *ngIf="!carregando; else tela">
     <mat-horizontal-stepper linear #stepper>
       <mat-step [stepControl]="dadosBasicosFormGroup">
         <div class="passo1">
@@ -45,7 +46,7 @@
               <div class="mensagem-geral">
                 <span *ngIf="tentouAvancar && (dadosBasicosFormGroup.invalid || !selectedFile)">Preencha todos os Campos</span>
               </div>
-              <button class="proximo" (click)="verificarFormulario()">Próximo <img src="../../../assets/icons/proximo.svg" alt="icone de próximo"></button>
+              <button class="proximo" (click)="verificarFormulario()">Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
             </div>
             
           </form>
@@ -92,12 +93,12 @@
             </button>
             <div class="botoes">
               <button class="remover" matStepperPrevious>
-                <img src="../../../assets/icons/voltar.png"> Anterior 
+                <img src="../../../assets/icons/anterior-proex.svg"> Anterior 
               </button>
               <div class="mensagem-geral">
                 <span *ngIf="tentouAvancarVideos && (videoUrlsFormGroup.invalid)">Preencha todos os Campos</span>
               </div>
-              <button class="proximo"(click)="verificarVideos()">Próximo <img src="../../../assets/icons/proximo.svg" alt="icone de próximo"></button>
+              <button class="proximo"(click)="verificarVideos()">Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
             </div>
           </form>
         </div>
@@ -153,13 +154,13 @@
             </button>
             <div class="botoes">
               <button class="voltar" matStepperPrevious>
-                <img src="../../../assets/icons/voltar.png">
+                <img src="../../../assets/icons/anterior-proex.svg">
                 Anterior
               </button>
               <div class="mensagem-geral">
                 <span *ngIf="tentouAvancarSaibaMais && saibaMaisFormGroup.invalid">Preencha todos os Campos</span>
               </div>
-              <button class="proximo" (click)="verificarSaibaMais()">Próximo <img src="../../../assets/icons/proximo.svg" alt="icone de próximo"></button>
+              <button class="proximo" (click)="verificarSaibaMais()">Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
             </div>
           </form>
         </div>
@@ -308,7 +309,7 @@
             </div>
             <div class="botoes">
               <button class="voltar" matStepperPrevious>
-                <img src="../../../assets/icons/voltar.png">
+                <img src="../../../assets/icons/anterior-proex.svg">
                 Anterior
               </button>
               <div class="mensagem-geral">
@@ -323,7 +324,7 @@
               (click)="verificarExercicios(stepper)"
             >
             Próximo
-            <img src="../../../assets/icons/proximo.svg">
+            <img src="../../../assets/icons/proximo-proex.png">
             </button>
           </div>
           </form>
@@ -424,6 +425,7 @@
         </div>
       </mat-step>
     </mat-horizontal-stepper>
+  </div>
   </div>
   <ng-template #tela>
     <div class="carregando-registro">
