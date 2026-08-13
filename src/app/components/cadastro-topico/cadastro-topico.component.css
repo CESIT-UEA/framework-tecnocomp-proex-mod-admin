@@ -216,7 +216,7 @@ button[mat-button] {
 /* Título do passo de revisão */
 .revisao-titulo {
   font-size: 2rem;
-  color: #fff;
+  color: #03422F;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -231,13 +231,13 @@ button[mat-button] {
 }
 
 .revisao-secao strong {
-  color: #fff;
+  color: #03422F;
   /* Destaque para os títulos das informações */
   font-size: 1.3rem;
 }
 
 .revisao-secao p {
-  color: #ffffff;
+  color: #03422F;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -247,13 +247,13 @@ button[mat-button] {
 }
 
 .revisao-secao li {
-  color: #ffffff;
+  color: #03422F;
   font-size: 1rem;
   margin: 15px 0;
 }
 
 a {
-  color: white;
+  color: #03422F;
 
 }
 
@@ -311,12 +311,15 @@ input.ng-invalid.ng-touched:focus {
   border: 2px solid #03422F;
   cursor: pointer;
   font-weight: 700;
+  box-sizing: border-box;
   
 }
 
 .botoes-tipo-questao button:hover {
   background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259 !important;
-  border-color: #7C4CC6;
+  border: none;
+  padding: 10px;
+  /* border-color: #7C4CC6; */
 }
 
 .botao-questao-ativa {
@@ -353,16 +356,51 @@ input.ng-invalid.ng-touched:focus {
   line-height: normal !important;
 }
 
-.limpar-dados {
+.wrapper-limpar-dados-btn {
+  position: relative;
   width: 153px;
   height: 35px;
-  background-color: transparent;
-  border: 2px solid #7C4CC6;
+  background: transparent;
   border-radius: 10px;
-
-  color: #7C4CC6;
+  z-index: 1;
 }
 
+.wrapper-limpar-dados-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+.limpar-dados {
+  position: absolute;
+  inset: 2px;
+
+  width: auto;
+  height: auto;
+
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+
+  /* Gradiente no texto */
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  z-index: 2;
+}
 
 .txt-caixa {
   min-height: 42px;
@@ -372,6 +410,7 @@ input.ng-invalid.ng-touched:focus {
   align-items: center;
   padding-left: 10px;
   margin: 10px 0;
+  border: 1px solid #27A36D;
 }
 
 .saiba-mais,

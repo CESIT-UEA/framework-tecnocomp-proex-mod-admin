@@ -2,172 +2,161 @@
 <div class="container-pagina">
   <div class="wrapper">
     <div class="formulario" *ngIf="!carregando; else tela">
-    <mat-horizontal-stepper linear #stepper>
-      <mat-step [stepControl]="dadosBasicosFormGroup">
-        <div class="passo1">
-          <form [formGroup]="dadosBasicosFormGroup">
-            <h3>Dados Básicos</h3>
-            <mat-divider></mat-divider>
-            <div class="mat-form-field">
-              <mat-label>Nome do Tópico</mat-label>
-              <input formControlName="nome_topico" required />
-              <div class="mensagem-validacao">
-                <span *ngIf="dadosBasicosFormGroup.get('nome_topico')?.errors?.['required'] 
+      <mat-horizontal-stepper linear #stepper>
+        <mat-step [stepControl]="dadosBasicosFormGroup">
+          <div class="passo1">
+            <form [formGroup]="dadosBasicosFormGroup">
+              <h3>Dados Básicos</h3>
+              <mat-divider></mat-divider>
+              <div class="mat-form-field">
+                <mat-label>Nome do Tópico</mat-label>
+                <input formControlName="nome_topico" required />
+                <div class="mensagem-validacao">
+                  <span *ngIf="dadosBasicosFormGroup.get('nome_topico')?.errors?.['required'] 
                             && dadosBasicosFormGroup.get('nome_topico')?.touched">
-                  Nome do tópico é obrigatório
-                </span>
+                    Nome do tópico é obrigatório
+                  </span>
+                </div>
               </div>
-            </div>
 
-            <div class="mat-form-field">
-              <mat-label>Url do slide</mat-label>
-              <input
-                formControlName="textoApoio"
-                required
-              >
-              <div class="mensagem-validacao">
-                <span *ngIf="dadosBasicosFormGroup.get('textoApoio')?.errors?.['required'] 
+              <div class="mat-form-field">
+                <mat-label>Url do slide</mat-label>
+                <input formControlName="textoApoio" required>
+                <div class="mensagem-validacao">
+                  <span *ngIf="dadosBasicosFormGroup.get('textoApoio')?.errors?.['required'] 
                             && dadosBasicosFormGroup.get('textoApoio')?.touched">
-                  URL do slide é obrigatório
-                </span>
-              </div>
-            </div>
-            <div class="cadastro-modulo-campo file-field">
-            <label for="ebookUrlGeral" class="cadastro-modulo-label upload-btn file-bnt">
-              Ebook Geral<span> *</span>
-            </label>
-            <div class="file-input-wrapper">
-              <!-- <mat-label>Ebook do Tópico</mat-label> -->
-              <input type="file" id="ebookUrlGeral"  (change)="onSelectedFile($event)" accept="application/pdf" class="cadastro-modulo-input"  required />
-              <span class="file-status-text">{{ selectedFile ? selectedFile.name : 'Nenhum arquivo selecionado' }}</span>
-            </div>
-            </div>
-            <div class="passo1-botao-proximo">
-              <div class="mensagem-geral">
-                <span *ngIf="tentouAvancar && (dadosBasicosFormGroup.invalid || !selectedFile)">Preencha todos os Campos</span>
-              </div>
-              <button class="proximo" (click)="verificarFormulario()">Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
-            </div>
-            
-          </form>
-        </div>
-      </mat-step>
-
-      <!-- Etapa 2: URLs de Vídeos -->
-      <mat-step [stepControl]="videoUrlsFormGroup">
-        <div class="passo2">
-          <form [formGroup]="videoUrlsFormGroup">
-            <h3>URLs de Vídeos</h3>
-            <mat-divider></mat-divider>
-            <div formArrayName="videoUrls">
-              <div
-                *ngFor="let videoUrl of videoUrls.controls; let i = index"
-                class="videoUrls"
-              >
-                <div class="mat-form-field field-url-video">
-                  <mat-label>URL do Vídeo {{ i + 1 }}</mat-label>
-                  <input [formControlName]="i" required />
-                  <div class="mensagem-validacao">
-                  <span *ngIf="videoUrl.errors?.['required'] && videoUrl.touched">
-                    URL do vídeo é obrigatória
+                    URL do slide é obrigatório
                   </span>
                 </div>
-                  <!-- Botão remover -->
-                   <button
-                      class="remover"
-                      *ngIf="i > 0"
-                      (click)="removerVideoUrl(i)"
-                    >
-                  <div class="icone-remover">
-                    <mat-icon>remove</mat-icon>
-                  </div>
-                </button>
+              </div>
+              <div class="cadastro-modulo-campo file-field">
+                <label for="ebookUrlGeral" class="cadastro-modulo-label upload-btn file-bnt">
+                  Ebook Geral<span> *</span>
+                </label>
+                <div class="file-input-wrapper">
+                  <!-- <mat-label>Ebook do Tópico</mat-label> -->
+                  <input type="file" id="ebookUrlGeral" (change)="onSelectedFile($event)" accept="application/pdf"
+                    class="cadastro-modulo-input" required />
+                  <span class="file-status-text">{{ selectedFile ? selectedFile.name : 'Nenhum arquivo selecionado'
+                    }}</span>
                 </div>
-                <!-- <br /> -->
-                
               </div>
-            </div>
-            <button class="adicionar" (click)="adicionarVideoUrl()">
-              <div class="icone-adicionar"><mat-icon>add</mat-icon></div>
-              Adicionar URL
-            </button>
-            <div class="botoes">
-              <button class="remover" matStepperPrevious>
-                <img src="../../../assets/icons/anterior-proex.svg"> Anterior 
-              </button>
-              <div class="mensagem-geral">
-                <span *ngIf="tentouAvancarVideos && (videoUrlsFormGroup.invalid)">Preencha todos os Campos</span>
+              <div class="passo1-botao-proximo">
+                <div class="mensagem-geral">
+                  <span *ngIf="tentouAvancar && (dadosBasicosFormGroup.invalid || !selectedFile)">Preencha todos os
+                    Campos</span>
+                </div>
+                <button class="proximo" (click)="verificarFormulario()">Próximo <img
+                    src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
               </div>
-              <button class="proximo"(click)="verificarVideos()">Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
-            </div>
-          </form>
-        </div>
-      </mat-step>
 
-      <!-- Etapa 3: Saiba Mais -->
-      <mat-step [stepControl]="saibaMaisFormGroup">
-        <div class="passo3">
-          <form [formGroup]="saibaMaisFormGroup">
-            <h3>Saiba Mais</h3>
-            <mat-divider></mat-divider>
-            <div formArrayName="saibaMais" >
-              <div
-                *ngFor="let sm of saibaMais.controls; let i = index"
-                [formGroupName]="i"
-              >
-               <mat-divider *ngIf="i === 1" class="mat-divider-top-mat-form-field"></mat-divider>
-                <div class="mat-form-field">
-                  <mat-label>Descrição Saiba Mais {{ i + 1 }}</mat-label>
-                  <input matInput formControlName="descricao" required />
-                  <div class="mensagem-validacao">
-                    <span *ngIf="sm.get('descricao')?.invalid && sm.get('descricao')?.touched">
-                    Descrição é obrigatória
-                  </span>
-                  </div>
-                  
-                </div>
-                <div class="mat-form-field field-url">
-                  <mat-label>URL Saiba Mais {{ i + 1 }}</mat-label>
-                  <input matInput formControlName="url" required />
-                  <div class="mensagem-validacao"><span *ngIf="sm.get('url')?.invalid && sm.get('url')?.touched">
-                    URL do saiba mais é obrigatória
-                  </span></div>
-                  
-                </div>
-                <br />
-                <button
-                  class="remover botao-remover"
-                  *ngIf="i > 0"
-                  (click)="removerSaibaMais(i)"
-                >
-                <div class="icone-remover">
-                  <mat-icon>remove</mat-icon>
-                </div>
-                  Remover Saiba Mais
-                </button>
-                <mat-divider *ngIf="i > 0" class="mat-divider-top-mat-form-field divider-bottom"></mat-divider>
-              </div>
-            </div>
-            <button class="adicionar botao-adicionar" (click)="adicionarSaibaMais()">
-              <div class="icone-adicionar"><mat-icon>add</mat-icon></div>
-              Adicionar Saiba Mais
-            </button>
-            <div class="botoes">
-              <button class="voltar" matStepperPrevious>
-                <img src="../../../assets/icons/anterior-proex.svg">
-                Anterior
-              </button>
-              <div class="mensagem-geral">
-                <span *ngIf="tentouAvancarSaibaMais && saibaMaisFormGroup.invalid">Preencha todos os Campos</span>
-              </div>
-              <button class="proximo" (click)="verificarSaibaMais()">Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
-            </div>
-          </form>
-        </div>
-      </mat-step>
+            </form>
+          </div>
+        </mat-step>
 
-      <!-- Etapa 4: Referências -->
-      <!-- <mat-step [stepControl]="referenciasFormGroup">
+        <!-- Etapa 2: URLs de Vídeos -->
+        <mat-step [stepControl]="videoUrlsFormGroup">
+          <div class="passo2">
+            <form [formGroup]="videoUrlsFormGroup">
+              <h3>URLs de Vídeos</h3>
+              <mat-divider></mat-divider>
+              <div formArrayName="videoUrls">
+                <div *ngFor="let videoUrl of videoUrls.controls; let i = index" class="videoUrls">
+                  <div class="mat-form-field field-url-video">
+                    <mat-label>URL do Vídeo {{ i + 1 }}</mat-label>
+                    <input [formControlName]="i" required />
+                    <div class="mensagem-validacao">
+                      <span *ngIf="videoUrl.errors?.['required'] && videoUrl.touched">
+                        URL do vídeo é obrigatória
+                      </span>
+                    </div>
+                    <!-- Botão remover -->
+                    <button class="remover" *ngIf="i > 0" (click)="removerVideoUrl(i)">
+                      <div class="icone-remover">
+                        <mat-icon>remove</mat-icon>
+                      </div>
+                    </button>
+                  </div>
+                  <!-- <br /> -->
+
+                </div>
+              </div>
+              <button class="adicionar" (click)="adicionarVideoUrl()">
+                <div class="icone-adicionar"><mat-icon>add</mat-icon></div>
+                Adicionar URL
+              </button>
+              <div class="botoes">
+                <button class="remover" matStepperPrevious>
+                  <img src="../../../assets/icons/anterior-proex.svg"> Anterior
+                </button>
+                <div class="mensagem-geral">
+                  <span *ngIf="tentouAvancarVideos && (videoUrlsFormGroup.invalid)">Preencha todos os Campos</span>
+                </div>
+                <button class="proximo" (click)="verificarVideos()">Próximo <img
+                    src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
+              </div>
+            </form>
+          </div>
+        </mat-step>
+
+        <!-- Etapa 3: Saiba Mais -->
+        <mat-step [stepControl]="saibaMaisFormGroup">
+          <div class="passo3">
+            <form [formGroup]="saibaMaisFormGroup">
+              <h3>Saiba Mais</h3>
+              <mat-divider></mat-divider>
+              <div formArrayName="saibaMais">
+                <div *ngFor="let sm of saibaMais.controls; let i = index" [formGroupName]="i">
+                  <mat-divider *ngIf="i === 1" class="mat-divider-top-mat-form-field"></mat-divider>
+                  <div class="mat-form-field">
+                    <mat-label>Descrição Saiba Mais {{ i + 1 }}</mat-label>
+                    <input matInput formControlName="descricao" required />
+                    <div class="mensagem-validacao">
+                      <span *ngIf="sm.get('descricao')?.invalid && sm.get('descricao')?.touched">
+                        Descrição é obrigatória
+                      </span>
+                    </div>
+
+                  </div>
+                  <div class="mat-form-field field-url">
+                    <mat-label>URL Saiba Mais {{ i + 1 }}</mat-label>
+                    <input matInput formControlName="url" required />
+                    <div class="mensagem-validacao"><span *ngIf="sm.get('url')?.invalid && sm.get('url')?.touched">
+                        URL do saiba mais é obrigatória
+                      </span></div>
+
+                  </div>
+                  <br />
+                  <button class="remover botao-remover" *ngIf="i > 0" (click)="removerSaibaMais(i)">
+                    <div class="icone-remover">
+                      <mat-icon>remove</mat-icon>
+                    </div>
+                    Remover Saiba Mais
+                  </button>
+                  <mat-divider *ngIf="i > 0" class="mat-divider-top-mat-form-field divider-bottom"></mat-divider>
+                </div>
+              </div>
+              <button class="adicionar botao-adicionar" (click)="adicionarSaibaMais()">
+                <div class="icone-adicionar"><mat-icon>add</mat-icon></div>
+                Adicionar Saiba Mais
+              </button>
+              <div class="botoes">
+                <button class="voltar" matStepperPrevious>
+                  <img src="../../../assets/icons/anterior-proex.svg">
+                  Anterior
+                </button>
+                <div class="mensagem-geral">
+                  <span *ngIf="tentouAvancarSaibaMais && saibaMaisFormGroup.invalid">Preencha todos os Campos</span>
+                </div>
+                <button class="proximo" (click)="verificarSaibaMais()">Próximo <img
+                    src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
+              </div>
+            </form>
+          </div>
+        </mat-step>
+
+        <!-- Etapa 4: Referências -->
+        <!-- <mat-step [stepControl]="referenciasFormGroup">
         <div class="passo4">
           <form [formGroup]="referenciasFormGroup">
             <h3>Referências</h3>
@@ -218,214 +207,193 @@
         </div>
       </mat-step> -->
 
-      <!-- Etapa 5: Exercícios -->
-      <mat-step [stepControl]="exerciciosFormGroup">
-        <div class="passo5">
-          <form [formGroup]="exerciciosFormGroup">
-            <h3>Exercícios</h3>
-            <mat-divider></mat-divider>
-            <div formArrayName="exercicios" *ngIf="exercicios.length > 0">
-              <div
-                *ngFor="let exercicio of exercicios.controls; let i = index"
-                [formGroupName]="i"
-              >
-                <div class="mat-form-field">
-                  <mat-label>Questão do Exercício</mat-label>
-                  <input matInput formControlName="questao" required />
-                  <div class="mensagem-validacao">
-                    <span *ngIf="exercicio.get('questao')?.invalid && exercicio.get('questao')?.touched">
-                    A questão é obrigatória
-                  </span></div>
-                </div>
-                <div class="botoes-tipo-questao">
-                  <button 
-                    class="botao-questao-objetiva" 
-                    [ngClass]="{'botao-questao-ativa': isQuestaoAberta === false}"
-                    (click)="criarQuestaoObjetiva(i)"
-                  >
-                    <img src="../../../assets/icons/icone-questao-objetiva.svg"> Questão objetiva
-                  </button>
-                  <button 
-                    class="botao-questao-discursiva" 
-                    [ngClass]="{'botao-questao-ativa': isQuestaoAberta}"
-                    (click)="criarQuestaoDiscursiva(i)"
-                  >
-                    <img src="../../../assets/icons/icone-questao-discursiva.svg">Questão discursiva
-                  </button>
-                </div>
-                <mat-divider></mat-divider>
-                <div class="questao-aberta" *ngIf="this.isQuestaoAberta">
-                  <label>Resposta esperada</label>
-                  <textarea class="questao-aberta-resposta-esperada" formControlName="respostaEsperada"></textarea>
-                  <span class="mensagem-validacao"
-                    *ngIf="exercicio.get('respostaEsperada')?.invalid && exercicio.get('respostaEsperada')?.touched">
-                    A resposta esperada é obrigatória
-                  </span>
-                </div>
-
-                <div formArrayName="alternativas" *ngIf="!this.isQuestaoAberta">
-                  <div
-                    *ngFor="let alt of alternativas(i).controls; let j = index"
-                    [formGroupName]="j"
-                  >
-                    <h3 style="padding: 20px 0">Alternativa {{ letras[j] }}</h3>
-                    <div class="mat-form-field">
-                      <mat-label>Descrição</mat-label>
-                      <input matInput formControlName="descricao" required />
-                      <span class="mensagem-validacao"
-                        *ngIf="alt.get('descricao')?.invalid && alt.get('descricao')?.touched">
-                        Descrição obrigatória
+        <!-- Etapa 5: Exercícios -->
+        <mat-step [stepControl]="exerciciosFormGroup">
+          <div class="passo5">
+            <form [formGroup]="exerciciosFormGroup">
+              <h3>Exercícios</h3>
+              <mat-divider></mat-divider>
+              <div formArrayName="exercicios" *ngIf="exercicios.length > 0">
+                <div *ngFor="let exercicio of exercicios.controls; let i = index" [formGroupName]="i">
+                  <div class="mat-form-field">
+                    <mat-label>Questão do Exercício</mat-label>
+                    <input matInput formControlName="questao" required />
+                    <div class="mensagem-validacao">
+                      <span *ngIf="exercicio.get('questao')?.invalid && exercicio.get('questao')?.touched">
+                        A questão é obrigatória
                       </span>
                     </div>
-                    <div class="mat-form-field">
-                      <mat-label>Explicação</mat-label>
-                      <input matInput formControlName="explicacao" required />
-                      <span class="mensagem-validacao"
-                      *ngIf="alt.get('explicacao')?.invalid && alt.get('explicacao')?.touched">
-                      Explicação obrigatória
-                      </span>
-                    </div>
-                    <mat-radio-group
-                      formControlName="correta"
-                      [value]="true"
-                      (change)="setAlternativaCorreta(i, j)"
-                      required
-                    >
-                      <mat-radio-button style="color: white" [value]="true"
-                        >Correta</mat-radio-button
-                      >
-                    </mat-radio-group>
-                    <br />
-                    <button
-                      class="limpar-dados"
-                      (click)="limparAlternativa(i, j)"
-                    >
-                      Limpar Dados
+                  </div>
+                  <div class="botoes-tipo-questao">
+                    <button class="botao-questao-objetiva"
+                      [ngClass]="{'botao-questao-ativa': isQuestaoAberta === false}" (click)="criarQuestaoObjetiva(i)">
+                      <img
+                        [src]="isQuestaoAberta === false ? '../../../assets/icons/icone-questao-objetiva-branca.png' : '../../../assets/icons/icone-questao-objetiva.png'">
+                      Questão objetiva
                     </button>
-                    <mat-divider></mat-divider>
+                    <button class="botao-questao-discursiva" [ngClass]="{'botao-questao-ativa': isQuestaoAberta}"
+                      (click)="criarQuestaoDiscursiva(i)">
+                      <img
+                        [src]="isQuestaoAberta ? '../../../assets/icons/icone-questoa-discursiva-branca.png' : '../../../assets/icons/icone-questao-discursiva.png'">Questão
+                      discursiva
+                    </button>
+                  </div>
+                  <mat-divider></mat-divider>
+                  <div class="questao-aberta" *ngIf="this.isQuestaoAberta">
+                    <label>Resposta esperada</label>
+                    <textarea class="questao-aberta-resposta-esperada" formControlName="respostaEsperada"></textarea>
+                    <span class="mensagem-validacao"
+                      *ngIf="exercicio.get('respostaEsperada')?.invalid && exercicio.get('respostaEsperada')?.touched">
+                      A resposta esperada é obrigatória
+                    </span>
+                  </div>
+
+                  <div formArrayName="alternativas" *ngIf="!this.isQuestaoAberta">
+                    <div *ngFor="let alt of alternativas(i).controls; let j = index" [formGroupName]="j">
+                      <h3 style="padding: 20px 0">Alternativa {{ letras[j] }}</h3>
+                      <div class="mat-form-field">
+                        <mat-label>Descrição</mat-label>
+                        <input matInput formControlName="descricao" required />
+                        <span class="mensagem-validacao"
+                          *ngIf="alt.get('descricao')?.invalid && alt.get('descricao')?.touched">
+                          Descrição obrigatória
+                        </span>
+                      </div>
+                      <div class="mat-form-field">
+                        <mat-label>Explicação</mat-label>
+                        <input matInput formControlName="explicacao" required />
+                        <span class="mensagem-validacao"
+                          *ngIf="alt.get('explicacao')?.invalid && alt.get('explicacao')?.touched">
+                          Explicação obrigatória
+                        </span>
+                      </div>
+                      <mat-radio-group formControlName="correta" [value]="true" (change)="setAlternativaCorreta(i, j)"
+                        required>
+                        <mat-radio-button style="color: white" [value]="true">Correta</mat-radio-button>
+                      </mat-radio-group>
+                      <br />
+                      <div class="wrapper-limpar-dados-btn">
+                        <button class="limpar-dados" (click)="limparAlternativa(i, j)">
+                          Limpar Dados
+                        </button>
+                      </div>
+
+                      <mat-divider></mat-divider>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="botoes">
-              <button class="voltar" matStepperPrevious>
-                <img src="../../../assets/icons/anterior-proex.svg">
-                Anterior
-              </button>
-              <div class="mensagem-geral">
-              <span *ngIf="tentouAvancarExercicio && 
+              <div class="botoes">
+                <button class="voltar" matStepperPrevious>
+                  <img src="../../../assets/icons/anterior-proex.svg">
+                  Anterior
+                </button>
+                <div class="mensagem-geral">
+                  <span *ngIf="tentouAvancarExercicio && 
               (exerciciosFormGroup.invalid || (!isQuestaoAberta && !isAlternativaCorretaValida()))">
-                Preencha todos os campos
-              </span>
+                    Preencha todos os campos
+                  </span>
+                </div>
+
+                <button class="proximo" (click)="verificarExercicios(stepper)">
+                  Próximo
+                  <img src="../../../assets/icons/proximo-proex.png">
+                </button>
+              </div>
+            </form>
+          </div>
+        </mat-step>
+
+        <!-- Etapa 6: Revisão -->
+        <mat-step>
+          <div class="passo6">
+            <h3 class="revisao-titulo">Revisar Informações</h3>
+            <mat-divider></mat-divider>
+
+            <div class="revisao-secao">
+              <p>
+                <strong class="txt-secao-um">Nome do Tópico</strong>
+              </p>
+              <p class="txt-caixa">{{ dadosBasicosFormGroup.value.nome_topico }}</p>
+              <p>
+                <strong class="txt-secao-um">Texto de Apoio:</strong>
+              </p>
+              <a class="txt-caixa" [href]="dadosBasicosFormGroup.value.textoApoio" target="_blank">Link</a>
+              <p>
+                <strong class="txt-secao-um">Ebook Geral:</strong>
+
+              </p>
+              <a class="txt-caixa" [href]="pdfPreviewUrl" target="_blank">Link</a>
             </div>
 
-            <button
-              class="proximo"
-              (click)="verificarExercicios(stepper)"
-            >
-            Próximo
-            <img src="../../../assets/icons/proximo-proex.png">
-            </button>
-          </div>
-          </form>
-        </div>
-      </mat-step>
-    
-      <!-- Etapa 6: Revisão -->
-      <mat-step>
-        <div class="passo6">
-          <h3 class="revisao-titulo">Revisar Informações</h3>
-          <mat-divider></mat-divider>
+            <mat-divider></mat-divider>
 
-          <div class="revisao-secao">
-            <p>
-              <strong class="txt-secao-um">Nome do Tópico</strong>
-            </p>
-            <p class="txt-caixa">{{ dadosBasicosFormGroup.value.nome_topico }}</p>
-            <p>
-              <strong class="txt-secao-um">Texto de Apoio:</strong>
-            </p>
-            <a class="txt-caixa" [href]="dadosBasicosFormGroup.value.textoApoio" target="_blank">Link</a>
-            <p>
-              <strong class="txt-secao-um">Ebook Geral:</strong>
-              
-            </p>
-            <a class="txt-caixa" [href]="pdfPreviewUrl" target="_blank">Link</a>
-          </div>
-
-          <mat-divider></mat-divider>
-
-          <div class="revisao-secao">
-            <p><strong class="txt-secao-um">URLs de Vídeos:</strong></p>
-            <ul>
-              <li
-                *ngFor="
+            <div class="revisao-secao">
+              <p><strong class="txt-secao-um">URLs de Vídeos:</strong></p>
+              <ul>
+                <li *ngFor="
                   let url of videoUrlsFormGroup.value.videoUrls;
                   let i = index
-                "
-              >
-                <p class="txt-caixa">
-                  <a [href]="url"> Video {{ i + 1 }} </a>
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <mat-divider></mat-divider>
-
-          <div class="revisao-secao">
-            <p><strong class="txt-secao-um">Saiba Mais:</strong></p>
-            <ul>
-              <li
-                class="txt-caixa saiba-mais"
-                *ngFor="
-                  let sm of saibaMaisFormGroup.value.saibaMais;
-                  let i = index
-                "
-              >
-                <p>Descrição: {{ sm.descricao }}</p>
-                <p><a [href]="sm.url"> URL </a></p>
-              </li>
-            </ul>
-          </div>
-
-          <mat-divider></mat-divider>
-
-        </div>
-        <div class="revisao-secao">
-          <p><strong class="txt-secao-um">Exercício:</strong></p>
-          <ul>
-            <li
-              *ngFor="let exercicio of exerciciosFormGroup.value.exercicios"
-            >
-            <p class="questao"><span style="font-weight: bold !important;">Questão</span> - {{ exercicio.questao }}</p>
-              <ul>
-                <li class="caixa-exercicio"  *ngFor="let alternativa of exercicio.alternativas; let i = index">
-                  <div class="letra" [ngClass]="{'correto': alternativa.correta == true}">
-                    <h3>{{letras[i]}}</h3>
-                  </div>     
-                  <div class="textos-exercicio">
-                    <p>Descrição: {{ alternativa.descricao }}</p>
-                    <p class="explicacao" [ngClass]="{'explicacao-correta': alternativa.correta == true}">Explicação: {{ alternativa.explicacao }}</p>
-                  </div>
+                ">
+                  <p class="txt-caixa">
+                    <a [href]="url"> Video {{ i + 1 }} </a>
+                  </p>
                 </li>
               </ul>
-            </li>
-          </ul>
+            </div>
 
-          <div class="botoes">
-            <button class="voltar" matStepperPrevious>
+            <mat-divider></mat-divider>
+
+            <div class="revisao-secao">
+              <p><strong class="txt-secao-um">Saiba Mais:</strong></p>
+              <ul>
+                <li class="txt-caixa saiba-mais" *ngFor="
+                  let sm of saibaMaisFormGroup.value.saibaMais;
+                  let i = index
+                ">
+                  <p>Descrição: {{ sm.descricao }}</p>
+                  <p><a [href]="sm.url"> URL </a></p>
+                </li>
+              </ul>
+            </div>
+
+            <mat-divider></mat-divider>
+
+          </div>
+          <div class="revisao-secao">
+            <p><strong class="txt-secao-um">Exercício:</strong></p>
+            <ul>
+              <li *ngFor="let exercicio of exerciciosFormGroup.value.exercicios">
+                <p class="questao"><span style="font-weight: bold !important;">Questão</span> - {{ exercicio.questao }}
+                </p>
+                <ul>
+                  <li class="caixa-exercicio" *ngFor="let alternativa of exercicio.alternativas; let i = index">
+                    <div class="letra" [ngClass]="{'correto': alternativa.correta == true}">
+                      <h3>{{letras[i]}}</h3>
+                    </div>
+                    <div class="textos-exercicio">
+                      <p>Descrição: {{ alternativa.descricao }}</p>
+                      <p class="explicacao" [ngClass]="{'explicacao-correta': alternativa.correta == true}">Explicação:
+                        {{ alternativa.explicacao }}</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="botoes">
+              <button class="voltar" matStepperPrevious>
                 <img src="../../../assets/icons/voltar.png">
                 Anterior
               </button>
-            <button class="finalizar" (click)="onSubmit()">
-              Finalizar
-            </button>
+              <button class="finalizar" (click)="onSubmit()">
+                Finalizar
+              </button>
+            </div>
           </div>
-        </div>
-      </mat-step>
-    </mat-horizontal-stepper>
-  </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </div>
   </div>
   <ng-template #tela>
     <div class="carregando-registro">
