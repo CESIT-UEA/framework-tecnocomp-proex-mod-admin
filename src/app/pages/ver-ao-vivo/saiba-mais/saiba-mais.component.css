@@ -1,6 +1,6 @@
 :host{
   height: 100%;
-  background-color: black;
+  background-color: #fff;
   display: block;
 }
 .header-recursos-complementares {
@@ -9,7 +9,6 @@
   grid-template-columns: 95% 5%;
   width: 100%;
   justify-content: center;
-  background-color: #161616;
   align-items: center;
 }
 
@@ -22,7 +21,7 @@
 
 .header-links p {
   font-size: 30px;
-  color: #B3B3B3;
+  color: #03422F;
 }
 
 
@@ -43,7 +42,7 @@
   width: 100%;
   text-align: center;
   padding: 10px 0;
-  color:white
+  color:#03422F;
 }
 .container-links-text a{
   text-decoration: none;
@@ -52,17 +51,20 @@
 }
 
 .container-links-text-caixa{
-  border: 1px solid #9665DF;
+  border-radius: 15px;
   width: 60%;
   margin-top: 15px;
   border-radius: 10px;
+  border: 3px solid #39A935;
+  padding: 10px 0;
 }
 
 #container-links-text-frase{
   text-align: justify;
   width: 60%;
   padding: 10px;
-  color: #FBFBFB;
+  font-size: 20px;
+  color: #03422F;
 }
 
 .container-links-text-caixa-descricao2{
@@ -71,16 +73,19 @@
 
 .container-links-text-caixa-descricao1{
   padding-top: 10px;
-  color:#B3B3B3;
+  color:#2F735E;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 
 .container-links-text-caixa a{
   display: inline-block;
-  background-color: #9665DF;
-  padding: 5px 10px;
+  background: linear-gradient(90deg, #2F735E 0%, #196D53 100%), #2F735E;;
+  padding: 4px 28px;
   margin-bottom: 10px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .container-links-text-caixa-descricao-conteudo{

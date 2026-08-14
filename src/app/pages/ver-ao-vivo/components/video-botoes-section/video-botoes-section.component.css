@@ -53,7 +53,9 @@
 
 .imagem-acima {
   align-self: center;
-  margin-bottom: 70px;
+  height: 280px;
+  width: 280px;
+  /* margin-bottom: 70px; */
 }
 
 .title {
@@ -62,7 +64,7 @@
 
 .text-unidade{
   padding-left: 20px;
-  color: #9665df;
+  color: rgba(47, 115, 94, 1);
 }
 .container-esquerdo app-video-section iframe {
   width: 100%;

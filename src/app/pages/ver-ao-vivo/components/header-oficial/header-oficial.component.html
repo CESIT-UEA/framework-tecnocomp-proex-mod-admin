@@ -1,6 +1,6 @@
 <div class="container">
   <header class="header">
-    <img src="../../../../../assets/imgs/tecnocomp.png" alt="Tecnocom+ LOGO" [routerLink]="voltar()"/>
+    <img style="height: 57px;" src="../../../../../assets/imgs/uea_01.svg" alt="PROEX LOGO" [routerLink]="voltar()"/>
     <div class="links">
             <a
               class="btn-ficha"
@@ -33,7 +33,7 @@
           {{ this.getUsuarioDados().username[0] }}
         </div>
         <mat-icon
-          style="color: white; cursor: pointer"
+          style=" cursor: pointer"
           (click)="this.verAoVivoService.abreMenuUser(); $event.stopPropagation()"
         >
           keyboard_arrow_down

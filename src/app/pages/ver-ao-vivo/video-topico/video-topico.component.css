@@ -7,7 +7,7 @@
   height: 90%;
 }
 .videos-assistidos-box {
-  background: #1b1b1b;
+  background: #fff;
   width: 100%;
   padding: 5px 0;
 }
@@ -25,7 +25,7 @@
   grid-template-columns: 20% 1fr;
   border-radius: 0 0 15px 15px;
   border: 1px solid rgba(39, 39, 39, 0.5);
-  background: #1b1b1b;
+  background: #fff;
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
@@ -57,8 +57,9 @@
   line-height: normal;
   color: #fff;
   cursor: pointer;
-  border: 1px solid #793cd4;
-  position: relative; /* Permite posicionamento relativo */
+  /* border: 1px solid #793cd4; */
+  position: relative; 
+  box-shadow: 0 0 4px 0.5px rgba(0, 0, 0, 0.50);
 }
 .navigate-p {
   align-self: flex-start;
@@ -84,8 +85,9 @@
 }
 
 .active {
-  background-color: #9665df;
-  border: 2px solid white;
+  background-color: #068E73;
+  ;
+  
 }
 
 .loading {

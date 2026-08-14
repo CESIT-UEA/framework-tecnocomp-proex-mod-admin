@@ -2,44 +2,31 @@
   display: flex;
   align-items: center;
   color: white;
-  height: 7vh;
-  background-color: #131313;
+  height: 9vh;
+  background-color: #fff;
   position: relative;
   justify-content: space-between;
   align-items: center;
-}
-.button {
-  border-radius: 8px;
-  background: linear-gradient(
-      90deg,
-      rgba(92, 51, 153, 0.75) 0%,
-      rgba(71, 42, 125, 0.61) 14.78%,
-      rgba(57, 36, 107, 0.53) 24.39%,
-      rgba(29, 38, 92, 0.45) 57.95%,
-      rgba(40, 53, 122, 0.6) 85.46%,
-      rgba(51, 68, 153, 0.75) 100%
-    ),
-    #0f0f0f;
-  padding: 6px 15px;
+  width: 96%;
   margin: 0 auto;
-  cursor: pointer;
-  position: absolute;
-  left: 40%;
 }
+
 .link-proximo {
   display: inline-grid;
   grid-template-columns: auto auto;
+  justify-content: center;
+  column-gap: 10px;
   align-items: center;
   text-decoration: none;
-  font: normal 400 16px Arial;
-  column-gap: 10px;
-  padding-right: 20px;
-  /* padding-bottom: 10px; */
-  width: fit-content;
+  font-size: 18px;
+  /* column-gap: 10px; */
+  /* width: fit-content; */
   cursor: pointer;
-  
+  background: linear-gradient(90deg, #2F735E 0%, #196D53 100%), #2F735E;
+  height: 40px;
+  width: 229px;
+  border-radius: 6px;
 }
-
 
 
 .link-voltar {
@@ -54,17 +41,20 @@
 .link-voltar {
   display: inline-grid;
   grid-template-columns: auto auto;
+  justify-content: center;
   align-items: center;
-  text-decoration: none;
-  font-family: Arial;
-  font-size: 16px;
-  line-height: normal;
   column-gap: 10px;
-  padding-left: 20px;
+  text-decoration: none;
+   font-size: 18px;
+  column-gap: 10px;
+  /* padding-left: 20px; */
   /* padding-bottom: 10px; */
-  width: fit-content;
   justify-self: start;
   cursor: pointer;
+  background: linear-gradient(90deg, #2F735E 0%, #196D53 100%), #2F735E;
+  height: 40px;
+  width: 229px;
+  border-radius: 6px;
 }
 .container-links {
   grid-template-columns: auto auto;

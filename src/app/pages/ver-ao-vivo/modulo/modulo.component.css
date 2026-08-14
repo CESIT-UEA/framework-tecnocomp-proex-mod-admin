@@ -11,7 +11,7 @@
       rgba(34, 45, 102, 0.7) 100%
     ),
     #000; */
-    background: url('../../../../assets/fundo-alternativo.png');
+    background: #fff;
     background-repeat: no-repeat;
     background-size: cover;
 }

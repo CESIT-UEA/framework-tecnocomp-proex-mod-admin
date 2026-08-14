@@ -1,85 +1,66 @@
 <div class="container-topico">
   <app-header-topico></app-header-topico>
   <div class="titulo-topico" *ngIf="this.topicos.length > 0;">
-  <ul >
-    <!-- Nome do tópico da unidade -->
-    <li class="titulo-topico-atual">{{ this.verAoVivoService.controll_topico + 1 }}. {{ topicoAtual?.nome_topico }}</li>
-    <hr>
-  </ul>  
-</div>
-<main *ngIf="this.topicos.length > 0; else semTopico" class="main">
-  <div class="div-slide">
-    <div class="container-video">
-      <app-video-topico [videos]="this.verAoVivoService.dados_completos.Topicos?.[this.verAoVivoService.controll_topico]?.VideoUrls"></app-video-topico>
-    </div>
+    <ul>
+      <!-- Nome do tópico da unidade -->
+      <li class="titulo-topico-atual">{{ this.verAoVivoService.controll_topico + 1 }}. {{ topicoAtual?.nome_topico }}
+      </li>
+      <hr>
+    </ul>
   </div>
-  <div class="recursos-complementares" > 
-    <p class="title">Recursos Complementares</p>
-    <section class="section-texto">
-      <div class="botoes-cima">
-      <button class="textoApoio" routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/slide">
-        <img src="../../../../assets/icons/texto-de-apoio.svg"
-            alt="Icone para download do ebook">
+  <main *ngIf="this.topicos.length > 0; else semTopico" class="main">
+    <div class="div-slide">
+      <div class="container-video">
+        <app-video-topico
+          [videos]="this.verAoVivoService.dados_completos.Topicos?.[this.verAoVivoService.controll_topico]?.VideoUrls"></app-video-topico>
+      </div>
+    </div>
+    <div class="recursos-complementares">
+      <p class="title">Recursos Complementares</p>
+      <section class="section-texto">
+        <div class="botoes-cima">
+          <button class="textoApoio" routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/slide">
+            <img src="../../../../assets/icons/icone-slide.png" alt="Icone para download do ebook">
             Slide
-      </button>
-      <button class="saibaMais" routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/saiba-mais">
-          <img
-            src="../../../../assets/icons/saibaMais.svg"
-            alt="Icone para download do ebook"
-          />
-          Saiba mais
-      </button>
-    </div>
-    <div class="botoes-baixo">
-      <button class="referencias" routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/referencias">
-          <img
-            src="../../../../assets/icons/referencias.svg"
-            alt="Icone para download do ebook"
-          />
-          Referências
-      </button>
-    </div>
-    </section>
-    <div class="position">
-      <section class="buttons-final">
-        <button class="atividade-botao" routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/exercicios">
-          <img
-            src="../../../../assets/icons/atividade.svg"
-            alt="Icone para ir para a atividade da unidade"
-            width="22px"
-            height="24px"
-          />
-          ATIVIDADE
-        </button>
-        <!-- Botão para download do e-book do tópico -->
-        <a
-          href="{{
-            this.verAoVivoService.dados_completos.Topicos?.[this.verAoVivoService.controll_topico]?.ebookUrlGeral
-          }}"
-          target="_blank"
-        >
-          <button class="ebook-botao">
-            <a download="E-book Teste.PDF"
-              >E-book Tópico {{ this.verAoVivoService.controll_topico + 1 }}</a
-            >
-            <img
-              src="assets/icons/download.svg"
-              alt="Icone para download do ebook"
-              width="22px"
-              height="24px"
-            />
           </button>
-        </a>
+          <button class="saibaMais"
+            routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/saiba-mais">
+            <img src="../../../../assets/icons/icone-saiba-mais.png" alt="Icone para download do ebook" />
+            Saiba mais
+          </button>
+          <button class="referencias"
+            routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/referencias">
+            <img src="../../../../assets/icons/icone-referencias.png" alt="Icone para download do ebook" />
+            Referências
+          </button>
+        </div>
+
       </section>
+      <div class="position">
+        <section class="buttons-final">
+          <button class="atividade-botao"
+            routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/exercicios">
+            <img src="../../../../assets/icons/atividade.svg" alt="Icone para ir para a atividade da unidade"
+              width="22px" height="24px" />
+            ATIVIDADE
+          </button>
+          <!-- Botão para download do e-book do tópico -->
+          <a class="ebook-botao"
+            [href]="verAoVivoService.dados_completos.Topicos?.[verAoVivoService.controll_topico]?.ebookUrlGeral"
+            target="_blank">
+            <img src="assets/icons/download.png" alt="Ícone para download do ebook" />
+
+            E-book Tópico {{ verAoVivoService.controll_topico + 1 }}
+          </a>
+        </section>
+      </div>
     </div>
-  </div>
-  
-</main>
-<ng-template #semTopico>
+
+  </main>
+  <ng-template #semTopico>
     <p class="sem-topico">
       Nenhum tópico cadastrado
     </p>
   </ng-template>
-<app-links-navegacao></app-links-navegacao>
+  <app-links-navegacao></app-links-navegacao>
 </div>
-

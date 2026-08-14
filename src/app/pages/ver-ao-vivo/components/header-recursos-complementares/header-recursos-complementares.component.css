@@ -1,12 +1,12 @@
 :host{
   height: 10vh;
-  background-color: black;
   display: block;
 }
 
 .titulo {
-  font-size: 30px;
+  font-size: 24px;
   color: #fff;
+
 }
 
 .header-recursos-complementares {
@@ -15,7 +15,8 @@
   grid-template-columns: 100%;
   width: 100%;
   justify-content: center;
-  background-color: #161616;
+  background-image: url('../../../../../assets/imgs/fundo_header.png');
+  background-size: cover;
   align-items: center;
 }
 
@@ -32,15 +33,15 @@
 }
 
 .header-links p {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
-  color: #B3B3B3;
+  color: #fff;
 }
 
 
 
 .container-links-p {
-  color:  #B3B3B3;
+  color:  #fff;
   font-family: Arial;
   font-size: 24px;
   font-style: normal;

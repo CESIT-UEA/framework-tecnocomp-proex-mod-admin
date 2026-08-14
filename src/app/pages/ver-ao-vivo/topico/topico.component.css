@@ -1,13 +1,13 @@
 
 
 .container-topico {
-  background-color: #131313;
+  background-color: #fff;
   height: 100vh;
 }
 
 
 .titulo-topico {
-  background-color: #131313;
+  background-color: #fff;
   display: flex;
   position: relative;
   align-items: center;
@@ -29,7 +29,7 @@
 }
 
 .titulo-topico ul li::marker {
-  color: #9665df;
+  color: #2F735E;
 }
 
 
@@ -38,13 +38,14 @@
     height: 2px;
     margin: 10px auto 10px;
     border-radius: 10px;
-    background-color: #3c2859;
+    background-color: #26988680;
     border: none;
 }
 
 .titulo-topico-atual {
-  color: #fff;
-  font-size: 25px;
+  color: #2F735E;
+  font-size: 27px;
+  font-weight: bold;
   padding: 30px 0 0;
 
 }
@@ -61,32 +62,33 @@
 }
 
 main {
-  background-color: #131313;
-  height: 70vh;
+  background-color: #fff;
+  height: 68vh;
   display: flex;
-  border-bottom: 2px solid #222222;
+  border-bottom: 2px solid rgba(143, 203, 191, 1);
 }
 
 .recursos-complementares {
   height: 84%;
   width: 19%;
   border-radius: 15px;
-  background-color: rgba(28, 28, 28, .7);
+  background-color: #fff;
   padding: 30px;
   max-width: 300px;
+  box-shadow: rgba(50, 50, 93, .25) 0px 6px 12px -2px, rgba(0, 0, 0, .3) 0px 3px 7px -3px;
 }
 
 .title {
-    color: #fff;
+    color: #2F735E;
     text-align: center;
     text-shadow: -5px 5px 5px rgba(0, 0, 0, .25);
     font-family: var(fontCustom);
-    font-size: 18px;
+    font-size: 19px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     padding-bottom: 5px;
-    border-bottom: 2px solid #9665df;
+    border-bottom: 2px solid #2F735E;
 }
 
 .section-texto
@@ -100,9 +102,17 @@ main {
 
 
 
-.recursos-complementares ,.botoes-cima, .botoes-baixo ,.saibaMais, .textoApoio, .referencias {
+.recursos-complementares , .botoes-baixo ,.saibaMais, .textoApoio, .referencias {
   display: flex;
+  
 }
+
+.botoes-cima {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .recursos-complementares {
   flex-direction: column;
@@ -123,27 +133,29 @@ button:hover {
 }
 
 .saibaMais, .textoApoio, .referencias {
-  flex-direction: column;
-  width: 6rem;
-  height: 70px;
+  width: 90%;
+  height: 38px;
   padding: 8px;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
   border-radius: 6px;
-  background: #2a2a2a;
-  box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  background: #fff;
+  box-shadow: 0 0 4px 0.5px rgba(0, 0, 0, 0.50);
   cursor: pointer;
-  color: white;
+  color: #2F735E;
   border: none;
   position: relative;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .buttons-final {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .atividade-botao {
@@ -159,39 +171,40 @@ button:hover {
   font-family: Arial;
   font-size: 15.25px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   line-height: normal;
   margin-bottom: 22px;
-  width: 95%;
+  width: 90%;
   height: 40px;
   cursor: pointer;
-  background: var(--2, #793cd4);
+  background: linear-gradient(90deg, #2F735E 0%, #196D53 100%), #2F735E;
+  
 }
 
 .ebook-botao {
   display: inline-flex;
-  padding: 9.868px 35.883px;
   justify-content: center;
   align-items: center;
   gap: 12.559px;
   background-color: transparent;
-  border-radius: 7.177px;
-  border: 1.794px solid var(--Terciaria, #fff);
+  border-radius: 8px;
   cursor: pointer;
   height: 40px;
-  width: 95%;
+  width: 90%;
+  border: 2px solid #2F735E;
+  text-decoration: none;
+  color: #2F735E;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
 }
 
-button.ebook-botao a {
-  color: #fff;
-  text-align: center;
-  font-family: Arial;
-  font-size: 15.25px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-decoration: none;
-  width: 100%;
+
+
+.atividade-botao,
+.ebook-botao {
+  box-sizing: border-box;
 }
 
 .sem-topico {

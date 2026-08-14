@@ -13,6 +13,7 @@
 
 .imagem-acima {
   align-self: center;
+
 }
 
 .button-section .button-group {
@@ -39,34 +40,51 @@
   border-radius: 6.95px;
   background: none;
   margin: 0 auto;
-  color: #fff;
+  color: #2F735E;
   font-family: minhaFonte;
-  border: 1.738px solid #fff;
+  border: 3px solid #2F735E;
   font-size: 0.8rem;
   font-style: normal;
   font-weight: 500;
-  background: linear-gradient(to right, #5e2fa5 50%, transparent 50%);
+  /* background: linear-gradient(to right, #2F735E 50%, transparent 50%); */
   background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all 0.5s ease-out;
+  /* background-position: right bottom; */
+  /* transition: all 0.5s ease-out; */
   cursor: pointer;
 }
 
 .button-section .button-group .download-button p {
-  color: #fff;
+  color: #2F735E;
+  font-weight: bold;
+  font-size: 16px;
 }
 
+.download-verde {
+  display: block;
+}
+
+.download-branco {
+  display: none;
+}
+
+
 .button-section .button-group .download-button:hover {
-  background-position: left bottom;
-  color: black;
-  font-weight: 400;
-  line-height: normal;
-  border: 1.738px solid #50288d;
+  background-color: #2F735E;
+  p {
+    color: white !important;
+  }
+  .download-verde {
+    display: none;
+  }
+
+  .download-branco {
+    display: block;
+  }
 }
 
 .button-section .button-group .start-button {
   border-radius: 0.49963rem;
-  background: #793cd4;
+  background: #2F735E;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--Terciaria, #fff);
   text-align: center;

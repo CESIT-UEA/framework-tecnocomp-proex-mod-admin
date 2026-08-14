@@ -6,16 +6,8 @@
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  border: 1px solid var(--Primaria, #9665df);
-  background: linear-gradient(
-      167deg,
-      rgba(61, 34, 102, 0.7) 3.02%,
-      rgba(34, 25, 72, 0.42) 24.84%,
-      rgba(16, 19, 53, 0.24) 54.42%,
-      rgba(11, 20, 69, 0.37) 77.21%,
-      rgba(34, 45, 102, 0.7) 100%
-    ),
-    #000;
+  border: 1px solid rgba(57, 169, 53, 1);
+  background-color: #2F735E;
   position: fixed;
   right: 2%;
   top: 2%;
@@ -24,16 +16,8 @@
   z-index: 2;
   cursor: pointer;
   border-radius: 8px;
-  border: 1px solid var(--1-4, #69479c);
-  background: linear-gradient(
-      167deg,
-      rgba(61, 34, 102, 0.7) 3.02%,
-      rgba(34, 25, 72, 0.42) 24.84%,
-      rgba(16, 19, 53, 0.24) 54.42%,
-      rgba(11, 20, 69, 0.37) 77.21%,
-      rgba(34, 45, 102, 0.7) 100%
-    ),
-    #000;
+  border: 1px solid rgba(57, 169, 53, 1);
+  background: #fff;
 }
 
 .nome {
@@ -43,7 +27,7 @@
   gap: 15px;
 }
 .nome p {
-  color: white;
+  color: #03422F;
   margin-top: 15px;
 }
 
@@ -53,11 +37,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
-  color: white;
+  color: #03422F;
 }
 .cima-p {
   margin-left: 15px;
-  color: #fff;
+  color: #03422F;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -68,7 +52,7 @@
   align-items: center;
   width: 80%;
   gap: 5px;
-  color: var(--30, #e6e6e6);
+  color: var(--30, #03422F);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -83,16 +67,16 @@
   height: 45px;
   background-color: white;
   border-radius: 28px;
-  border: 3px solid var(--Primaria, #9665df);
+  border: 3px solid rgba(57, 169, 53, 1);
   margin: 0 auto;
-  color: #474747;
+  color: #03422F;
   font-size: 31.395px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 .nome-info p {
-  color: var(--Terciaria, #fff);
+  color: var(--Terciaria, #03422F);
   font-family: Arial;
   font-size: 16px;
   font-style: normal;

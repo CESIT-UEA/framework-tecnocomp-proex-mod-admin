@@ -18,9 +18,11 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  background-image: url('../../../../../assets/imgs/fundo_header.png');
+  background-size: cover;
 }
 .header img {
-  max-height: 80px;
+  max-height: 48px;
   height: 79;
   width: 180px;
   padding: 5px 0;
@@ -58,7 +60,7 @@
   align-items: center;
   gap: 5px;
   border-radius: 20px;
-  background: #131313;
+  background: #fff;
   margin-right: 20px;
   
 }
@@ -70,7 +72,7 @@
   height: 28px;
   background-color: white;
   border-radius: 28px;
-  border: 1px solid var(--Primaria, #9665df);
+  border: 1px solid rgba(0, 102, 50, 1);
   color: #000;
   font-size: 24px;
   font-style: normal;
@@ -103,19 +105,19 @@ a {
 }
 
 .btn-ficha.ativo {
-  border-bottom: 3px solid #793cd4;
+  border-bottom: 3px solid #fff;
 }
 
 .btn-home.ativo {
-  border-bottom: 3px solid #793cd4;
+  border-bottom: 3px solid #fff;
 }
 
 .btn-sobre.ativo {
-  border-bottom: 3px solid #793cd4;
+  border-bottom: 3px solid #fff;
 }
 
 .btn-ficha:hover, .btn-home:hover, .btn-sobre:hover {
-  border-bottom: 3px solid #793cd4;
+  border-bottom: 3px solid #fff;
   /* padding-bottom: 3px */
   width: fit-content;
 }
