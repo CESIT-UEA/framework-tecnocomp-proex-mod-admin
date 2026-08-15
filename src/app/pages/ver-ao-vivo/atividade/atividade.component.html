@@ -1,4 +1,4 @@
-<app-header-recursos-complementares icone="../../../../assets/icons/atividade.svg" texto="Atividade"></app-header-recursos-complementares>
+<app-header-recursos-complementares icone="../../../../assets/icons/clipboard.png" texto="Atividade"></app-header-recursos-complementares>
 <main class="container-atividade">
     <div class="questao-aberta" *ngIf="this.exercicio.aberta">
       <app-questao-aberta [exercicio]="this.exercicio"></app-questao-aberta>
@@ -9,12 +9,17 @@
               <ul>
                 <li class="caixa-exercicio"  *ngFor="let alternativa of exercicio.Alternativas; let i = index">
       
-                   <div class="letra" 
-                   [ngStyle]="{
-                    'background-color': (alternativa.correta && this.selecionado[i]) ? '#58DB43' : 
-                    (!alternativa.correta && !this.selecionado[i]) || (alternativa.correta && !this.selecionado[i]) ? '#A174E2' : 'red'
-                    }"
-                   >
+                  <div
+  class="letra"
+  [ngStyle]="{
+    'background':
+      (alternativa.correta && selecionado[i])
+        ? '#58DB43'
+        : (!alternativa.correta && !selecionado[i]) || (alternativa.correta && !selecionado[i])
+          ? 'linear-gradient(90deg, #206377 0%, #247E6E 66.35%, rgba(36, 131, 110, 0.88) 83.65%, rgba(39, 163, 109, 0.10) 100%), #2F735E'
+          : 'red'
+  }"
+>
                     <h3 *ngIf="!this.selecionado[i]">{{letras[i]}}</h3>
                     <img
                     *ngIf="this.selecionado[i] && alternativa.correta" 
@@ -35,7 +40,7 @@
                         > {{ alternativa.explicacao }}
                         </p>
                         <mat-icon class="icone-olho" (click)="selecionar(i)" [ngStyle]="{
-                          'color': this.selecionado[i] ? '#A174E2' : 'white'
+                          'color': !this.selecionado[i] ? '#888888' : alternativa.correta ? '#44A834' : 'red'
                         }">remove_red_eye</mat-icon>
                         
                     </div>

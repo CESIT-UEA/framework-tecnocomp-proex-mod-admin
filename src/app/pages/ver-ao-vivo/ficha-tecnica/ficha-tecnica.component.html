@@ -3,12 +3,12 @@
   <div class="container-conteudo">
     <div class="container-cima">
       <h1>Ficha Técnica</h1>
-      <hr style="background-color: white" />
+      <hr style="background-color: #03422F" />
       <div class="bloco">
         <h2>Nome do Módulo:</h2>
         <p>{{ this.verAoVivo.dados_completos.nome_modulo }}</p>
       </div>
-      <hr />
+      <hr style="background-color: rgba(39, 163, 109, 0.53);" />
       <div *ngFor="let equipe of this.verAoVivo.dados_completos?.FichaTecnica?.Equipes">
           <div class="equipe">
               <h2>{{ equipe.nome }}:</h2>
@@ -16,7 +16,7 @@
                 <h2>{{ membro?.cargo }}:</h2>
                 <p>{{ membro?.nome }}</p>
               </div>
-              <hr />
+              <hr style="background-color: rgba(39, 163, 109, 0.53);" />
       </div>
           </div>
       </div>
@@ -26,7 +26,7 @@
         <h2>Laboratorios envolvidos:</h2>
         <p>Laboratorio de Design</p>
         <p>Laboratorio de Midia</p>
-        <hr />
+        <hr style="background-color: rgba(39, 163, 109, 0.53);" />
       </div>
 
       <div class="bloco">
@@ -57,7 +57,7 @@
           Av. Mário Andreazza, 2960 - Jardim Florestal - 69100-000 - Itacoatiara
           - AM
         </p>
-        <hr />
+        <hr  style="background-color: rgba(39, 163, 109, 0.53);" />
       </div>
       <div class="bloco">
         <h2>Licença:</h2>

@@ -1,21 +1,14 @@
 .container{
   width: 100%;
-  background-color: #1B1B23;
+  background-color: #FFF;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.40);
 }
 .foto-apoio {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: linear-gradient(
-      167deg,
-      rgba(61, 34, 102, 0.7) 3.02%,
-      rgba(34, 25, 72, 0.42) 24.84%,
-      rgba(16, 19, 53, 0.24) 54.42%,
-      rgba(11, 20, 69, 0.37) 77.21%,
-      rgba(34, 45, 102, 0.7) 100%
-    ),
-    #000;
+  align-items: start;
+  background-color: #F9FFF9;
 }
 .foto-apoio img {
   width: 100%;
@@ -27,7 +20,7 @@
   padding: 50px 20px;
   gap: 20px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: start;
 }
 .texto p {
@@ -40,6 +33,8 @@
   display: grid;
   grid-template-columns: repeat(5,1fr);
   column-gap: 20px;
+  justify-content: start;
+  align-items: start;
 }
 .bloco{
   width: 100%;
@@ -47,13 +42,18 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  color: white;
+  color: #03422F;
   font-size: 15px;
+  justify-content: start;
+  
 }
 .bloco h2{
   font-size: 15px;
-  border-bottom: 1px solid #9665DF;
+  
 }
+
+
+
 
 @media (max-width: 1100px){
   .texto {

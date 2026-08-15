@@ -1,8 +1,9 @@
 .container-atividade {
     min-height: 90vh;
-    background-color: black;
-    color: #fff;
+    background-color: #fff;
+    color: #03422F;
     padding-bottom: 10px;
+    box-sizing: border-box;
 }
 
 
@@ -13,12 +14,11 @@
 
 .questao {
   text-align: justify;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300 !important;
-  line-height: normal;
-
   padding: 20px 0 16px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .container-objetiva {
@@ -31,11 +31,11 @@
   display: grid;
   grid-template-columns: 10% 87%;
   column-gap: 30px;
-  background-color: #4f4f4f;
+  background-color: #fff;
   border-radius: 12px;
   margin-bottom: 20px;
   min-height: 74px;
-  
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.70);
 }
 
 .nao-selecionada {
@@ -73,7 +73,7 @@ button {
   margin: 10px 15px 0 0;
   width: 90%;
   border: 2px solid red;
-  background-color: #333;
+  background-color: #fff;
 }
 
 .icone-olho {
@@ -92,4 +92,8 @@ button {
 
 .correto {
   background-color: #58DB43 !important;
+}
+
+.letra h3 {
+  color: #F9F9F9;
 }

@@ -1,15 +1,7 @@
 
 .container {
-  background: linear-gradient(
-      167deg,
-      rgba(61, 34, 102, 0.7) 3.02%,
-      rgba(34, 25, 72, 0.42) 24.84%,
-      rgba(16, 19, 53, 0.24) 54.42%,
-      rgba(11, 20, 69, 0.37) 77.21%,
-      rgba(34, 45, 102, 0.7) 100%
-    ),
-    #000;
-  color: white;
+  background-color: #F9FFF9;;
+  color: #676767;
   font-family: Arial;
   width: 100%;
   padding-top: 3rem;
@@ -18,7 +10,7 @@
   width: 90%;
   margin: 0 auto;
   padding-top: 40px;
-  color: #fff;
+  color: #03422F;
   font-family: Arial;
   font-size: 22px;
   /* font-style: normal; */
@@ -27,7 +19,7 @@
   padding-bottom: 40px;
 }
 .container-cima h1 {
-  color: #ffffff;
+  color: #676767;
   font-family: Arial;
   font-size: 35px;
   /* font-style: normal; */
@@ -43,7 +35,7 @@
   margin: 40px 0;
 }
 .bloco p{
-  color: #AAA;
+  color: #676767;
   font-size: 22px;
   font-family: Arial;
 }
