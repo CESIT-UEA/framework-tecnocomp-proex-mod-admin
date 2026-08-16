@@ -2,17 +2,9 @@
 
 .cadastro-container {
   height: 100vh;
-  color: #ffffff;
+  color: #03422F;
   font-family: Inter, sans-serif;
-  background:
-    linear-gradient(
-      116deg,
-      rgba(18, 0, 96, 0.1) 35.95%,
-      rgba(0, 0, 0, 0.09) 59.28%,
-      rgba(66, 0, 146, 0.05) 85.94%,
-      rgba(95, 0, 211, 0.05) 96.33%
-    ),
-    #131313;
+  background: #F9FFF9;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,22 +35,25 @@
 /* CARD CADASTRO */
 
 .card-cadastro {
-  width: 78%;
+  width: 100%;
   padding: 40px 55px 36px;
   border-radius: 40px;
-  border-top: 10px solid #7c4cc6;
-  background:
-    linear-gradient(
-      112deg,
-      rgba(18, 0, 96, 0.1) 0%,
-      rgba(0, 0, 0, 0.09) 32.21%,
-      rgba(19, 0, 41, 0.09) 55.29%,
-      rgba(95, 0, 211, 0.05) 95.21%,
-      rgba(66, 0, 146, 0.05) 100%
-    ),
-    #2b2a2e;
+  background: linear-gradient(180deg, #FFFFFF 0%, #EEFFFC 100%);
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
+}
+
+.borda-topo {
+  background: linear-gradient(
+    90deg,
+    #27A36D 0%,
+    #116259 100%
+  );
+  border-radius: 40px;
+  padding-top: 8px;
+  width: 100%;
+  max-width: 705px;
+  display: flex;
 }
 
 /* TÍTULO E TEXTO */
@@ -75,7 +70,7 @@
   text-align: center;
   font-size: 16px;
   font-weight: 400;
-  color: #a879f2;
+  color: #27A36D;
 }
 
 /* FORM */
@@ -97,7 +92,7 @@
 }
 
 .cadastro-conteudo label {
-  color: #ffffff;
+  color: #03422F;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -106,21 +101,13 @@
 /* INPUTS */
 
 .cadastro-conteudo input {
-  background:
-    linear-gradient(
-      112deg,
-      rgba(18, 0, 96, 0.1) 0%,
-      rgba(0, 0, 0, 0.09) 32.21%,
-      rgba(19, 0, 41, 0.09) 55.29%,
-      rgba(95, 0, 211, 0.05) 95.21%,
-      rgba(66, 0, 146, 0.05) 100%
-    ),
-    #424147;
+  background-color: #FFFFFF;
   border-radius: 10px;
   border: none;
-  color: #f5f5f5;
+  color: #27A36D;
   padding: 9px 14px;
   font-size: 14px;
+  border: 1px solid #27A36D;
 }
 
 .cadastro-conteudo input::placeholder {
@@ -162,7 +149,7 @@
 }
 
 .input-senha .icon.ativo mat-icon {
-  color: #A879F2;
+  color: #27A36D;
 }
 
 /* MENSAGENS DE ERRO */
@@ -191,7 +178,6 @@
   border-radius: 7px;
   cursor: pointer;
   border: none;
-
 }
 
 button {
@@ -211,29 +197,36 @@ button {
 
 /* botão cadastrar */
 .botao-cadastrar {
-  background: linear-gradient(90deg, rgba(124, 76, 198, 0.50) 0%, rgba(83, 0, 249, 0.50) 100%), #7C4CC6;
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
   color: #ffffff;
   /* border: 3px solid #7C4CC6; */
 }
 
 .botao-cadastrar:hover {
   background: transparent;
-  color: #7c4cc6;
+  background:
+    linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+    linear-gradient(90deg, #27A36D 0%, #116259 100%) border-box;
+  border: 3px solid transparent;
   font-weight: 700;
-  border: 3px solid #7C4CC6;
+  color: #116259;
 }
 
 /* botão outline (Não possuo uma conta) */
 .button-two {
   background: transparent;
-  border: 3px solid #7c4cc6;
-  color: #7c4cc6;
+   background:
+    linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+    linear-gradient(90deg, #27A36D 0%, #116259 100%) border-box;
+  border: 3px solid transparent;
   font-weight: 700;
+  color: #116259;
 }
 
 .button-two:hover {
-  background-color: #7c4cc6;
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
   color: #ffffff;
+  border: none;
 }
 
 
