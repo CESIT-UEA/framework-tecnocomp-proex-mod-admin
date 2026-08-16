@@ -6,6 +6,10 @@
   height: 88vh;
 }
 
+.container-background {
+  background: #F9FFF9;
+}
+
 .container-wrapper {
   
   background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
@@ -109,7 +113,7 @@ input.ng-invalid.ng-touched {
   padding: 7px;
   width: 145px;
   border: none;
-  color: #FFFFFF;
+  
   border-radius: 10px;
   cursor: pointer;
 }
@@ -286,7 +290,7 @@ background: #FFF;
 
 .carregando-registro {
   height: 88vh;
-  color: white;
+  color: #03422F;
   display: flex;
   justify-content: center;
   align-items: center;

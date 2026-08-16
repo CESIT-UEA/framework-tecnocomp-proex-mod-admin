@@ -589,10 +589,14 @@ ul {
 
 .carregando-registro {
   height: 88vh;
-  color: white;
+  color: #03422F;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+
+.carregando-registro h2 {
+color: #03422F;
+}
 

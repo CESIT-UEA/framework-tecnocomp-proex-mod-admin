@@ -3,21 +3,32 @@
     justify-content: center;
     align-items: center;
     height: 88%;
-    background-color: #1E1E1E;
-    color: white;
+    background-color: #F9FFF9;
+    color: #03422F;
+}
+
+
+.wrapper {
+  width: 55%;
+  border-radius: 40px;
+    background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%);
+;
+    padding-top: 8px;
 }
 
 .form-editar-perfil {
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #2B2A2E;;
-  width: 55%;
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+
+  width: 100%;
   border-radius: 40px;
   padding: 0 2.5rem;
-  border-top: 8px solid #7C4CC6;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
 }
 #form-editar-perfil-titulo {
     text-align: center;
     padding: 35px 0 30px 0;
-    border-bottom: 2px solid #7C4CC6;
+    border-bottom: 2px solid #27A36D;
 }
 
 .obrigatorio {
@@ -62,13 +73,13 @@ label {
 .form-editar-perfil-campo input {
     display: flex;
     flex-direction: column;
-    background-color: #3F3F40;
+    background-color: #fff;
     height: 35px;
     width: 100%;
-    border: none;
     border-radius: 10px;
-    color: white;
+    color: #27A36D;
     padding-left: 10px;
+    border: 1px solid #27A36D;
 }
 
 .form-editar-perfil-campo input:focus {
@@ -92,18 +103,58 @@ label {
   cursor: pointer;
 }
 
-#botao-um {
-    background-color: #7C4CC6;
-    
+.btn-wrapper {
+  display: inline-block;
+  padding: 2px; /* espessura da borda */
+  border-radius: 10px;
+  background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%);
 }
+
+
+#botao-um {
+ border: none;
+ background:#fff;
+}
+
+#botao-um {
+  display: block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; /* menor que o wrapper */
+  background: #fff;
+  cursor: pointer;
+
+ 
+}
+
+#botao-um span {
+   background: linear-gradient(90deg, #27A36D, #116259);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#botao-um:hover span {
+  background: none; /* remove o gradiente */
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+#botao-um:hover {
+  background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%), #2F735E;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+
+ 
+}
+
+
 
 #botao-dois {
-    background-color: transparent;
-    border: 3px solid #7C4CC6;
-    color: #7C4CC6;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%), #2F735E;
+;
 }
 
-button:hover {
-    opacity: 50%;
-    cursor: pointer;
+#botao-dois:hover {
+  opacity: 50%;
 }

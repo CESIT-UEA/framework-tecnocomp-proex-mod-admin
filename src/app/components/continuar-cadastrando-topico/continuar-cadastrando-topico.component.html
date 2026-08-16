@@ -4,6 +4,9 @@
 </mat-dialog-content>
 
 <mat-dialog-actions class="botoes">
-  <button class="cancelar" (click)="cancelar()">Cancelar</button>
-  <button class="salvar" (click)="confirmar()">Continuar</button>
+  <div class="btn-wrapper">
+    <button id="botao-um" (click)="cancelar()"><span>Cancelar</span></button>
+  </div>
+  
+  <button id="botao-dois" (click)="confirmar()">Continuar</button>
 </mat-dialog-actions>

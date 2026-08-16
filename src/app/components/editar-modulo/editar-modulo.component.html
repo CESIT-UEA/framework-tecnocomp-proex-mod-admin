@@ -1,7 +1,7 @@
 <app-header-voltar texto="Editar Módulo"></app-header-voltar>
 <main class="container">
-  <div class="container-wrapper">
-    <form class="forms" [formGroup]="moduloForm" *ngIf="!carregando; else tela" >
+  <div class="container-wrapper" *ngIf="!carregando; else tela">
+    <form class="forms" [formGroup]="moduloForm"  >
     <div class="form-campos">
       <div class="titulo-formulario">
         <h1>Editar Módulo</h1>

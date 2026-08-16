@@ -20,12 +20,14 @@
   </div>
 
   <mat-dialog-actions>
+    <div class="btn-wrapper">
+      <button type="button" id="botao-um"  (click)="onCancelar()">
+      <span>Cancelar</span>
+     </button>
+    </div>
+    
 
-    <button type="button" class="bt1"  (click)="onCancelar()">
-      Cancelar
-    </button>
-
-    <button type="button" class="bt2" (click)="onConfirmar()">
+    <button type="button" id="botao-dois" (click)="onConfirmar()">
       Confirmar
     </button>
 

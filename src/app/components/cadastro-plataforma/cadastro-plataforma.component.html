@@ -1,8 +1,8 @@
 <app-header-voltar texto="Cadastrar Plataforma"></app-header-voltar>
 <div class="container-background">
   <div class="cadastro-plataforma-pagina">
-  <div class="container-wrapper">
-    <section class="cadastro-plataforma-container" *ngIf="!carregando; else tela">
+  <div class="container-wrapper" *ngIf="!carregando; else tela">
+    <section class="cadastro-plataforma-container" >
     <h2 class="cadastro-plataforma-titulo">Cadastro de Plataforma</h2>
     <p class="cadastro-plaforma-aviso">*Indica uma pergunta obrigatória</p>
     <form
@@ -101,12 +101,14 @@
       </div>
     </form>
   </section>
-  <ng-template #tela>
-    <div class="carregando-registro">
-      <h2 class="">Cadastrando plataforma...</h2>
-    </div>
-  </ng-template>
+  
+</div>
+<ng-template #tela>
+  <div class="carregando-registro">
+    <h2 class="">Cadastrando plataforma...</h2>
   </div>
+</ng-template>
+
 </div>
 
 </div>

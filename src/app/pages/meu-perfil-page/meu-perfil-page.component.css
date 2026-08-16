@@ -1,5 +1,5 @@
 :host {
-  color: white;
+  color: #03422F;
 }
 
 .container-background {
@@ -11,7 +11,7 @@
   width: 90%;
   margin: 0 auto;
   padding-top: 20px;
-  color: white;
+  color: #03422F;
 }
 
 .informacoes {
@@ -20,7 +20,8 @@
   column-gap: 30px;
   padding: 30px;
   border-radius: 20px;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #2B2A2E;
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+
   box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.25);
   
 }
@@ -66,12 +67,12 @@
 #texto-cargo {
   /* height: 32px; */
   align-content: center;
-  color: #7C4CC6;
+  color: #03422F;
   display: inline-block;
   /* padding: 0 10px; */
   text-align: center;
   border-radius: 10px;
-  border: 2px solid  #7C4CC6;
+  border: 2px solid  #03422F;
   width: 142px;
   height: 32px;
   /* margin-top: 6px; */
@@ -85,12 +86,14 @@
 
 
 .titulo {
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #2B2A2E;
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
   align-items: center;
 }
 
 .icone-adicionar-grad {
-  background: linear-gradient(90deg, rgba(124, 76, 198, 0.50) 0%, rgba(83, 0, 249, 0.50) 100%), #7C4CC6;;
+  background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%), #2F735E;
+
 }
 
 .container-cards-modulos, .container-cards-plataformas {
@@ -127,7 +130,8 @@ mat-divider {
 
 .meus-modulos .titulo button,.minhas-plataformas .titulo button{
   cursor: pointer;
-  background: var(--12, #9256ed);
+  background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%), #2F735E;
+;
   outline: none;
   border: none;
   padding: 2px;

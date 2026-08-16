@@ -1,7 +1,7 @@
 <app-header-voltar texto="Cadastrar Tópico"></app-header-voltar>
 <div class="container-pagina">
-  <div class="wrapper">
-    <div class="formulario" *ngIf="!carregando; else tela">
+  <div class="wrapper" *ngIf="!carregando; else tela">
+    <div class="formulario" >
       <mat-horizontal-stepper linear #stepper>
         <mat-step [stepControl]="dadosBasicosFormGroup">
           <div class="passo1">
