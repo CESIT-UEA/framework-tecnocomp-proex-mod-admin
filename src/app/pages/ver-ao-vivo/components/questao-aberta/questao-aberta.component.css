@@ -1,11 +1,12 @@
 .container {
     min-height: 90vh;
-    background-color: black;
+    background-color: #F9FFF9;
     padding: 2rem 0;
 }
 
 .container-questao {
-    background-color: #272729;
+    background: #FFF;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.50);
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
@@ -26,7 +27,7 @@ h2 {
 .resposta-esperada {
     text-align: justify;
     background-color: #d4edda;
-    color: #155724;
+    color: #03422F;
     border-radius: 12px;
     padding: 20px;
 }
