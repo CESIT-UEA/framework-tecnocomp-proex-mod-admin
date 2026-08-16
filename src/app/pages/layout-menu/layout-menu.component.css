@@ -113,7 +113,7 @@ input::placeholder {
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
-  row-gap: 1.2rem;
+  row-gap: 1rem;
 }
 
 .nav-list a {

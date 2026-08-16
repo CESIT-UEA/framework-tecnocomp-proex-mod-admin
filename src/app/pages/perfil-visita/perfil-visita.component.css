@@ -1,17 +1,18 @@
 :host {
-  color: white;
+  color: #03422F;
 }
 
 .container-background {
   min-height: 88vh;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 16.83%, rgba(0, 0, 0, 0.09) 47.11%, rgba(66, 0, 146, 0.05) 81.73%, rgba(95, 0, 211, 0.05) 95.21%), #131313;
+  background: #fff;
 }
 
 .container-perfil {
   width: 90%;
   margin: 0 auto;
   padding-top: 20px;
-  color: white;
+  color: #03422F;
+;
 }
 
 
@@ -21,7 +22,8 @@
   column-gap: 30px;
   padding: 30px;
   border-radius: 20px;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #2B2A2E;
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+
   box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.25);
   
 }
@@ -61,12 +63,12 @@
 #texto-cargo {
   /* height: 32px; */
   align-content: center;
-  color: #7C4CC6;
+  color: #03422F;
   display: inline-block;
   text-align: center;
   /* padding: 0 10px; */
   border-radius: 10px;
-  border: 2px solid  #7C4CC6;
+  border: 2px solid  #03422F;
   /* margin-top: 6px; */
   width: 142px;
   height: 32px;
@@ -74,7 +76,7 @@
 
 
 .informacoes .informacoes-usuario button mat-icon {
-  color: white;
+  color: #03422F;
   font-size: 16px;
 }
 
@@ -83,7 +85,8 @@
   border-radius: 35px;
   display: flex;
   align-items: center;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 16.83%, rgba(0, 0, 0, 0.09) 47.11%, rgba(66, 0, 146, 0.05) 81.73%, rgba(95, 0, 211, 0.05) 95.21%), #2B2A2E;
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .botao-add {
@@ -111,7 +114,7 @@
 }
 .meus-modulos p, .minhas-plataformas p {
   margin-top: 30px;
-  color: #fff;
+  color: #03422F;
   font-family: Arial;
   font-size: 20px;
   font-style: normal;
@@ -119,7 +122,7 @@
   line-height: normal;
 }
 mat-divider {
-  background-color: white;
+  background-color: #03422F;
   margin: 30px 0 10px 0;
 }
 
@@ -136,7 +139,8 @@ mat-divider {
 }
 
 .meus-modulos .titulo button mat-icon ,.minhas-plataformas .titulo button mat-icon{
-  color: white;
+  color: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+;
 }
 
 .titulo button {

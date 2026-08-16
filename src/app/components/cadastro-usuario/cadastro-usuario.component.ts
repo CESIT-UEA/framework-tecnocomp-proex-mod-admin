@@ -89,6 +89,7 @@ export class CadastroUsuarioComponent implements OnInit {
         error => {
           this.errorCadastro = true
           console.error('Erro ao cadastrar usuário:', error);
+          this.apiService.message(error.error?.message || 'Ocorreu um erro ao cadastrar o usuário. Por favor, tente novamente.');
         }
       );
     }

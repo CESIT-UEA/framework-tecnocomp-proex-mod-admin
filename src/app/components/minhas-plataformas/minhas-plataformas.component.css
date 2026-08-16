@@ -4,14 +4,14 @@
 
 .container-background {
   min-height: 88vh;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 16.83%, rgba(0, 0, 0, 0.09) 47.11%, rgba(66, 0, 146, 0.05) 81.73%, rgba(95, 0, 211, 0.05) 95.21%), #131313;
+  background: #F9FFF9;
 } 
 
 .container-perfil {
   width: 90%;
   margin: 0 auto;
   padding-top: 2.5rem;
-  color: white;
+  color: #03422F;
 }
 
 .titulo {
@@ -23,15 +23,14 @@
   align-self: stretch;
   border-radius: 1.875rem;
   border-radius: 35px;
-background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 16.83%, rgba(0, 0, 0, 0.09) 47.11%, rgba(66, 0, 146, 0.05) 81.73%, rgba(95, 0, 211, 0.05) 95.21%), #2B2A2E;
+  background: linear-gradient(90deg, #FFF 0%, #EEFFFC 100%);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
 .titulo h1 {
-  color: var(--0-color);
-  font-size: 1.25rem;
+  color: #03422F;
+  font-size: 24px;
   font-style: normal;
-  font-weight: bold;
   font-weight: 700;
   line-height: normal;
 }
@@ -96,7 +95,7 @@ mat-divider {
 .meus-modulos .titulo button,
 .minhas-plataformas .titulo button {
   cursor: pointer;
-  background: linear-gradient(180deg, #7C4CC6 0%, #5300F9 100%);
+  background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%), #2F735E;
   outline: none;
   border: none;
   padding: .125rem;
@@ -114,6 +113,7 @@ mat-divider {
 
 .titulo h1 {
   font-family: var(fontCustom);
+  
 }
 
 .card {

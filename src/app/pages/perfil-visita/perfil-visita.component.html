@@ -1,14 +1,14 @@
 <div class="container-background">
   <div class="container-perfil">
   <section class="informacoes">
-    <img src="../../../assets/icons/perfil-sem-foto-grande.svg" alt="" style="width: 147px; height: 147px;">
+    <img src="../../../assets/icons/icone-perfil.png" alt="" style="width: 147px; height: 147px;">
     <div class="informacoes-bloco-dois">
       <div class="informacoes-usuario">
       <p class="cargo">
-        {{ dadosUsuario?.tipo === 'adm' ? 'Admin': 'Professor' }}
+        {{ dadosUsuario.username }}
       </p>
       <button [routerLink]="['/editar-perfil']">
-        <img src="../../../assets/icons/Editar.svg" alt="ícone de editar-perfil">
+        <img src="../../../assets/icons/icone-editar-proex.png" alt="ícone de editar-perfil">
       </button>
     </div>
   
@@ -23,9 +23,7 @@
   <section class="minhas-plataformas">
     <div class="titulo">
       <h1>Plataformas: {{ paginationPlataformas.totalItems }}</h1>
-      <button routerLink="/cadastro-plataforma" class="botao-add">
-        <mat-icon>add</mat-icon>
-      </button>
+      
     </div>
     <div class="container-cards-plataformas">
       <div  *ngFor="let plataforma of plataformas">
@@ -50,9 +48,6 @@
   <section class="meus-modulos">
     <div class="titulo">
       <h1>Módulos: {{ paginationModulos.totalItems }}</h1>
-      <button routerLink="/registrar-modulo" class="botao-add">
-        <mat-icon class="icon-add">add</mat-icon>
-      </button>
     </div>
     <div class="container-cards-modulos">
       <div class="card" *ngFor="let modulo of modulos">

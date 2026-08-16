@@ -1,14 +1,14 @@
 <div class="container-background">
   <div class="container-perfil">
   <section class="informacoes">
-    <img src="../../../assets/icons/perfil-sem-foto-grande.svg" alt="" style="width: 147px; height: 147px;">
+    <img src="../../../assets/icons/icone-perfil.png" alt="" style="width: 147px; height: 147px;">
     <div class="informacoes-bloco-dois">
       <div class="informacoes-usuario">
       <p class="cargo">
-        {{ dadosUsuario().tipo === 'adm' ? 'Admin': 'Professor' }}
+        {{ dadosUsuario().username }}
       </p>
       <button [routerLink]="['/tecnocomp','editar-perfil']">
-        <img src="../../../assets/icons/Editar.svg" alt="ícone de editar-perfil">
+        <img src="../../../assets/icons/icone-editar-proex.png" alt="ícone de editar-perfil">
       </button>
     </div>
     <div class="perfil-dados">
