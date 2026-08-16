@@ -366,10 +366,10 @@
               <li *ngFor="let exercicio of exerciciosFormGroup.value.exercicios">
                 <p class="questao"><span style="font-weight: bold !important;">Questão</span> - {{ exercicio.questao }}
                 </p>
-                <ul>
+                <ul *ngIf="!this.isQuestaoAberta">
                   <li class="caixa-exercicio" *ngFor="let alternativa of exercicio.alternativas; let i = index">
                     <div class="letra" [ngClass]="{'correto': alternativa.correta == true}">
-                      <h3>{{letras[i]}}</h3>
+                      <h3 class="letra-texto">{{letras[i]}}</h3>
                     </div>
                     <div class="textos-exercicio">
                       <p>Descrição: {{ alternativa.descricao }}</p>
@@ -378,7 +378,13 @@
                     </div>
                   </li>
                 </ul>
-              </li>
+                
+          
+                    <p *ngIf="this.isQuestaoAberta" class="questao"><span style="font-weight: bold !important;">Resposta Esperada</span> - {{ exercicio.respostaEsperada }}
+                    </p>
+        
+
+              
             </ul>
 
             <div class="botoes">

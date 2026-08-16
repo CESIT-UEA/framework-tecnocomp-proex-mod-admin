@@ -30,11 +30,13 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  column-gap: 1.25rem;
+  /* justify-content: space-between; */
   padding-left: 1.75rem;
   align-items: center;
   height: 4.625rem;
-  background: linear-gradient(90deg, #206377 0%, #247E6E 50.96%, rgba(39, 163, 109, 0.10) 100%);
+  background-image: url('../../../assets/imgs/fundo_header.png');
+  background-size: cover;
   color: white;
 }
 

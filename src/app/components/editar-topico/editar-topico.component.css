@@ -1,26 +1,42 @@
 .container-pagina {
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 16.83%, rgba(0, 0, 0, 0.09) 47.11%, rgba(66, 0, 146, 0.05) 81.73%, rgba(95, 0, 211, 0.05) 95.21%), #131313;
+  background: #F9FFF9;
   min-height: 88vh;
   align-content: center;
 }
 
-.formulario {
+.wrapper {
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
   width: 60%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  border-radius: 40px;
+  padding-top: 8px !important;
+
+}
+
+.formulario {
+  width: 100%;
   max-width: 1100px;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  margin: 10px auto;
+  margin: 0px auto;
   gap: 20px;
-  background-color: #2C2C2E;
   border-radius: 40px;
-  border-top: 6px solid #7C4CC6;
-  background: linear-gradient(112deg, rgba(18, 0, 96, 0.10) 0%, rgba(0, 0, 0, 0.09) 32.21%, rgba(19, 0, 41, 0.09) 55.29%, rgba(95, 0, 211, 0.05) 95.21%, rgba(66, 0, 146, 0.05) 100%), #2B2A2E;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
 
+ background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%);
+
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
 }
 .mat-stepper-horizontal {
   background-color: transparent;
+}
+
+mat-label {
+  color: #03422F;
 }
 
 .mat-form-field {
@@ -41,14 +57,14 @@
 }
 
 mat-divider {
-  background-color: #7C4CC6;
+  background-color: #27A36D;
   height: 2px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
 h3 {
-  color: white;
+  color: #03422F;
 }
 /* Campos de formulário */
 .campo-formulario {
@@ -74,8 +90,8 @@ h3 {
 /* Estilização do Input do Ebook */
 .file-field #ebookUrlGeral::file-selector-button {
   background-color: transparent;
-  color: rgba(124, 76, 198, 1);
-  border: 2.5px solid rgba(124, 76, 198, 1);
+  color: #27A36D;
+  border: 2.5px solid #27A36D;
   /* font-family: Inter, sans-serif; */
   font-size: 15px;
   font-weight: 700;
@@ -88,7 +104,7 @@ h3 {
 }
 
 .file-field #ebookUrlGeral::file-selector-button:hover {
-  background-color: rgba(124, 76, 198, 1);
+  background-color: #27A36D;
   color: #fff;
 }
 
@@ -105,7 +121,8 @@ h3 {
 .file-input-wrapper {
   display: flex;
   align-items: center;
-  background-color: #3F3F40;
+  background-color: #fff;
+  border: 1px solid #27A36D;
   border-radius: 10px;
   
   gap: 10px;
@@ -135,7 +152,7 @@ h3 {
 }
 
 .file-status-text {
-  color: #fff;
+  color: #27A36D;
   /* font-family: Inter, sans-serif; */
   font-size: 15px;
   white-space: nowrap;
@@ -147,16 +164,16 @@ h3 {
 .mat-form-field {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #27A36D;
   row-gap: 10px;
   padding-bottom: 15px;
 }
 
 .mat-form-field input {
   height: 42px;
-  background-color: #3F3F40;
-  border: none;
-  color: white;
+  background-color: #fff;
+  border: 1px solid #27A36D;
+  color: #27A36D;
   padding-left: 10px;
 }
 
@@ -183,15 +200,20 @@ textarea {
   display: flex;
 } 
 
-.passo1-botao-proximo .proximo, .proximo, .voltar, .remover, .adicionar, .anterior {
+.passo1-botao-proximo .proximo, .proximo, .voltar, .adicionar, .anterior {
   display: flex;
   align-items: center;
   background-color: transparent;
   border: none;
-  color: white;
+
   cursor: pointer;
   column-gap: 10px;
 }
+
+.passo1-botao-proximo .proximo, .proximo, .voltar, .adicionar, .anterior {
+  color: #03422F;
+}
+
 
 .proximo {
   margin-left: auto;
@@ -205,7 +227,8 @@ textarea {
   width: 185px;
   height: 35px;
   border-radius: 10px;
-  background: linear-gradient(90deg, rgba(124, 76, 198, 0.50) 0%, rgba(83, 0, 249, 0.50) 100%), #7C4CC6;
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259;
+
   color: #FFF;
   text-align: center;
   font-size: 14px;
@@ -231,13 +254,18 @@ textarea {
   right: 10px;
 }
 
-.icone-adicionar, .icone-remover, .remover{
+ .icone-adicionar ,.icone-remover, .remover{
    border-radius: 50% !important;
-   background-color: #7C4CC6;
+  
+;
    height: 25px;
    width: 25px;
+   color: #fff !important;
 }
 
+.icone-adicionar {
+ background: linear-gradient(90deg, #27A36D 0%, #2F735E 100%), #2F735E;
+}
 
 
  
@@ -246,6 +274,7 @@ textarea {
   position: relative;
   top: -25px;
   margin-bottom: 0;
+  color: #fff;
 }
 
 .botao-adicionar {
@@ -261,11 +290,11 @@ textarea {
 
 
 .remover {
-  background-color: #ff5722; /* Laranja destaque */
+  background-color: #F84C4C; /* Laranja destaque */
 }
 
 .icone-remover {
-  background-color: #ff5722 !important;
+  background-color: #F84C4C !important;
 } 
 
 .icone-adicionar{
@@ -313,7 +342,7 @@ button {
 /* Título do passo de revisão */
 .revisao-titulo {
   font-size: 2rem;
-  color: #fff;
+  color: #03422F;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -326,12 +355,12 @@ button {
 }
 
 .revisao-secao strong {
-  color: #fff; /* Destaque para os títulos das informações */
+  color: #03422F; /* Destaque para os títulos das informações */
   font-size: 1.3rem;
 }
 
 .revisao-secao p {
-  color: #ffffff;
+  color: #03422F;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -346,7 +375,7 @@ button {
   margin: 15px 0;
 }
 a{
-  color: white;
+  color: #03422F;
 
 }
 .correto{
@@ -363,29 +392,33 @@ a{
 }
 
 .botoes-tipo-questao button {
-  background-color: transparent;
+   background-color: transparent;
   display: flex;
   align-items: center;
   height: 35px;
   width: 209px;
   border: none;
-  color: white;
+  color: #03422F;
   padding: 10px;
   justify-content: center;
   border-radius: 10px;
   column-gap: 10px;
-  border: 2px solid white;
-  cursor: pointer
+  border: 2px solid #03422F;
+  cursor: pointer;
+  font-weight: 700;
+  box-sizing: border-box;
 }
 
 .botoes-tipo-questao button:hover {
-  background-color: #7C4CC6;
-  border-color: #7C4CC6;
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259 !important;
+  border: none;
+  padding: 10px;
 }
 
 .botao-questao-ativa {
-  background-color: #7C4CC6 !important;
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%), #116259 !important;
   border: none !important;
+  color: #fff !important;
 }
 
 .questao-aberta {
@@ -393,13 +426,15 @@ a{
   flex-direction: column;
   width: 100%;
   row-gap: 10px;
-  color: white;
+   color: #03422F;
 }
 
 .questao-aberta-resposta-esperada {
   height: 150px;
   border: none;
-  color: white;
+  background-color: #fff;
+  color: #03422F;
+  border: 1px solid #27A36D;
 }
 
 .questao-aberta-resposta-esperada:focus {
@@ -407,15 +442,53 @@ a{
   box-shadow: 0 0 0 0;
 }
 
-.limpar-dados {
+.wrapper-limpar-dados-btn {
+  position: relative;
   width: 153px;
   height: 35px;
-  background-color: transparent;
-  border: 2px solid #7C4CC6;
+  background: transparent;
   border-radius: 10px;
-
-  color: #7C4CC6;
+  z-index: 1;
 }
+
+.wrapper-limpar-dados-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+.limpar-dados {
+  position: absolute;
+  bottom: 8px;
+  translate: 36%;
+
+  width: auto;
+  height: auto;
+
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+
+  /* Gradiente no texto */
+  background: linear-gradient(90deg, #27A36D 0%, #116259 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  z-index: 2;
+}
+
 
 .txt-secao-um {
   font-size: 18px !important;
@@ -426,12 +499,13 @@ a{
 
 .txt-caixa {
   min-height: 42px;
-  background-color: #3F3F40;
+  background-color: #fff;
   border-radius: 10px;
   display: flex;
   align-items: center;
   padding-left: 10px;
   margin: 10px 0;
+  border: 1px solid #27A36D;
 }
 
 ul {
@@ -451,13 +525,16 @@ ul {
   display: grid;
   grid-template-columns: 10% 87%;
   column-gap: 30px;
-  background-color: #3B3B3B;
+  background-color: #fff;
+   border: 1px solid #27A36D;
   border-radius: 12px;
 }
 
 
 .textos-exercicio {
   padding: 15px 0px;
+  margin: 10px 15px 0 0;
+  text-align: justify;
 }
 
 .letra {
@@ -505,6 +582,10 @@ ul {
     
 }
 
+.letra-texto {
+  color: #fff;
+}
+
 
 .carregando-registro {
   height: 88vh;
@@ -515,22 +596,3 @@ ul {
 }
 
 
-/* Responsividade */
-@media (max-width: 1100px) {
-  .formulario {
-    width: 70%;
-  }
-}
-
-@media (max-width: 800px) {
-  .formulario {
-    width: 90%;
-  }
-}
-
-@media (max-width: 600px) {
-  .formulario {
-    width: 100%;
-    margin: 0 10px; /* Adiciona margens laterais */
-  }
-}

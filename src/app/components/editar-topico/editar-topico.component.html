@@ -1,6 +1,8 @@
 <app-header-voltar texto="Editar Tópico"></app-header-voltar>
 <div class="container-pagina">
-  <div class="formulario" *ngIf="!carregando; else tela">
+  
+  <div class="wrapper">
+    <div class="formulario" *ngIf="!carregando; else tela">
     <mat-horizontal-stepper linear #stepper>
       <!-- Etapa 1: Dados Básicos -->
       <mat-step [stepControl]="dadosBasicosFormGroup">
@@ -34,7 +36,7 @@
 
             <div class="botoes passo1-botao-proximo">
               <button class="salvar" (click)="onSubmit()">Salvar Alterações</button>
-              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo.svg" alt="icone de próximo"></button>
+              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
             </div>
           </form>
         </div>
@@ -71,10 +73,10 @@
             </button>
             <div class="botoes passo1-botao-proximo">
               <button class="anterior" matStepperPrevious>
-                <img src="../../../assets/icons/voltar.png"> Anterior 
+                <img src="../../../assets/icons/anterior-proex.svg"> Anterior 
               </button>
               <button class="salvar" (click)="onSubmit()">Salvar Edição</button>
-              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo.svg" alt="icone de próximo"></button>
+              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
             </div>
           </form>
         </div>
@@ -113,11 +115,11 @@
             </button>
             <div class="botoes">
               <button class="voltar" matStepperPrevious>
-                <img src="../../../assets/icons/voltar.png">
+                <img src="../../../assets/icons/anterior-proex.svg">
                 Anterior
               </button>
               <button class="salvar" (click)="onSubmit()">Salvar Edição</button>
-              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo.svg" alt="icone de próximo"></button>
+              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
             </div>
           </form>
         </div>
@@ -167,20 +169,18 @@
                 </div>
                 
                 <div class="botoes-tipo-questao">
-                  <button 
-                    class="botao-questao-objetiva" 
-                    [ngClass]="{'botao-questao-ativa': isQuestaoAberta === false}"
-                    (click)="criarQuestaoObjetiva(i)"
-                  >
-                    <img src="../../../assets/icons/icone-questao-objetiva.svg"> Questão objetiva
-                  </button>
-                  <button 
-                    class="botao-questao-discursiva" 
-                    [ngClass]="{'botao-questao-ativa': isQuestaoAberta}"
-                    (click)="criarQuestaoDiscursiva(i)"
-                  >
-                    <img src="../../../assets/icons/icone-questao-discursiva.svg">Questão discursiva
-                  </button>
+                  <button class="botao-questao-objetiva"
+                      [ngClass]="{'botao-questao-ativa': isQuestaoAberta === false}" (click)="criarQuestaoObjetiva(i)">
+                      <img
+                        [src]="isQuestaoAberta === false ? '../../../assets/icons/icone-questao-objetiva-branca.png' : '../../../assets/icons/icone-questao-objetiva.png'">
+                      Questão objetiva
+                    </button>
+                  <button class="botao-questao-discursiva" [ngClass]="{'botao-questao-ativa': isQuestaoAberta}"
+                      (click)="criarQuestaoDiscursiva(i)">
+                      <img
+                        [src]="isQuestaoAberta ? '../../../assets/icons/icone-questoa-discursiva-branca.png' : '../../../assets/icons/icone-questao-discursiva.png'">Questão
+                      discursiva
+                    </button>
                 </div>
                 <mat-divider></mat-divider>
                 <div class="questao-aberta" *ngIf="this.isQuestaoAberta">
@@ -203,7 +203,10 @@
                       <mat-radio-button style="color: white" [value]="true">Correta</mat-radio-button>
                     </mat-radio-group>
                     <br />
-                    <button class="limpar-dados" (click)="limparAlternativa(i, j)">Limpar Dados</button>
+                    <div class="wrapper-limpar-dados-btn">
+                        <button class="limpar-dados" (click)="limparAlternativa(i, j)">Limpar Dados</button>
+                      </div>
+                    
                     <mat-divider></mat-divider>
                   </div>
                 </div>
@@ -211,7 +214,7 @@
             </div>
             <div class="botoes">
               <button class="voltar" matStepperPrevious>
-                <img src="../../../assets/icons/voltar.png">
+                <img src="../../../assets/icons/anterior-proex.svg">
                 Anterior
               </button>
               <button class="salvar" (click)="onSubmit()">Salvar Edição</button>
@@ -222,7 +225,7 @@
                 [disabled]="!isAlternativaCorretaValida()"
               >
               Próximo
-              <img src="../../../assets/icons/proximo.svg">
+              <img src="../../../assets/icons/proximo-proex.png">
               </button>
               <button
                 *ngIf="this.isQuestaoAberta"
@@ -230,7 +233,7 @@
                 matStepperNext
               >
               Próximo
-              <img src="../../../assets/icons/proximo.svg">
+              <img src="../../../assets/icons/proximo-proex.png">
               </button>
               
             </div>
@@ -290,8 +293,8 @@
                   let i = index
                 "
               >
-                <p>Saiba Mais {{ i + 1 }}</p>
-                <p>Descrição: {{ sm.descricao }}</p>
+                <p style="font-weight: bold;">Saiba Mais {{ i + 1 }}</p>
+                <p><span style="font-weight: bold;">Descrição:</span> {{ sm.descricao }}</p>
                 <p><a [href]="sm.url"> URL </a></p>
               </li>
             </ul>
@@ -306,10 +309,10 @@
                 *ngFor="let exercicio of exerciciosFormGroup.value.exercicios"
               >
               <p class="questao"><span style="font-weight: bold !important;">Questão</span> - {{ exercicio.questao }}</p>
-                <ul>
+                <ul  *ngIf="!this.isQuestaoAberta">
                   <li class="caixa-exercicio" *ngFor="let alternativa of exercicio.alternativas; let i = index">
                     <div class="letra" [ngClass]="{'correto': alternativa.correta == true}">
-                      <h3>{{letras[i]}}</h3>
+                      <h3 class="letra-texto">{{letras[i]}}</h3>
                     </div> 
                     <div class="textos-exercicio">
                       <p>Descrição: {{ alternativa.descricao }}</p>
@@ -317,13 +320,15 @@
                     </div>
                   </li>
                 </ul>
+                <!-- <p *ngIf="this.isQuestaoAberta" class="questao"><span style="font-weight: bold !important;">Resposta Esperada</span> - {{ exercicio.respostaEsperada }}
+                    </p> -->
               </li>
             </ul>
           </div>
 
           <div class="botoes">
             <button class="voltar" matStepperPrevious>
-                <img src="../../../assets/icons/voltar.png">
+                <img src="../../../assets/icons/anterior-proex.svg">
                 Anterior
               </button>
             <button class="salvar salvar-edicao" (click)="onSubmit()">Salvar Edição</button>

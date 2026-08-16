@@ -1,5 +1,6 @@
 .container-voltar{
-  background:linear-gradient(90deg, #206377 0%, #247E6E 50.96%, rgba(39, 163, 109, 0.10) 100%);
+  background-image: url('../../../assets/imgs/fundo_header.png');
+  background-size: cover;
   box-sizing: border-box;
   display: flex;
   justify-content: start;
