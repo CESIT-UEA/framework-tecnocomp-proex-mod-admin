@@ -55,7 +55,7 @@
   height: 25px;
   font-weight: 600;
   line-height: normal;
-  color: #fff;
+  color: #2F735E;
   cursor: pointer;
   /* border: 1px solid #793cd4; */
   position: relative; 
@@ -87,7 +87,7 @@
 .active {
   background-color: #068E73;
   ;
-  
+  color: #fff !important;
 }
 
 .loading {
