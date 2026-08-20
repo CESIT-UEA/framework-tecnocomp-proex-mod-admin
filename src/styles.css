@@ -132,7 +132,14 @@ html {
 }
 
 .snackbar-custom button.mat-mdc-snack-bar-action {
-  color: #7C4CC6 !important;
+  color: #03422F !important;
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%) !important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__label, .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  background: linear-gradient(180deg, #FFF 0%, #EEFFFC 100%) !important;
+  color: #03422F !important;
+  border-radius: 10px;
 }
 
 input:focus,
