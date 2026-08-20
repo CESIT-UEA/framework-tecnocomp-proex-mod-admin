@@ -96,8 +96,8 @@ export class ApiAdmService {
   listarModulos(page: number, quantidadeItens: number) {
     return this.http.get<{modulos: Modulo[], infoModulos: InfoPaginacao}>(`${this.baseUrl}/api/modulos?page=${page}&quantidadeItens=${quantidadeItens}`);
   }
-  listarTemplates(): Observable<Modulo[]> {
-    return this.http.get<Modulo[]>(`${this.baseUrl}/api/templates`);
+  listarTemplates(page: number, quantidadeItens: number) {
+    return this.http.get<{templates: Modulo[], infoTemplates: InfoPaginacao}>(`${this.baseUrl}/api/templates?page=${page}&quantidadeItens=${quantidadeItens}`);
   }
   excluirModulo(id: number, idUsuario: number, palavraConfirmacao: string): Observable<any> {
     const params = new HttpParams()
