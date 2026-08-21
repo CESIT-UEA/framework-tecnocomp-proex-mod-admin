@@ -39,3 +39,10 @@ mat-divider {
   /* column-gap: 10px; */
 }
 
+.carregando-registro {
+  height: calc(100vh - 4.625rem);
+   color: #03422F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
