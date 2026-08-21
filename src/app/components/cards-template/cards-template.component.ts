@@ -7,6 +7,7 @@ import { DialogConfirmarRemocaoComponent } from '../dialog-confirmar-remocao/dia
 import { ApiAdmService } from 'src/app/services/api-adm.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-cards-template',
   templateUrl: './cards-template.component.html',
@@ -20,12 +21,14 @@ export class CardsTemplateComponent {
     idExcluir: number;
   }>();
 
+  @Output() clonar = new EventEmitter<Modulo>();
+
   constructor(
     private dialog: MatDialog,
     private authService: AuthService,
     private admService: ApiAdmService,
     private router: Router
-  ) {}
+  ) { }
 
   confirmarClonagem(): void {
     const dialogRef = this.dialog.open(DialogConfirmarRemocaoComponent, {
@@ -41,14 +44,9 @@ export class CardsTemplateComponent {
     dialogRef.afterClosed().subscribe((confirmado) => {
       if (confirmado) {
         if (this.modulo?.id != null) {
-          this.admService.clonarTemplate(this.modulo.id).subscribe(() => {
-          this.admService.message(`Módulo ${this.modulo.nome_modulo} clonado com sucesso`)
-          if (this.authService.isAdmin()){
-            this.router.navigate(['/tecnocomp/modulos'])
-          } else {
-            this.router.navigate(['/tecnocomp/meus-modulos'])
-          }
-        });
+
+          this.clonar.emit(this.modulo);
+
         }
       }
     });
@@ -57,4 +55,6 @@ export class CardsTemplateComponent {
   verMais(): void {
     console.log('Ver mais sobre o módulo:', this.modulo);
   }
+
+
 }

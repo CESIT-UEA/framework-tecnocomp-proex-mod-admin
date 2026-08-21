@@ -1,4 +1,4 @@
-<div class="container-background">
+<div class="container-background" *ngIf="!carregando; else tela">
   <div class="container-modulos">
 
     <div class="titulo-template">
@@ -8,7 +8,7 @@
 
     <div class="container-cards-modulos">
       <div class="card" *ngFor="let modulo of modulos">
-        <app-cards-template [modulo]="modulo"></app-cards-template>
+        <app-cards-template [modulo]="modulo" (clonar)="clonarTemplate($event)"></app-cards-template>
       </div>
     </div>
   </div>
@@ -20,4 +20,10 @@
     itemsLabel="template"
     (pageChange)="onPageChange($event, this.quantidadeItens)">
   </app-pagination>
+  
 </div>
+<ng-template #tela>
+    <div class="carregando-registro">
+      <h2 class="">Clonando template...</h2>
+    </div>
+  </ng-template>
