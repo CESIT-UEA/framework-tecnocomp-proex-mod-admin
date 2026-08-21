@@ -8,31 +8,23 @@
           <div class="informacoes">
             <p class="paragrafo">
               <strong>Status: </strong>
-              <span
-                [ngClass]="
+              <span [ngClass]="
                   modulo.publicado ? 'status-publicado' : 'status-nao-publicado'
-                "
-              >
+                ">
                 {{ modulo.publicado ? "Publicado" : "Não Publicado" }}
               </span>
             </p>
             <div class="publicacoes-e-templates">
-              <button
-                [ngClass]="modulo.publicado ? 'nao-publicado' : 'publicado'"
-                class="btn btn-publicar"
-                (click)="alterarPublicacao()"
-              >
+              <button [ngClass]="modulo.publicado ? 'nao-publicado' : 'publicado'" class="btn btn-publicar"
+                (click)="alterarPublicacao()">
                 {{
-                  modulo.publicado ? "Módulo publicado" : "Módulo não publicado"
+                modulo.publicado ? "Módulo publicado" : "Módulo não publicado"
                 }}
               </button>
-              <button
-                [ngClass]="modulo.template ? 'nao-publicado' : 'publicado'"
-                class="btn btn-publicar"
-                (click)="templateModulo()"
-              >
+              <button [ngClass]="modulo.template ? 'nao-publicado' : 'publicado'" class="btn btn-publicar"
+                (click)="templateModulo()">
                 {{
-                  modulo.template ? "Template ativado" : "Template desativado"
+                modulo.template ? "Template ativado" : "Template desativado"
                 }}
               </button>
             </div>
@@ -43,9 +35,7 @@
 
             <!-- <p class="paragrafo"><strong>Id: </strong> {{ modulo?.id }}</p> -->
             <p class="paragrafo">
-              <a target="_blank" [href]="modulo.ebookUrlGeral" style="color: #03422F;"
-                >Ebook Completo</a
-              >
+              <a target="_blank" [href]="modulo.ebookUrlGeral" style="color: #03422F;">Ebook Completo</a>
             </p>
             <p class="paragrafo">
               <a target="_blank" [href]="modulo.video_inicial" style="color: #03422F;">Vídeo Inicial</a>
@@ -56,31 +46,29 @@
                 <mat-icon>content_copy</mat-icon>
               </button>
             </p>
+            
             <div class="coluna-gerenciar">
               <button routerLink="gerenciar-ficha-tecnica">
                 Gerenciar Ficha Técnica
               </button>
-              <button  [ngClass]="{'desabilitar-clonagem-ficha': fichaTecnicaIsEmpty}"
-              (click)="mostrarMensagem()"
-                [routerLink]="!fichaTecnicaIsEmpty ? ['/modulo/clonar-ficha-tecnica', modulo?.id] : null"
-              >
+              <button [ngClass]="{'desabilitar-clonagem-ficha': fichaTecnicaIsEmpty}" (click)="mostrarMensagem()"
+                [routerLink]="!fichaTecnicaIsEmpty ? ['/modulo/clonar-ficha-tecnica', modulo?.id] : null">
                 Clonar Ficha Técnica
               </button>
-            </div>
-            <div class="coluna-gerenciar">
+
+
               <button routerLink="gerenciar-referencias">
                 Gerenciar Referências
               </button>
               <button routerLink="gerenciar-alunos">Gerenciar Alunos</button>
+              <a routerLink="/modulo/topicos" class="botao-vizualizar-topicos" [queryParams]="{ id_modulo: modulo.id }"
+                style="color: #03422F;">
+                Visualizar tópicos
+              </a>
             </div>
+
           </div>
-          <a
-            routerLink="/modulo/topicos"
-            class="botao-vizualizar-topicos"
-            [queryParams]="{ id_modulo: modulo.id }" style="color: #03422F;"
-          >
-            Vizualizar tópicos
-          </a>
+
         </div>
       </div>
     </div>
@@ -88,10 +76,7 @@
   <ng-template #carregando>
     <div class="loading-container">
       <div class="icon-loading">
-        <img
-          src="../../../assets/imgs/uea.png"
-          alt="logo de carregamento tecnocomp"
-        />
+        <img src="../../../assets/imgs/uea.png" alt="logo de carregamento tecnocomp" />
       </div>
 
       <div class="progress-bar">
