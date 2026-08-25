@@ -1,11 +1,12 @@
 .container {
-    height: 83vh;
+    height: 88vh;
     background: #FFFFFF;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     row-gap: 35px;
+    box-sizing: border-box;
 }
 
 .com-referencia {

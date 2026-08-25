@@ -31,13 +31,14 @@ export class GerenciarReferenciasComponent {
       .getReferenciasByModulo(this.moduloId)
       .subscribe((res) => {
         this.referencias = res;
+        console.log(this.referencias)
       });
   }
 
   adicionarReferencia(): void {
     const dialogRef = this.dialog.open(DialogCriarReferenciaComponent, {
-      width: '733px',
-      height: '374px',
+      width: '633px',
+      height: '274px',
       panelClass: 'dialog-custom',
       data: {},
     });
@@ -56,10 +57,10 @@ export class GerenciarReferenciasComponent {
 
   editarReferencia(referencia: ReferenciaModulo): void {
     const dialogRef = this.dialog.open(DialogCriarReferenciaComponent, {
-      width: '733px',
-      height: '374px',
+      width: '633px',
+      height: '274px',
       panelClass: 'dialog-custom',
-      data: { descricao: referencia.descricao, link: referencia.link },
+      data: { descricao: referencia.descricao },
     });
 
     dialogRef.afterClosed().subscribe((dadosAtualizados) => {
