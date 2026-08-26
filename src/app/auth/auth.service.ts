@@ -52,7 +52,8 @@ export class AuthService {
       email: payload.email,
       tipo: payload.tipo,
       url_foto: payload.url_foto,
-      provedor: payload.provedor
+      provedor: payload.provedor,
+      
     } as User;
   } catch (error) {
     console.error("Erro ao decodificar token:", error);
@@ -105,9 +106,14 @@ export class AuthService {
       .post(`${this.apiUrl}/auth/refresh-token`, { refreshToken })
       .pipe(
         tap((response: any) => {
-          this.setToken(response.accessToken); // 🔥 salva corretamente
+           console.log('REFRESH FUNCIONOU');
+          console.log('Novo access token:', response.accessToken);
+          this.setToken(response.accessToken); // salva corretamente
         }),
         catchError((error: HttpErrorResponse) => {
+          console.error('REFRESH FALHOU');
+        console.error('Status:', error.status);
+        console.error('Resposta:', error.error);
           if (error.status === 401 || error.status === 403) {
             this.logout();
           }

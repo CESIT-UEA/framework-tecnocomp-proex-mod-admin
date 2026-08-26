@@ -35,7 +35,7 @@
           </small>
         </div>
       </div>
-      <div class="form-conteudo">
+      <!-- <div class="form-conteudo">
           <label for="senha" class="cadastro-usuario-label">Senha<span> *</span></label>
           <input [type]="hide ? 'password' : 'text'"  formControlName="senha" class="cadastro-usuario-input" type="password" formControlName="senha" placeholder="Digite a sua senha">
           
@@ -52,8 +52,8 @@
             Mín. 8 caracteres, com letra minúscula, número e símbolo.
           </small>
         </div>
-      </div>
-      <div class="form-conteudo">
+      </div> -->
+      <!-- <div class="form-conteudo">
           <label for="confirmar-senha" class="cadastro-usuario-label">Confirmar<span> *</span></label>
           <input [type]="hideConfirmar ? 'password' : 'text'" type="password" formControlName="confirmarSenha" class="cadastro-usuario-input" id="confirmar-senha" placeholder="Confirmar a senha">
           <button  class="icon" (click)="hideConfirmar = !hideConfirmar" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirmar">
@@ -69,15 +69,21 @@
             Confirme sua senha.
           </small>
         </div>
-        </div>
+        </div> -->
     </div>
 
     <div class="form-conteudo-tipo">
-      <label for="tipo" class="cadastro-usuario-label">Tipo de usuário<span> *</span></label>
-      <mat-radio-group class="radio-group" formControlName="tipo">
-        <mat-radio-button class="check-professor" value="professor">Professor</mat-radio-button>
-        <mat-radio-button *ngIf="isAdminUser()" class="check-administrador" value="adm">Administrador</mat-radio-button>
-      </mat-radio-group>
+      <label for="tipo" class="cadastro-usuario-label tipo">Tipo de usuário<span> *</span></label>
+      <div class="bloco1">
+        <mat-radio-group class="radio-group" formControlName="tipo">
+          <mat-radio-button class="check-professor" value="professor">Professor</mat-radio-button>
+          <mat-radio-button *ngIf="isAdminUser()" class="check-administrador" value="adm">Administrador</mat-radio-button>
+        </mat-radio-group>
+        <mat-slide-toggle formControlName="ativo" name="ativo">
+            Usuário ativo
+        </mat-slide-toggle>
+      </div>
+      
     </div>
     <div class="buttons">
       <div class="btn-wrapper">

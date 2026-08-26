@@ -22,9 +22,8 @@ export class CadastroUsuarioComponent implements OnInit {
   cadastroForm = new FormGroup({
     nome: new FormControl('', [Validators.required, Validators.minLength(4), noOnlyWhitespace()]),
     email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(13), noOnlyWhitespace()]),
-    senha: new FormControl('', [Validators.required, Validators.minLength(8), senhaForte(), noOnlyWhitespace()]),
-    confirmarSenha: new FormControl('',[Validators.required,Validators.minLength(8), senhaForte(),noOnlyWhitespace()]),
-    tipo: new FormControl('professor', Validators.required)
+    tipo: new FormControl('professor', Validators.required),
+    ativo: new FormControl(false, Validators.required)
   });
 
   constructor(
@@ -38,7 +37,7 @@ export class CadastroUsuarioComponent implements OnInit {
           this.errorCadastro = false
 
           const form = this.cadastroForm.value
-          if (form.nome?.trim().length != 0 && form.email?.trim().length != 0 && form.senha?.trim().length != 0){
+          if (form.nome?.trim().length != 0 && form.email?.trim().length != 0){
             this.buttonDisabled = false
           }else{
             this.buttonDisabled = true

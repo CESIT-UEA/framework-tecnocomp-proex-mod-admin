@@ -4,5 +4,6 @@ export interface User {
   username: string,
   email: string,
   url_foto?: string,
-  provedor?: string
+  provedor?: string,
+  ativo: boolean
 }

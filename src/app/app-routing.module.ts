@@ -49,7 +49,6 @@ import { CadastrarCodigoComponent } from './pages/cadastrar-codigo/cadastrar-cod
 const routes: Routes = [
  
   { path: 'login', component: LoginComponent },
-  { path: 'cadastrar', component: AutoCadastroComponent},
   { path: 'cadastrar/confirmar', component: ConfirmacaoAutoCadastroComponent},
   { path: 'cadastrar/codigo', component: CadastrarCodigoComponent},
   { path: 'forgot-password', component: ForgotPasswordComponent},

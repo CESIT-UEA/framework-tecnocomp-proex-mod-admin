@@ -10,7 +10,7 @@ import { User } from 'src/interfaces/user';
   styleUrls: ['./editar-usuario.component.css'],
 })
 export class EditarUsuarioComponent {
-  user: User = { id: 0, username: '', email: '', tipo: '' };
+  user: User = { id: 0, username: '', email: '', tipo: '', ativo: false };
   senhaAtual: string = '';
 
    hide = true;
@@ -44,6 +44,7 @@ export class EditarUsuarioComponent {
       username: this.user.username,
       email: this.user.email,
       tipo: this.user.tipo,
+      ativo: this.user.ativo
     }).subscribe(
       () => {
         if (this.getUsuarioDados().id == this.user.id) {

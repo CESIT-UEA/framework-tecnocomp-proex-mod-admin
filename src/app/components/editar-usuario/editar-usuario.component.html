@@ -1,57 +1,62 @@
-
 <app-header-voltar texto="Editar Usuário"></app-header-voltar>
 <main class="container">
-    <div class="container-wrapper">
-      <form class="form-editar-usuario">
-    <h2 id="form-editar-usuario-titulo">Editar Usuário</h2>
-    <p class="obrigatorio">* Indica campos obrigatórios</p>
-    <section class="form-editar-usuario-campos">
-      <!-- Nome -->
-      <div class="form-editar-usuario-campo">
-        <label>Nome do Usuário <span class="obrigatorio">*</span></label>
-        <input matInput [(ngModel)]="user.username" name="username" required placeholder="Digite o nome do usuário" />
-        
-      </div>
+  <div class="container-wrapper">
+    <form class="form-editar-usuario">
+      <h2 id="form-editar-usuario-titulo">Editar Usuário</h2>
+      <p class="obrigatorio">* Indica campos obrigatórios</p>
+      <section class="form-editar-usuario-campos">
+        <!-- Nome -->
+        <div class="form-editar-usuario-campo">
+          <label>Nome do Usuário <span class="obrigatorio">*</span></label>
+          <input matInput [(ngModel)]="user.username" name="username" required placeholder="Digite o nome do usuário" />
 
-      <!-- Email -->
-      <div class="form-editar-usuario-campo">
-        <label>Email <span class="obrigatorio">*</span></label>
-        <input matInput [(ngModel)]="user.email" name="email" required placeholder="Digite o email" />
-      </div>
-
-      <!-- Senha Atual -->
-      <div class="form-editar-usuario-campo">
-        <label>Senha Administrador <span class="obrigatorio">*</span></label>
-        <div class="input-wrapper">
-          <input [type]="hide ? 'password' : 'text'" matInput [(ngModel)]="senhaAtual" name="senhaAtual" type="password" required placeholder="Digite a senha atual" />
-         <button  class="icon" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
         </div>
-      </div>
 
-      <!-- Tipo -->
-      <div class="form-editar-usuario-campo">
-        <label>Tipo <span class="obrigatorio">*</span></label>
-        <select [(ngModel)]="user.tipo" name="tipo" required>
-          <option value="professor">Professor</option>
-          <option value="adm">Administrador</option>
-        </select>
+        <!-- Email -->
+        <div class="form-editar-usuario-campo">
+          <label>Email <span class="obrigatorio">*</span></label>
+          <input matInput [(ngModel)]="user.email" name="email" required placeholder="Digite o email" />
+        </div>
+
+        <!-- Senha Atual -->
+        <div class="form-editar-usuario-campo">
+          <label>Senha Administrador <span class="obrigatorio">*</span></label>
+          <div class="input-wrapper">
+            <input [type]="hide ? 'password' : 'text'" matInput [(ngModel)]="senhaAtual" name="senhaAtual"
+              type="password" required placeholder="Digite a senha atual" />
+            <button class="icon" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tipo -->
+        <div class="form-editar-usuario-campo">
+          <label>Tipo <span class="obrigatorio">*</span></label>
+          <select [(ngModel)]="user.tipo" name="tipo" required>
+            <option value="professor">Professor</option>
+            <option value="adm">Administrador</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Botões -->
+      <div class="botoes">
+            <mat-slide-toggle [(ngModel)]="user.ativo" name="ativo">
+            Usuário ativo
+          </mat-slide-toggle>
+        <div class="acoes">
+          <div class="btn-wrapper">
+            <button [routerLink]="'/tecnocomp/usuarios'" id="botao-dois"><span>Cancelar</span></button>
+          </div>
+          <div class="btn-wrapper-salvar">
+            <button id="botao-um" (click)="atualizarUsuario()"><span>Salvar Alterações</span></button>
+          </div>
+        </div>
+
       </div>
-    </section>
-    
-    <!-- Botões -->
-    <div class="botoes">
-      <div class="btn-wrapper">
-        <button [routerLink]="'/tecnocomp/usuarios'" id="botao-dois" ><span>Cancelar</span></button>
-      </div>
-      <div class="btn-wrapper-salvar">
-        <button id="botao-um" (click)="atualizarUsuario()"><span>Salvar Alterações</span></button>
-      </div>
-      
-    </div>
-  </form>
-    </div>
+    </form>
+  </div>
 </main>
 
 

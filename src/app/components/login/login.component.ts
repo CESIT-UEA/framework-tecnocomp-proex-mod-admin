@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
 import { jwtDecode} from 'jwt-decode';
+import { ApiAdmService } from 'src/app/services/api-adm.service';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class LoginComponent implements OnInit {
   });
 
  
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router, private apiService: ApiAdmService) {
       this.loginForm.valueChanges.subscribe(() => {
       this.errorLogin = false;
     });
@@ -41,6 +42,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/tecnocomp/meu-perfil']);
         },
         error: (err) => {
+          this.apiService.message(err.error)
           console.error("Erro login Google:", err);
         }
       });
@@ -96,6 +98,7 @@ export class LoginComponent implements OnInit {
           }
         },
         (error) => {
+          this.apiService.message(error.error.error)
           this.errorLogin = true;
           this.loginForm.markAllAsTouched()
           console.error('Erro ao fazer login:', error);

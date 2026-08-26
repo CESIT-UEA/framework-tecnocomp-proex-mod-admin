@@ -13,7 +13,7 @@ import { noOnlyWhitespace, senhaForte } from '../validators/validators';
 export class EditarPerfilComponent {
   senhaAtual: string = '';
   novaSenha: string = '';
-  isGoogleUser!: boolean;
+  isProvedorGoogle!: boolean;
 
   cadastroForm = new FormGroup({
       nome: new FormControl('', [Validators.required, Validators.minLength(4), noOnlyWhitespace()]),
@@ -35,7 +35,7 @@ export class EditarPerfilComponent {
     console.log(this.authService.getUsuarioDados())
     const dados = this.authService.getUsuarioDados()
     if (dados.provedor){
-      this.isGoogleUser = dados.provedor === 'google';
+      this.isProvedorGoogle = dados.provedor === 'google';
     }
     this.cadastroForm.patchValue({
       nome: dados.username,
@@ -47,7 +47,7 @@ export class EditarPerfilComponent {
   atualizarPerfil(): void {
     const senhaAtual = this.cadastroForm.value.senhaAtual
     
-    if (!senhaAtual && !this.isGoogleUser) {
+    if (!senhaAtual && !this.isProvedorGoogle) {
       this.cadastroForm.markAllAsTouched()
       this.apiService.message('Você precisa informar sua senha atual para atualizar o perfil.');
       return;

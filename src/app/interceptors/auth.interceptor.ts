@@ -13,7 +13,7 @@ import { ApiAdmService } from '../services/api-adm.service';
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-  constructor(private authService: AuthService, private apiAdm: ApiAdmService) {}
+  constructor(private authService: AuthService, private apiAdm: ApiAdmService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
@@ -21,23 +21,23 @@ export class AuthInterceptor implements HttpInterceptor {
 
     const authReq = token
       ? req.clone({
-          setHeaders: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
+        setHeaders: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       : req;
 
     return next.handle(authReq).pipe(
       catchError((error: HttpErrorResponse) => {
 
-        
+
         if (req.url.includes('/refresh-token')) {
           this.authService.logout();
           window.location.href = '/login';
+          console.log("Executei o refresh 37")
           return throwError(() => error);
         }
 
-  
         if (error.error?.error === "Senha incorreta") {
           return throwError(() => error);
         }
@@ -46,11 +46,15 @@ export class AuthInterceptor implements HttpInterceptor {
           return throwError(() => error);
         }
 
-        if (req.url.includes('/self') && req.method === 'PATCH' && error.status === 401){
+        if (req.url.includes('/self') && req.method === 'PATCH' && error.status === 401) {
           return throwError(() => error);
         }
 
-        if (error.status === 401 || error.status === 403) {
+        if (
+          (error.status === 401 || error.status === 403) &&
+          !req.url.endsWith('/login') &&
+          !req.url.endsWith('/login-google')
+        ) {
           return this.authService.refreshAccessToken().pipe(
 
             switchMap(() => {
@@ -69,6 +73,7 @@ export class AuthInterceptor implements HttpInterceptor {
             catchError((err) => {
               this.apiAdm.message('Sua sessão expirou. Faça login novamente.');
               this.authService.logout();
+              console.log("Executei o catch")
               return throwError(() => err);
             })
           );

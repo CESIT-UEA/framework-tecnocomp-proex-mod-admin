@@ -82,23 +82,24 @@ input.ng-invalid.ng-touched {
 }
 
 .campos {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
 }
 
 
 .form-conteudo {
   display: flex;
   flex-direction: column;
-  width: 92%;
+  width: 100%;
   padding: 5px 0;
 }
 
 .cadastro-usuario-input, .icon {
   height: 35px;
- border-radius: 10px;
-border: 1px solid #27A36D;
-background: #FFF;
+  border-radius: 10px;
+  border: 1px solid #27A36D;
+  background: #FFF;
   color: #03422F;
   padding-left: 10px;
 }
@@ -128,13 +129,23 @@ mat-icon {
   color: #888888;
 }
 
+.bloco1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: -18px;
+}
+
 .form-conteudo-tipo {
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: -20px;
 }
 
+.tipo {
+  position: relative;
+  top: -12px;
+}
 
 .radio-group {
   display: flex;
@@ -213,4 +224,11 @@ mat-icon {
 
 .check-professor, .check-administrador {
   color: #03422F;
+}
+
+@media(max-width: 953px) {
+  .bloco1 {
+    flex-direction: column;
+    align-items: start;
+  }
 }

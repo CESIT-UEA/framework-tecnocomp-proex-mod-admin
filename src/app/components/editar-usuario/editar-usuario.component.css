@@ -94,7 +94,13 @@
     display: flex;
     padding: 40px 0;
     column-gap: 20px;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acoes {
+  display: flex;
+  column-gap: 20px;
 }
 
 #botao-um, #botao-dois {
