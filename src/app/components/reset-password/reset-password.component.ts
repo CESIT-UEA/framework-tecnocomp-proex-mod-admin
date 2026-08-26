@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiAdmService } from 'src/app/services/api-adm.service';
 import { OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -20,7 +20,8 @@ export class ResetPasswordComponent implements OnInit {
 
   constructor(
     private ApiAdmService: ApiAdmService, 
-    private router: ActivatedRoute
+    private router: ActivatedRoute,
+    private route: Router
   ){ }
 
   ngOnInit(): void {
@@ -35,7 +36,8 @@ export class ResetPasswordComponent implements OnInit {
             this.token, 
             this.redefinirSenha.value.nova_senha!
           ).subscribe(data =>{
-              console.log(data)
+              this.route.navigate(['/login'])
+              this.ApiAdmService.message('Senha redefinida com sucesso')
           })
       }
       // esvazia os campos do formulário
