@@ -232,7 +232,7 @@ button {
   background:
     linear-gradient(#FFFFFF, #FFFFFF) padding-box,
     linear-gradient(90deg, #27A36D 0%, #116259 100%) border-box;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   color: #116259;
 }
 
