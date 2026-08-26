@@ -223,13 +223,13 @@ export class ApiAdmService {
 
   
   enviarEmailSenhaEsquecida(email: string): Observable<DadosResponse>{
-    return this.http.post<DadosResponse>(`${this.baseUrl}/api/forgot_password`, {email, baseUrl: environmentFrontEnd.baseUrl})
+    return this.http.post<DadosResponse>(`${this.baseUrl}/api/forgot_password`, { email })
   }
 
   validaLinkRedefinirSenha(email: string, token: string): Observable<ValidaLinkResponse>{
     return this.http.post<ValidaLinkResponse>(
       `${this.baseUrl}/api/valida_link`,
-      {email, token, baseUrl: environmentFrontEnd.baseUrl})
+      { email, token })
   }
 
   resetPassword(email: string, token: string, novaSenha: string){
