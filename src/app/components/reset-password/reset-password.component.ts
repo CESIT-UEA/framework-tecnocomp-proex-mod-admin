@@ -35,9 +35,15 @@ export class ResetPasswordComponent implements OnInit {
             this.email,
             this.token, 
             this.redefinirSenha.value.nova_senha!
-          ).subscribe(data =>{
+          ).subscribe({
+            next: () => {
               this.route.navigate(['/login'])
               this.ApiAdmService.message('Senha redefinida com sucesso')
+            },
+            error: () => {
+              this.route.navigate(['/login'])
+              this.ApiAdmService.message('Não foi possível redefinir a senha. O link pode ter expirado!')
+            }
           })
       }
       // esvazia os campos do formulário
