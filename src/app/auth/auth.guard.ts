@@ -32,6 +32,7 @@ export const resetPasswordGuard: CanActivateFn = (route, state) => {
       map((data) => {
         if (data.redirect == '/login'){
             router.navigate(['/login'], { replaceUrl: true })
+            apiAdmService.message('Não foi possível redefinir a senha. O link pode ter expirado!')
             return false
         }
         return true
