@@ -6,5 +6,5 @@ export const environment = {
 
 export const environmentFrontEnd = {
   production: true,
-  baseUrl: 'https://apiadminproex.tecnocomp.cloud'
+  baseUrl: 'https://admin-mboepi.uea.edu.br'
 }
