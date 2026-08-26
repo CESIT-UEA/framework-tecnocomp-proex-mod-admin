@@ -1,8 +1,11 @@
 <div class="container-background">
   <div class="container-cadastro">
-  <p style="color: #03422F">
+  <p style="color: #03422F" *ngIf="this.isAdmin()">
     Selecione uma opção abaixo para cadastrar um novo usuário, módulo ou
     plataforma.
+  </p>  
+  <p style="color: #03422F" *ngIf="!this.isAdmin()">
+    Selecione a opção abaixo para cadastrar um novo módulo
   </p>  
   <div class="box-container">
     <div class="sub-box">
@@ -18,7 +21,7 @@
             caminhoImagem="../../../assets/icons/icone-adicionar-modulo.png"
             caminhoUrl="/tecnocomp/cadastros/registrar-modulo"
           ></app-cards-cadastro>
-          <app-cards-cadastro
+          <app-cards-cadastro *ngIf="this.isAdmin()"
             nomeCard="Plataforma"
             caminhoImagem="../../../assets/icons/icone-adicionar-plataforma.png"
             caminhoUrl="/tecnocomp/cadastros/cadastro-plataforma"

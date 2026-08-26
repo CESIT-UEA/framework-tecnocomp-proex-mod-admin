@@ -19,7 +19,7 @@
     
   </section>
   <mat-divider></mat-divider>
-  <section class="minhas-plataformas">
+  <section class="minhas-plataformas" *ngIf="dadosUsuario().tipo === 'adm'">
     <div class="titulo">
       <h1>Minhas Plataformas: {{ paginationPlataformas.totalItems }}</h1>
       <button routerLink="/tecnocomp/cadastros/cadastro-plataforma" style="width: 28px; height: 28px;" class="icone-adicionar-grad">
