@@ -9,23 +9,24 @@
     </div>
     <mat-nav-list class="nav-list">
       <a routerLink="/tecnocomp/meu-perfil" routerLinkActive="active">
-        <img src="../../../assets/icons/icone-estrela-perfil.png" alt="ícone de perfil">
+        <img src="../../../assets/icons/icone-estrela-perfil.svg" alt="ícone de perfil">
         Meu perfil
       </a>
       <a routerLink="/tecnocomp/cadastros" routerLinkActive="active">
-        <img src="../../../assets/icons/icone-cadastrar.png" alt="ícone de cadastro">
+        <img src="../../../assets/icons/icone-cadastrar.svg" alt="ícone de cadastro">
         Cadastrar
       </a>
-      
-      <a routerLink="/tecnocomp/templates" routerLinkActive="active">
-        <img src="../../../assets/icons/icone-template-novo.png" alt="ícone de templates">
-        Templates
-      </a>
-      <!-- Administrador -->
       <a *ngIf="isAdmin" routerLink="/tecnocomp/usuarios" routerLinkActive="active">
-        <img src="../../../assets/icons/user_icone.png" alt="ícone de usuário">
+        <img src="../../../assets/icons/user_icone.svg" alt="ícone de usuário">
         Usuarios
       </a>
+
+      <a routerLink="/tecnocomp/templates" routerLinkActive="active">
+        <img src="../../../assets/icons/icone-template-novo.svg" alt="ícone de templates">
+        Templates
+      </a>
+    
+      
       <a *ngIf="isAdmin" routerLink="/tecnocomp/modulos" routerLinkActive="active">
         <mat-icon svgIcon="modulos"></mat-icon>
         Modulos

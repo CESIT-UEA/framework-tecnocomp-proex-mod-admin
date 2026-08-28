@@ -1,14 +1,14 @@
 <div class="container-background">
   <div class="container-perfil">
   <section class="informacoes">
-    <img src="../../../assets/icons/icone-perfil.png" alt="" style="width: 147px; height: 147px;">
+    <img src="../../../assets/icons/icone-perfil.svg" alt="" style="width: 147px; height: 147px;">
     <div class="informacoes-bloco-dois">
       <div class="informacoes-usuario">
       <p class="cargo">
         {{ dadosUsuario().username }}
       </p>
       <button [routerLink]="['/tecnocomp','editar-perfil']">
-        <img src="../../../assets/icons/icone-editar-proex.png" alt="ícone de editar-perfil">
+        <img src="../../../assets/icons/icone-editar-proex.svg" alt="ícone de editar-perfil">
       </button>
     </div>
     <div class="perfil-dados">
@@ -21,7 +21,7 @@
   <mat-divider></mat-divider>
   <section class="minhas-plataformas" *ngIf="dadosUsuario().tipo === 'adm'">
     <div class="titulo">
-      <h1>Minhas Plataformas: {{ paginationPlataformas.totalItems }}</h1>
+      <h1>Minhas Plataformas: <span class="total-itens">{{ paginationPlataformas.totalItems }} </span></h1>
       <button routerLink="/tecnocomp/cadastros/cadastro-plataforma" style="width: 28px; height: 28px;" class="icone-adicionar-grad">
         <mat-icon>add</mat-icon>
       </button>
@@ -48,7 +48,7 @@
   <mat-divider></mat-divider>
   <section class="meus-modulos">
     <div class="titulo">
-      <h1>Meus Módulos: {{ paginationModulos.totalItems }}</h1>
+      <h1>Meus Módulos: <span class="total-itens">{{ paginationModulos.totalItems }}</span></h1>
       <button routerLink="/tecnocomp/cadastros/registrar-modulo" style="width: 28px; height: 28px;" class="icone-adicionar-grad">
         <mat-icon>add</mat-icon>
       </button>

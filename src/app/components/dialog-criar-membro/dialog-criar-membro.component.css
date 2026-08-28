@@ -1,5 +1,5 @@
 .titulo {
-    color: #27A36D;
+    color: #03422F;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -80,7 +80,7 @@ mat-dialog-content {
 }
 
 .nome-membro, .cargo-membro {
-    color: #FFF;
+    color: #03422F;
     font-style: normal;
     font-weight: 700;
     line-height: normal;

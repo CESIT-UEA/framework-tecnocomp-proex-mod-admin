@@ -36,7 +36,7 @@
 
             <div class="botoes passo1-botao-proximo">
               <button class="salvar" (click)="onSubmit()">Salvar Alterações</button>
-              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
+              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo-proex.svg" alt="icone de próximo"></button>
             </div>
           </form>
         </div>
@@ -76,7 +76,7 @@
                 <img src="../../../assets/icons/anterior-proex.svg"> Anterior 
               </button>
               <button class="salvar" (click)="onSubmit()">Salvar Edição</button>
-              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
+              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo-proex.svg" alt="icone de próximo"></button>
             </div>
           </form>
         </div>
@@ -119,7 +119,7 @@
                 Anterior
               </button>
               <button class="salvar" (click)="onSubmit()">Salvar Edição</button>
-              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
+              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo-proex.svg" alt="icone de próximo"></button>
             </div>
           </form>
         </div>
@@ -172,13 +172,13 @@
                   <button class="botao-questao-objetiva"
                       [ngClass]="{'botao-questao-ativa': isQuestaoAberta === false}" (click)="criarQuestaoObjetiva(i)">
                       <img
-                        [src]="isQuestaoAberta === false ? '../../../assets/icons/icone-questao-objetiva-branca.png' : '../../../assets/icons/icone-questao-objetiva.png'">
+                        [src]="isQuestaoAberta === false ? '../../../assets/icons/icone-questao-objetiva-branca.svg' : '../../../assets/icons/icone-questao-objetiva.svg'">
                       Questão objetiva
                     </button>
                   <button class="botao-questao-discursiva" [ngClass]="{'botao-questao-ativa': isQuestaoAberta}"
                       (click)="criarQuestaoDiscursiva(i)">
                       <img
-                        [src]="isQuestaoAberta ? '../../../assets/icons/icone-questoa-discursiva-branca.png' : '../../../assets/icons/icone-questao-discursiva.png'">Questão
+                        [src]="isQuestaoAberta ? '../../../assets/icons/icone-questoa-discursiva-branca.svg' : '../../../assets/icons/icone-questao-discursiva.svg'">Questão
                       discursiva
                     </button>
                 </div>
@@ -225,7 +225,7 @@
                 [disabled]="!isAlternativaCorretaValida()"
               >
               Próximo
-              <img src="../../../assets/icons/proximo-proex.png">
+              <img src="../../../assets/icons/proximo-proex.svg">
               </button>
               <button
                 *ngIf="this.isQuestaoAberta"
@@ -233,7 +233,7 @@
                 matStepperNext
               >
               Próximo
-              <img src="../../../assets/icons/proximo-proex.png">
+              <img src="../../../assets/icons/proximo-proex.svg">
               </button>
               
             </div>

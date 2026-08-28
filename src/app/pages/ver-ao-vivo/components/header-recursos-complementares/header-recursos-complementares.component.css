@@ -15,7 +15,7 @@
   grid-template-columns: 100%;
   width: 100%;
   justify-content: center;
-  background-image: url('../../../../../assets/imgs/fundo_header.png');
+  background-image: url('../../../../../assets/imgs/fundo_header.svg');
   background-size: cover;
   align-items: center;
 }

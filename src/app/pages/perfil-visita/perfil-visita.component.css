@@ -44,7 +44,7 @@
   line-height: 28px;
   display: flex;
   flex-direction: column;
-  row-gap: 13px;
+  row-gap: 2rem;
 }
 
 .txt-email, #email {
@@ -52,12 +52,22 @@
 }
 
 #email {
-  color: #A2A2A2;
+  color: #27A36D;
+  
 }
+
+.txt-email {
+  font-weight: 700;
+}
+
+#email {
+  font-weight: 500;
+}
+
 
 .cargo {
   font-size: 32px;
-  padding-bottom: 13px;
+  font-weight: 700;
 }
 
 #texto-cargo {
@@ -122,8 +132,19 @@
   line-height: normal;
 }
 mat-divider {
-  background-color: #03422F;
+  background-color: white;
   margin: 30px 0 10px 0;
+}
+
+.titulo h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.total-itens {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .meus-modulos .titulo button,.minhas-plataformas .titulo button{

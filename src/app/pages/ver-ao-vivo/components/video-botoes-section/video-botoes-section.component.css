@@ -1,10 +1,12 @@
 
 .container {
-  height: 90vh;
+  box-sizing: border-box;
+  height: 100vh;
   width: 100%;
-  padding-top: 10vh;
+  /* padding-top: 10vh; */
 }
 .container-section {
+  box-sizing: border-box;
   height: 90vh;
   width: 100%;
   display: grid;
@@ -13,13 +15,16 @@
   color: white;
   align-items: end;
   text-align: center;
+  padding: 4rem 2.5rem 0;
+  padding-top: 10vh;
 }
  
 .container-esquerdo {
+  box-sizing: border-box;
   height: 90vh;
   width: 100%;
   align-content: center;
-  
+  padding-top: 1rem;
 }
 .container-esquerdo p {
   text-align: center;
@@ -31,30 +36,23 @@
 }
 .container-esquerdo h1 {
 
-  color: var(--Terciaria, #fff);
-  font-family: Arial;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px;
-  /* border-left: 3px solid #9256ed; */
-  width: 70%;
-  margin: 0 auto;
-  padding-right: 30px;
-  margin-bottom: 30px;
-  text-align: center;
+  font-size: 2.25rem;
+    text-align: center;
+    padding: 1.25rem;
 }
 
 .container-direito {
-    height: 90vh;
-    align-content: center;
-    /* padding-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-top: calc(40vh - 15.47vw - 2px + 1rem);
 }
 
 .imagem-acima {
   align-self: center;
-  height: 280px;
-  width: 280px;
+  align-self: center;
+  margin-bottom: -2.5rem;
   /* margin-bottom: 70px; */
 }
 

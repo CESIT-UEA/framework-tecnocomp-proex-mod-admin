@@ -1,7 +1,7 @@
 <div class="container-background">
   <div class="container-perfil">
   <section class="informacoes">
-    <img src="../../../assets/icons/icone-perfil.png" alt="" style="width: 147px; height: 147px;">
+    <img src="../../../assets/icons/icone-perfil.svg" alt="" style="width: 147px; height: 147px;">
     <div class="informacoes-bloco-dois">
       <div class="informacoes-usuario">
       <p class="cargo">
@@ -19,7 +19,7 @@
   <mat-divider></mat-divider> 
   <section class="minhas-plataformas">
     <div class="titulo">
-      <h1>Plataformas: {{ paginationPlataformas.totalItems }}</h1>
+      <h1>Plataformas: <span class="total-itens">{{ paginationPlataformas.totalItems }} </span></h1>
       
     </div>
     <div class="container-cards-plataformas">
@@ -44,7 +44,7 @@
   <mat-divider></mat-divider>
   <section class="meus-modulos">
     <div class="titulo">
-      <h1>Módulos: {{ paginationModulos.totalItems }}</h1>
+      <h1>Módulos: <span class="total-itens">{{ paginationModulos.totalItems }}</span> </h1>
     </div>
     <div class="container-cards-modulos">
       <div class="card" *ngFor="let modulo of modulos">

@@ -47,7 +47,7 @@
                     Campos</span>
                 </div>
                 <button class="proximo" (click)="verificarFormulario()">Próximo <img
-                    src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
+                    src="../../../assets/icons/proximo-proex.svg" alt="icone de próximo"></button>
               </div>
 
             </form>
@@ -93,7 +93,7 @@
                   <span *ngIf="tentouAvancarVideos && (videoUrlsFormGroup.invalid)">Preencha todos os Campos</span>
                 </div>
                 <button class="proximo" (click)="verificarVideos()">Próximo <img
-                    src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
+                    src="../../../assets/icons/proximo-proex.svg" alt="icone de próximo"></button>
               </div>
             </form>
           </div>
@@ -149,63 +149,11 @@
                   <span *ngIf="tentouAvancarSaibaMais && saibaMaisFormGroup.invalid">Preencha todos os Campos</span>
                 </div>
                 <button class="proximo" (click)="verificarSaibaMais()">Próximo <img
-                    src="../../../assets/icons/proximo-proex.png" alt="icone de próximo"></button>
+                    src="../../../assets/icons/proximo-proex.svg" alt="icone de próximo"></button>
               </div>
             </form>
           </div>
         </mat-step>
-
-        <!-- Etapa 4: Referências -->
-        <!-- <mat-step [stepControl]="referenciasFormGroup">
-        <div class="passo4">
-          <form [formGroup]="referenciasFormGroup">
-            <h3>Referências</h3>
-            <mat-divider></mat-divider>
-            <div formArrayName="referencias">
-              <div
-                *ngFor="let ref of referencias.controls; let i = index"
-                [formGroupName]="i"
-              >
-              <mat-divider *ngIf="i === 1" class="mat-divider-top-mat-form-field"></mat-divider>
-                <div class="mat-form-field field-url">
-                  <mat-label>Caminho da Imagem {{ i + 1 }}</mat-label>
-                  <input matInput formControlName="caminhoDaImagem" required />
-                </div>
-                <div class="mat-form-field">
-                  <mat-label>Texto da Referência {{ i + 1 }}</mat-label>
-                  <input matInput formControlName="referencia" required />
-                </div>
-                <br />
-                <button
-                  class="remover botao-remover"
-                  *ngIf="i > 0"
-                  (click)="removerReferencia(i)"
-                >
-                <div class="icone-remover">
-                  <mat-icon>remove</mat-icon>
-                </div>
-                  Remover
-                </button>
-                <mat-divider *ngIf="i > 0" class="mat-divider-top-mat-form-field divider-bottom"></mat-divider>
-              </div>
-            </div>
-            <button
-              class="adicionar botao-adicionar"
-              (click)="adicionarReferencia()"
-            >
-            <div class="icone-adicionar"><mat-icon>add</mat-icon></div>
-              Adicionar Referência
-            </button>
-            <div class="botoes">
-              <button class="voltar" matStepperPrevious>
-                <img src="../../../assets/icons/voltar.png">
-                Anterior
-              </button>
-              <button class="proximo" matStepperNext>Próximo <img src="../../../assets/icons/proximo.svg" alt="icone de próximo"></button>
-            </div>
-          </form>
-        </div>
-      </mat-step> -->
 
         <!-- Etapa 5: Exercícios -->
         <mat-step [stepControl]="exerciciosFormGroup">
@@ -228,13 +176,13 @@
                     <button class="botao-questao-objetiva"
                       [ngClass]="{'botao-questao-ativa': isQuestaoAberta === false}" (click)="criarQuestaoObjetiva(i)">
                       <img
-                        [src]="isQuestaoAberta === false ? '../../../assets/icons/icone-questao-objetiva-branca.png' : '../../../assets/icons/icone-questao-objetiva.png'">
+                        [src]="isQuestaoAberta === false ? '../../../assets/icons/icone-questao-objetiva-branca.svg' : '../../../assets/icons/icone-questao-objetiva.svg'">
                       Questão objetiva
                     </button>
                     <button class="botao-questao-discursiva" [ngClass]="{'botao-questao-ativa': isQuestaoAberta}"
                       (click)="criarQuestaoDiscursiva(i)">
                       <img
-                        [src]="isQuestaoAberta ? '../../../assets/icons/icone-questoa-discursiva-branca.png' : '../../../assets/icons/icone-questao-discursiva.png'">Questão
+                        [src]="isQuestaoAberta ? '../../../assets/icons/icone-questoa-discursiva-branca.svg' : '../../../assets/icons/icone-questao-discursiva.svg'">Questão
                       discursiva
                     </button>
                   </div>
@@ -297,7 +245,7 @@
 
                 <button class="proximo" (click)="verificarExercicios(stepper)">
                   Próximo
-                  <img src="../../../assets/icons/proximo-proex.png">
+                  <img src="../../../assets/icons/proximo-proex.svg">
                 </button>
               </div>
             </form>

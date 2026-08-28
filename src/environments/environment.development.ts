@@ -1,6 +1,6 @@
 export const environment = {
   production:false,
-  baseUrl:'https://apiadminproex.tecnocomp.cloud',
+  baseUrl:'https://admin-mboepi.uea.edu.br',
 };
 
 export const environmentFrontEnd = {

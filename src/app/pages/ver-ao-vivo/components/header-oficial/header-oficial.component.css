@@ -5,7 +5,6 @@
 
 .container {
   width: 100%;
-  border-bottom: 1px solid var(--22, #1c1c1c);
   position: fixed;
   background: #000;
   box-sizing: border-box;
@@ -14,25 +13,25 @@
 .header {
   display: flex;
   width: 100%;
-  height: calc(10vh - 1px);
+  height: 10vh;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  background-image: url('../../../../../assets/imgs/fundo_header.png');
+  background-image: url('../../../../../assets/imgs/fundo_header.svg');
   background-size: cover;
 }
 .header img {
-  max-height: 48px;
-  height: 79;
-  width: 180px;
+  max-height: 5rem;
+  width: 203.61px;
   padding: 5px 0;
-  margin-left: 1rem;
+  margin-left: .5rem;
   cursor: pointer;
 }
 .header nav {
   display: flex;
   align-items: center;
   color: #fff;
+  gap: 3.63rem;
 }
 .header nav ul {
   display: flex;
@@ -89,37 +88,43 @@ a {
 }
 
 .links {
-  height: 100%;
   display: flex;
-  gap: 40px;
+  gap: 3.63rem;
+  padding-top: 5px;
+  align-items: center;
 }
 
 .btn-ficha, .btn-home, .btn-sobre {
-  color: #fff;
-  font-size: 16px;
-  font-weight: normal;
+  color: #FFFFFF86;
   cursor: pointer;
   display: inline-block;
-  
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  border-bottom: 3px solid transparent;
+  font-size: 1rem;
+  font-weight: 700;
   
 }
 
 .btn-ficha.ativo {
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #fff !important;
+  color: #fff;
 }
 
 .btn-home.ativo {
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #fff !important;
+  color: #fff;
 }
 
 .btn-sobre.ativo {
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #fff !important;
 }
 
 .btn-ficha:hover, .btn-home:hover, .btn-sobre:hover {
   border-bottom: 3px solid #fff;
   /* padding-bottom: 3px */
-  width: fit-content;
+  
+  
 }
 
 

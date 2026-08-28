@@ -51,6 +51,10 @@ p{
   line-height: normal;
 }
 
+span {
+  font-weight: 400;
+}
+
 mat-divider{
   background-color: #227272;
   margin: 30px 0;
