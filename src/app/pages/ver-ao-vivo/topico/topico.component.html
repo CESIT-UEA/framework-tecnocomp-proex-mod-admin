@@ -20,17 +20,17 @@
       <section class="section-texto">
         <div class="botoes-cima">
           <button class="textoApoio" routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/slide">
-            <img src="../../../../assets/icons/icone-slide.png" alt="Icone para download do ebook">
+            <img src="../../../../assets/icons/icone-slide.svg" alt="Icone para download do ebook">
             Slide
           </button>
           <button class="saibaMais"
             routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/saiba-mais">
-            <img src="../../../../assets/icons/icone-saiba-mais.png" alt="Icone para download do ebook" />
+            <img src="../../../../assets/icons/icone-saiba-mais.svg" alt="Icone para download do ebook" />
             Saiba mais
           </button>
           <button class="referencias"
             routerLink="/ver-ao-vivo/{{verAoVivoService.dados_completos.id}}/topicos/referencias">
-            <img src="../../../../assets/icons/icone-referencias.png" alt="Icone para download do ebook" />
+            <img src="../../../../assets/icons/icone-referencias.svg" alt="Icone para download do ebook" />
             Referências
           </button>
         </div>
@@ -48,7 +48,7 @@
           <a class="ebook-botao"
             [href]="verAoVivoService.dados_completos.Topicos?.[verAoVivoService.controll_topico]?.ebookUrlGeral"
             target="_blank">
-            <img src="assets/icons/download.png" alt="Ícone para download do ebook" />
+            <img src="assets/icons/download.svg" alt="Ícone para download do ebook" />
 
             E-book Tópico {{ verAoVivoService.controll_topico + 1 }}
           </a>

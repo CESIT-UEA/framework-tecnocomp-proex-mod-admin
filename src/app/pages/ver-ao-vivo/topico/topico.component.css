@@ -213,8 +213,8 @@ button:hover {
   text-align: center;
   height: 80vh;
   align-content: center;
-  color: #fbfbfb;
-  font-size: 21px;
-  /* margin-top: 10vh; */
+  color: rgba(47, 115, 94, 1);
+  font-size: 28px;
+  font-weight: 600;
   padding-top: 10vh;
 }

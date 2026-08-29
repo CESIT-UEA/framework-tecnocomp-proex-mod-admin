@@ -1,4 +1,4 @@
-<app-header-recursos-complementares icone="../../../../assets/icons/clipboard.png" texto="Atividade"></app-header-recursos-complementares>
+<app-header-recursos-complementares icone="../../../../assets/icons/clipboard.svg" texto="Atividade"></app-header-recursos-complementares>
 <main class="container-atividade">
     <div class="questao-aberta" *ngIf="this.exercicio.aberta">
       <app-questao-aberta [exercicio]="this.exercicio"></app-questao-aberta>
@@ -23,12 +23,13 @@
                     <h3 *ngIf="!this.selecionado[i]">{{letras[i]}}</h3>
                     <img
                     *ngIf="this.selecionado[i] && alternativa.correta" 
-                    src="../../../../assets/icons/correto-atividade.png" 
+                    style="width: 60px; height: 60px;"
+                    src="../../../../assets/icons/correto-atividade.svg" 
                     alt="ícone de atividade correta">
                     <img 
                     style="width: 60px; height: 60px;"
                     *ngIf="this.selecionado[i] && alternativa.correta == false"
-                    src="../../../../assets/icons/erradoAtividade.png" 
+                    src="../../../../assets/icons/erradoAtividade.svg" 
                     alt="Ícone de atividade incorreta">
                   </div>     
                   <div class="textos-exercicio">

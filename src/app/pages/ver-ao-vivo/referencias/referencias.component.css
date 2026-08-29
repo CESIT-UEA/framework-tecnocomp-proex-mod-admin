@@ -120,8 +120,9 @@
   text-align: center;
   height: 85vh;
   align-content: center;
-  color: #03422F;
-  font-size: 21px;
+  color: rgba(47, 115, 94, 1);
+  font-size: 28px;
+  font-weight: 600;
 }
 
 
