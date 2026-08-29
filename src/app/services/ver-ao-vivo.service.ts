@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 export class VerAoVivoService {
   public apiUrl = environment.baseUrl;
   player: any;
+  playerCapa: any;
   public currentVideoIndex: number = 0;
   private storageKey = 'dados_completos_do_modulo';
   public dados_completos: any = [];
@@ -58,6 +59,46 @@ export class VerAoVivoService {
         this.recreatePlayer();
       };
     }
+  }
+
+  loadYouTubeAPICapa(): void {
+    if (!(window as any).YT) {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.body.appendChild(tag);
+
+      (window as any).onYouTubeIframeAPIReady = () => {
+        this.recreatePlayerCapa();
+      };
+    } else {
+      // API já foi carregada
+      this.recreatePlayerCapa();
+    }
+  }
+
+  recreatePlayerCapa(): void {
+    if (this.playerCapa) {
+      this.playerCapa.destroy(); // Destroi o player existente
+    }
+
+    const videoId = this.extractVideoId(
+      this.dados_completos.video_inicial
+    );
+
+    this.playerCapa = new (window as any).YT.Player('player-capa', {
+      height: '100%',
+      width: '100%',
+      videoId: videoId,
+      playerVars: {
+        rel: 0,
+        enablejsapi: 1,
+      },
+      events: {
+        onReady: this.onPlayerReady.bind(this),
+        onStateChange: this.onPlayerStateChange.bind(this),
+      },
+    });
+
   }
 
   salvarIdTopico(){
